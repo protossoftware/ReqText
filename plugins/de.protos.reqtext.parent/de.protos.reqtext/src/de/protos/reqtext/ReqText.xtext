@@ -1,0 +1,35 @@
+grammar de.protos.reqtext.ReqText with org.eclipse.xtext.common.Terminals
+
+generate reqText "http://www.protos.de/reqtext/ReqText"
+
+RModel:
+	imports+=RImport*
+	contents+=Content*
+;
+
+Content:
+	RList|RMap|CrossRef
+;
+	
+RList:
+	'List' name=ID ('[' (entries+=ID (',' entries+=ID)*)? ']')?
+;
+
+RMap:
+	'Map' name=ID entries+=RMapEntry*
+;
+
+RMapEntry:
+	name=ID '=>' value=CC_STRING ('[' ref=[RMapEntry]? ']')?
+;
+
+CrossRef:
+	'ref' ref=[Content|ID]
+;
+
+RImport:
+	'import' importURI=STRING
+;
+
+terminal CC_STRING:
+	"'''" -> "'''";
