@@ -50,14 +50,16 @@ public class ReqTextFormatter extends AbstractFormatter2 {
     EList<EObject> _eContents = model.eContents();
     final Consumer<EObject> _function_1 = (EObject it) -> {
       boolean _matched = false;
-      EList<RImport> _imports = model.getImports();
-      RImport _last = IterableExtensions.<RImport>last(_imports);
-      if (Objects.equal(it, _last)) {
-        _matched=true;
-        final Procedure1<IHiddenRegionFormatter> _function_2 = (IHiddenRegionFormatter it_1) -> {
-          it_1.setNewLines(2, 2, 3);
-        };
-        document.<EObject>append(it, _function_2);
+      if (!_matched) {
+        EList<RImport> _imports = model.getImports();
+        RImport _last = IterableExtensions.<RImport>last(_imports);
+        if (Objects.equal(it, _last)) {
+          _matched=true;
+          final Procedure1<IHiddenRegionFormatter> _function_2 = (IHiddenRegionFormatter it_1) -> {
+            it_1.setNewLines(2, 2, 3);
+          };
+          document.<EObject>append(it, _function_2);
+        }
       }
       if (!_matched) {
         document.<EObject>append(it, this.appendDefault);
