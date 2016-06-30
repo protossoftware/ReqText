@@ -394,7 +394,7 @@ public class InternalReqTextParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSpecObject"
-    // InternalReqText.g:170:1: ruleSpecObject returns [EObject current=null] : (otherlv_0= 'SpecObject' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'description' ( (lv_description_4_0= RULE_CC_STRING ) ) otherlv_5= 'state' ( (otherlv_6= RULE_ID ) ) otherlv_7= 'classification' ( (otherlv_8= RULE_ID ) ) otherlv_9= 'version' ( (lv_version_10_0= ruleVersion ) ) (otherlv_11= 'image' ( (lv_image_12_0= RULE_CC_STRING ) ) )? (otherlv_13= 'reference' ( (otherlv_14= RULE_ID ) ) )? ( (lv_children_15_0= ruleSpecObject ) )* otherlv_16= '}' ) ;
+    // InternalReqText.g:170:1: ruleSpecObject returns [EObject current=null] : (otherlv_0= 'SpecObject' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'description' ( (lv_description_4_0= RULE_CC_STRING ) ) otherlv_5= 'state' ( (otherlv_6= RULE_ID ) ) otherlv_7= 'classification' ( (otherlv_8= RULE_ID ) ) otherlv_9= 'version' ( (lv_version_10_0= ruleVersion ) ) (otherlv_11= 'image' ( (lv_image_12_0= ruleImage ) ) )? (otherlv_13= 'reference' ( (otherlv_14= RULE_ID ) ) )? ( (lv_children_15_0= ruleSpecObject ) )* otherlv_16= '}' ) ;
     public final EObject ruleSpecObject() throws RecognitionException {
         EObject current = null;
 
@@ -409,11 +409,12 @@ public class InternalReqTextParser extends AbstractInternalAntlrParser {
         Token otherlv_8=null;
         Token otherlv_9=null;
         Token otherlv_11=null;
-        Token lv_image_12_0=null;
         Token otherlv_13=null;
         Token otherlv_14=null;
         Token otherlv_16=null;
         EObject lv_version_10_0 = null;
+
+        EObject lv_image_12_0 = null;
 
         EObject lv_children_15_0 = null;
 
@@ -422,11 +423,11 @@ public class InternalReqTextParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalReqText.g:176:2: ( (otherlv_0= 'SpecObject' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'description' ( (lv_description_4_0= RULE_CC_STRING ) ) otherlv_5= 'state' ( (otherlv_6= RULE_ID ) ) otherlv_7= 'classification' ( (otherlv_8= RULE_ID ) ) otherlv_9= 'version' ( (lv_version_10_0= ruleVersion ) ) (otherlv_11= 'image' ( (lv_image_12_0= RULE_CC_STRING ) ) )? (otherlv_13= 'reference' ( (otherlv_14= RULE_ID ) ) )? ( (lv_children_15_0= ruleSpecObject ) )* otherlv_16= '}' ) )
-            // InternalReqText.g:177:2: (otherlv_0= 'SpecObject' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'description' ( (lv_description_4_0= RULE_CC_STRING ) ) otherlv_5= 'state' ( (otherlv_6= RULE_ID ) ) otherlv_7= 'classification' ( (otherlv_8= RULE_ID ) ) otherlv_9= 'version' ( (lv_version_10_0= ruleVersion ) ) (otherlv_11= 'image' ( (lv_image_12_0= RULE_CC_STRING ) ) )? (otherlv_13= 'reference' ( (otherlv_14= RULE_ID ) ) )? ( (lv_children_15_0= ruleSpecObject ) )* otherlv_16= '}' )
+            // InternalReqText.g:176:2: ( (otherlv_0= 'SpecObject' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'description' ( (lv_description_4_0= RULE_CC_STRING ) ) otherlv_5= 'state' ( (otherlv_6= RULE_ID ) ) otherlv_7= 'classification' ( (otherlv_8= RULE_ID ) ) otherlv_9= 'version' ( (lv_version_10_0= ruleVersion ) ) (otherlv_11= 'image' ( (lv_image_12_0= ruleImage ) ) )? (otherlv_13= 'reference' ( (otherlv_14= RULE_ID ) ) )? ( (lv_children_15_0= ruleSpecObject ) )* otherlv_16= '}' ) )
+            // InternalReqText.g:177:2: (otherlv_0= 'SpecObject' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'description' ( (lv_description_4_0= RULE_CC_STRING ) ) otherlv_5= 'state' ( (otherlv_6= RULE_ID ) ) otherlv_7= 'classification' ( (otherlv_8= RULE_ID ) ) otherlv_9= 'version' ( (lv_version_10_0= ruleVersion ) ) (otherlv_11= 'image' ( (lv_image_12_0= ruleImage ) ) )? (otherlv_13= 'reference' ( (otherlv_14= RULE_ID ) ) )? ( (lv_children_15_0= ruleSpecObject ) )* otherlv_16= '}' )
             {
-            // InternalReqText.g:177:2: (otherlv_0= 'SpecObject' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'description' ( (lv_description_4_0= RULE_CC_STRING ) ) otherlv_5= 'state' ( (otherlv_6= RULE_ID ) ) otherlv_7= 'classification' ( (otherlv_8= RULE_ID ) ) otherlv_9= 'version' ( (lv_version_10_0= ruleVersion ) ) (otherlv_11= 'image' ( (lv_image_12_0= RULE_CC_STRING ) ) )? (otherlv_13= 'reference' ( (otherlv_14= RULE_ID ) ) )? ( (lv_children_15_0= ruleSpecObject ) )* otherlv_16= '}' )
-            // InternalReqText.g:178:3: otherlv_0= 'SpecObject' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'description' ( (lv_description_4_0= RULE_CC_STRING ) ) otherlv_5= 'state' ( (otherlv_6= RULE_ID ) ) otherlv_7= 'classification' ( (otherlv_8= RULE_ID ) ) otherlv_9= 'version' ( (lv_version_10_0= ruleVersion ) ) (otherlv_11= 'image' ( (lv_image_12_0= RULE_CC_STRING ) ) )? (otherlv_13= 'reference' ( (otherlv_14= RULE_ID ) ) )? ( (lv_children_15_0= ruleSpecObject ) )* otherlv_16= '}'
+            // InternalReqText.g:177:2: (otherlv_0= 'SpecObject' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'description' ( (lv_description_4_0= RULE_CC_STRING ) ) otherlv_5= 'state' ( (otherlv_6= RULE_ID ) ) otherlv_7= 'classification' ( (otherlv_8= RULE_ID ) ) otherlv_9= 'version' ( (lv_version_10_0= ruleVersion ) ) (otherlv_11= 'image' ( (lv_image_12_0= ruleImage ) ) )? (otherlv_13= 'reference' ( (otherlv_14= RULE_ID ) ) )? ( (lv_children_15_0= ruleSpecObject ) )* otherlv_16= '}' )
+            // InternalReqText.g:178:3: otherlv_0= 'SpecObject' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'description' ( (lv_description_4_0= RULE_CC_STRING ) ) otherlv_5= 'state' ( (otherlv_6= RULE_ID ) ) otherlv_7= 'classification' ( (otherlv_8= RULE_ID ) ) otherlv_9= 'version' ( (lv_version_10_0= ruleVersion ) ) (otherlv_11= 'image' ( (lv_image_12_0= ruleImage ) ) )? (otherlv_13= 'reference' ( (otherlv_14= RULE_ID ) ) )? ( (lv_children_15_0= ruleSpecObject ) )* otherlv_16= '}'
             {
             otherlv_0=(Token)match(input,12,FOLLOW_5); 
 
@@ -577,7 +578,7 @@ public class InternalReqTextParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalReqText.g:283:3: (otherlv_11= 'image' ( (lv_image_12_0= RULE_CC_STRING ) ) )?
+            // InternalReqText.g:283:3: (otherlv_11= 'image' ( (lv_image_12_0= ruleImage ) ) )?
             int alt3=2;
             int LA3_0 = input.LA(1);
 
@@ -586,31 +587,36 @@ public class InternalReqTextParser extends AbstractInternalAntlrParser {
             }
             switch (alt3) {
                 case 1 :
-                    // InternalReqText.g:284:4: otherlv_11= 'image' ( (lv_image_12_0= RULE_CC_STRING ) )
+                    // InternalReqText.g:284:4: otherlv_11= 'image' ( (lv_image_12_0= ruleImage ) )
                     {
                     otherlv_11=(Token)match(input,18,FOLLOW_8); 
 
                     				newLeafNode(otherlv_11, grammarAccess.getSpecObjectAccess().getImageKeyword_11_0());
                     			
-                    // InternalReqText.g:288:4: ( (lv_image_12_0= RULE_CC_STRING ) )
-                    // InternalReqText.g:289:5: (lv_image_12_0= RULE_CC_STRING )
+                    // InternalReqText.g:288:4: ( (lv_image_12_0= ruleImage ) )
+                    // InternalReqText.g:289:5: (lv_image_12_0= ruleImage )
                     {
-                    // InternalReqText.g:289:5: (lv_image_12_0= RULE_CC_STRING )
-                    // InternalReqText.g:290:6: lv_image_12_0= RULE_CC_STRING
+                    // InternalReqText.g:289:5: (lv_image_12_0= ruleImage )
+                    // InternalReqText.g:290:6: lv_image_12_0= ruleImage
                     {
-                    lv_image_12_0=(Token)match(input,RULE_CC_STRING,FOLLOW_14); 
 
-                    						newLeafNode(lv_image_12_0, grammarAccess.getSpecObjectAccess().getImageCC_STRINGTerminalRuleCall_11_1_0());
+                    						newCompositeNode(grammarAccess.getSpecObjectAccess().getImageImageParserRuleCall_11_1_0());
                     					
+                    pushFollow(FOLLOW_14);
+                    lv_image_12_0=ruleImage();
+
+                    state._fsp--;
+
 
                     						if (current==null) {
-                    							current = createModelElement(grammarAccess.getSpecObjectRule());
+                    							current = createModelElementForParent(grammarAccess.getSpecObjectRule());
                     						}
-                    						setWithLastConsumed(
+                    						set(
                     							current,
                     							"image",
                     							lv_image_12_0,
-                    							"de.protos.reqtext.ReqText.CC_STRING");
+                    							"de.protos.reqtext.ReqText.Image");
+                    						afterParserOrEnumRuleCall();
                     					
 
                     }
@@ -624,7 +630,7 @@ public class InternalReqTextParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalReqText.g:307:3: (otherlv_13= 'reference' ( (otherlv_14= RULE_ID ) ) )?
+            // InternalReqText.g:308:3: (otherlv_13= 'reference' ( (otherlv_14= RULE_ID ) ) )?
             int alt4=2;
             int LA4_0 = input.LA(1);
 
@@ -633,17 +639,17 @@ public class InternalReqTextParser extends AbstractInternalAntlrParser {
             }
             switch (alt4) {
                 case 1 :
-                    // InternalReqText.g:308:4: otherlv_13= 'reference' ( (otherlv_14= RULE_ID ) )
+                    // InternalReqText.g:309:4: otherlv_13= 'reference' ( (otherlv_14= RULE_ID ) )
                     {
                     otherlv_13=(Token)match(input,19,FOLLOW_5); 
 
                     				newLeafNode(otherlv_13, grammarAccess.getSpecObjectAccess().getReferenceKeyword_12_0());
                     			
-                    // InternalReqText.g:312:4: ( (otherlv_14= RULE_ID ) )
-                    // InternalReqText.g:313:5: (otherlv_14= RULE_ID )
+                    // InternalReqText.g:313:4: ( (otherlv_14= RULE_ID ) )
+                    // InternalReqText.g:314:5: (otherlv_14= RULE_ID )
                     {
-                    // InternalReqText.g:313:5: (otherlv_14= RULE_ID )
-                    // InternalReqText.g:314:6: otherlv_14= RULE_ID
+                    // InternalReqText.g:314:5: (otherlv_14= RULE_ID )
+                    // InternalReqText.g:315:6: otherlv_14= RULE_ID
                     {
 
                     						if (current==null) {
@@ -666,7 +672,7 @@ public class InternalReqTextParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalReqText.g:326:3: ( (lv_children_15_0= ruleSpecObject ) )*
+            // InternalReqText.g:327:3: ( (lv_children_15_0= ruleSpecObject ) )*
             loop5:
             do {
                 int alt5=2;
@@ -679,10 +685,10 @@ public class InternalReqTextParser extends AbstractInternalAntlrParser {
 
                 switch (alt5) {
             	case 1 :
-            	    // InternalReqText.g:327:4: (lv_children_15_0= ruleSpecObject )
+            	    // InternalReqText.g:328:4: (lv_children_15_0= ruleSpecObject )
             	    {
-            	    // InternalReqText.g:327:4: (lv_children_15_0= ruleSpecObject )
-            	    // InternalReqText.g:328:5: lv_children_15_0= ruleSpecObject
+            	    // InternalReqText.g:328:4: (lv_children_15_0= ruleSpecObject )
+            	    // InternalReqText.g:329:5: lv_children_15_0= ruleSpecObject
             	    {
 
             	    					newCompositeNode(grammarAccess.getSpecObjectAccess().getChildrenSpecObjectParserRuleCall_13_0());
@@ -741,8 +747,136 @@ public class InternalReqTextParser extends AbstractInternalAntlrParser {
     // $ANTLR end "ruleSpecObject"
 
 
+    // $ANTLR start "entryRuleImage"
+    // InternalReqText.g:354:1: entryRuleImage returns [EObject current=null] : iv_ruleImage= ruleImage EOF ;
+    public final EObject entryRuleImage() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleImage = null;
+
+
+        try {
+            // InternalReqText.g:354:46: (iv_ruleImage= ruleImage EOF )
+            // InternalReqText.g:355:2: iv_ruleImage= ruleImage EOF
+            {
+             newCompositeNode(grammarAccess.getImageRule()); 
+            pushFollow(FOLLOW_1);
+            iv_ruleImage=ruleImage();
+
+            state._fsp--;
+
+             current =iv_ruleImage; 
+            match(input,EOF,FOLLOW_2); 
+
+            }
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleImage"
+
+
+    // $ANTLR start "ruleImage"
+    // InternalReqText.g:361:1: ruleImage returns [EObject current=null] : ( ( (lv_name_0_0= RULE_CC_STRING ) ) ( (lv_url_1_0= RULE_CC_STRING ) ) ) ;
+    public final EObject ruleImage() throws RecognitionException {
+        EObject current = null;
+
+        Token lv_name_0_0=null;
+        Token lv_url_1_0=null;
+
+
+        	enterRule();
+
+        try {
+            // InternalReqText.g:367:2: ( ( ( (lv_name_0_0= RULE_CC_STRING ) ) ( (lv_url_1_0= RULE_CC_STRING ) ) ) )
+            // InternalReqText.g:368:2: ( ( (lv_name_0_0= RULE_CC_STRING ) ) ( (lv_url_1_0= RULE_CC_STRING ) ) )
+            {
+            // InternalReqText.g:368:2: ( ( (lv_name_0_0= RULE_CC_STRING ) ) ( (lv_url_1_0= RULE_CC_STRING ) ) )
+            // InternalReqText.g:369:3: ( (lv_name_0_0= RULE_CC_STRING ) ) ( (lv_url_1_0= RULE_CC_STRING ) )
+            {
+            // InternalReqText.g:369:3: ( (lv_name_0_0= RULE_CC_STRING ) )
+            // InternalReqText.g:370:4: (lv_name_0_0= RULE_CC_STRING )
+            {
+            // InternalReqText.g:370:4: (lv_name_0_0= RULE_CC_STRING )
+            // InternalReqText.g:371:5: lv_name_0_0= RULE_CC_STRING
+            {
+            lv_name_0_0=(Token)match(input,RULE_CC_STRING,FOLLOW_8); 
+
+            					newLeafNode(lv_name_0_0, grammarAccess.getImageAccess().getNameCC_STRINGTerminalRuleCall_0_0());
+            				
+
+            					if (current==null) {
+            						current = createModelElement(grammarAccess.getImageRule());
+            					}
+            					setWithLastConsumed(
+            						current,
+            						"name",
+            						lv_name_0_0,
+            						"de.protos.reqtext.ReqText.CC_STRING");
+            				
+
+            }
+
+
+            }
+
+            // InternalReqText.g:387:3: ( (lv_url_1_0= RULE_CC_STRING ) )
+            // InternalReqText.g:388:4: (lv_url_1_0= RULE_CC_STRING )
+            {
+            // InternalReqText.g:388:4: (lv_url_1_0= RULE_CC_STRING )
+            // InternalReqText.g:389:5: lv_url_1_0= RULE_CC_STRING
+            {
+            lv_url_1_0=(Token)match(input,RULE_CC_STRING,FOLLOW_2); 
+
+            					newLeafNode(lv_url_1_0, grammarAccess.getImageAccess().getUrlCC_STRINGTerminalRuleCall_1_0());
+            				
+
+            					if (current==null) {
+            						current = createModelElement(grammarAccess.getImageRule());
+            					}
+            					setWithLastConsumed(
+            						current,
+            						"url",
+            						lv_url_1_0,
+            						"de.protos.reqtext.ReqText.CC_STRING");
+            				
+
+            }
+
+
+            }
+
+
+            }
+
+
+            }
+
+
+            	leaveRule();
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleImage"
+
+
     // $ANTLR start "entryRuleState"
-    // InternalReqText.g:353:1: entryRuleState returns [EObject current=null] : iv_ruleState= ruleState EOF ;
+    // InternalReqText.g:409:1: entryRuleState returns [EObject current=null] : iv_ruleState= ruleState EOF ;
     public final EObject entryRuleState() throws RecognitionException {
         EObject current = null;
 
@@ -750,8 +884,8 @@ public class InternalReqTextParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalReqText.g:353:46: (iv_ruleState= ruleState EOF )
-            // InternalReqText.g:354:2: iv_ruleState= ruleState EOF
+            // InternalReqText.g:409:46: (iv_ruleState= ruleState EOF )
+            // InternalReqText.g:410:2: iv_ruleState= ruleState EOF
             {
              newCompositeNode(grammarAccess.getStateRule()); 
             pushFollow(FOLLOW_1);
@@ -778,7 +912,7 @@ public class InternalReqTextParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleState"
-    // InternalReqText.g:360:1: ruleState returns [EObject current=null] : (otherlv_0= 'State' ( (lv_name_1_0= RULE_ID ) ) ) ;
+    // InternalReqText.g:416:1: ruleState returns [EObject current=null] : (otherlv_0= 'State' ( (lv_name_1_0= RULE_ID ) ) ) ;
     public final EObject ruleState() throws RecognitionException {
         EObject current = null;
 
@@ -789,21 +923,21 @@ public class InternalReqTextParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalReqText.g:366:2: ( (otherlv_0= 'State' ( (lv_name_1_0= RULE_ID ) ) ) )
-            // InternalReqText.g:367:2: (otherlv_0= 'State' ( (lv_name_1_0= RULE_ID ) ) )
+            // InternalReqText.g:422:2: ( (otherlv_0= 'State' ( (lv_name_1_0= RULE_ID ) ) ) )
+            // InternalReqText.g:423:2: (otherlv_0= 'State' ( (lv_name_1_0= RULE_ID ) ) )
             {
-            // InternalReqText.g:367:2: (otherlv_0= 'State' ( (lv_name_1_0= RULE_ID ) ) )
-            // InternalReqText.g:368:3: otherlv_0= 'State' ( (lv_name_1_0= RULE_ID ) )
+            // InternalReqText.g:423:2: (otherlv_0= 'State' ( (lv_name_1_0= RULE_ID ) ) )
+            // InternalReqText.g:424:3: otherlv_0= 'State' ( (lv_name_1_0= RULE_ID ) )
             {
             otherlv_0=(Token)match(input,21,FOLLOW_5); 
 
             			newLeafNode(otherlv_0, grammarAccess.getStateAccess().getStateKeyword_0());
             		
-            // InternalReqText.g:372:3: ( (lv_name_1_0= RULE_ID ) )
-            // InternalReqText.g:373:4: (lv_name_1_0= RULE_ID )
+            // InternalReqText.g:428:3: ( (lv_name_1_0= RULE_ID ) )
+            // InternalReqText.g:429:4: (lv_name_1_0= RULE_ID )
             {
-            // InternalReqText.g:373:4: (lv_name_1_0= RULE_ID )
-            // InternalReqText.g:374:5: lv_name_1_0= RULE_ID
+            // InternalReqText.g:429:4: (lv_name_1_0= RULE_ID )
+            // InternalReqText.g:430:5: lv_name_1_0= RULE_ID
             {
             lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_2); 
 
@@ -848,7 +982,7 @@ public class InternalReqTextParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleClass"
-    // InternalReqText.g:394:1: entryRuleClass returns [EObject current=null] : iv_ruleClass= ruleClass EOF ;
+    // InternalReqText.g:450:1: entryRuleClass returns [EObject current=null] : iv_ruleClass= ruleClass EOF ;
     public final EObject entryRuleClass() throws RecognitionException {
         EObject current = null;
 
@@ -856,8 +990,8 @@ public class InternalReqTextParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalReqText.g:394:46: (iv_ruleClass= ruleClass EOF )
-            // InternalReqText.g:395:2: iv_ruleClass= ruleClass EOF
+            // InternalReqText.g:450:46: (iv_ruleClass= ruleClass EOF )
+            // InternalReqText.g:451:2: iv_ruleClass= ruleClass EOF
             {
              newCompositeNode(grammarAccess.getClassRule()); 
             pushFollow(FOLLOW_1);
@@ -884,7 +1018,7 @@ public class InternalReqTextParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleClass"
-    // InternalReqText.g:401:1: ruleClass returns [EObject current=null] : (otherlv_0= 'Classification' ( (lv_name_1_0= RULE_ID ) ) ) ;
+    // InternalReqText.g:457:1: ruleClass returns [EObject current=null] : (otherlv_0= 'Classification' ( (lv_name_1_0= RULE_ID ) ) ) ;
     public final EObject ruleClass() throws RecognitionException {
         EObject current = null;
 
@@ -895,21 +1029,21 @@ public class InternalReqTextParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalReqText.g:407:2: ( (otherlv_0= 'Classification' ( (lv_name_1_0= RULE_ID ) ) ) )
-            // InternalReqText.g:408:2: (otherlv_0= 'Classification' ( (lv_name_1_0= RULE_ID ) ) )
+            // InternalReqText.g:463:2: ( (otherlv_0= 'Classification' ( (lv_name_1_0= RULE_ID ) ) ) )
+            // InternalReqText.g:464:2: (otherlv_0= 'Classification' ( (lv_name_1_0= RULE_ID ) ) )
             {
-            // InternalReqText.g:408:2: (otherlv_0= 'Classification' ( (lv_name_1_0= RULE_ID ) ) )
-            // InternalReqText.g:409:3: otherlv_0= 'Classification' ( (lv_name_1_0= RULE_ID ) )
+            // InternalReqText.g:464:2: (otherlv_0= 'Classification' ( (lv_name_1_0= RULE_ID ) ) )
+            // InternalReqText.g:465:3: otherlv_0= 'Classification' ( (lv_name_1_0= RULE_ID ) )
             {
             otherlv_0=(Token)match(input,22,FOLLOW_5); 
 
             			newLeafNode(otherlv_0, grammarAccess.getClassAccess().getClassificationKeyword_0());
             		
-            // InternalReqText.g:413:3: ( (lv_name_1_0= RULE_ID ) )
-            // InternalReqText.g:414:4: (lv_name_1_0= RULE_ID )
+            // InternalReqText.g:469:3: ( (lv_name_1_0= RULE_ID ) )
+            // InternalReqText.g:470:4: (lv_name_1_0= RULE_ID )
             {
-            // InternalReqText.g:414:4: (lv_name_1_0= RULE_ID )
-            // InternalReqText.g:415:5: lv_name_1_0= RULE_ID
+            // InternalReqText.g:470:4: (lv_name_1_0= RULE_ID )
+            // InternalReqText.g:471:5: lv_name_1_0= RULE_ID
             {
             lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_2); 
 
@@ -954,7 +1088,7 @@ public class InternalReqTextParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleVersion"
-    // InternalReqText.g:435:1: entryRuleVersion returns [EObject current=null] : iv_ruleVersion= ruleVersion EOF ;
+    // InternalReqText.g:491:1: entryRuleVersion returns [EObject current=null] : iv_ruleVersion= ruleVersion EOF ;
     public final EObject entryRuleVersion() throws RecognitionException {
         EObject current = null;
 
@@ -962,8 +1096,8 @@ public class InternalReqTextParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalReqText.g:435:48: (iv_ruleVersion= ruleVersion EOF )
-            // InternalReqText.g:436:2: iv_ruleVersion= ruleVersion EOF
+            // InternalReqText.g:491:48: (iv_ruleVersion= ruleVersion EOF )
+            // InternalReqText.g:492:2: iv_ruleVersion= ruleVersion EOF
             {
              newCompositeNode(grammarAccess.getVersionRule()); 
             pushFollow(FOLLOW_1);
@@ -990,7 +1124,7 @@ public class InternalReqTextParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVersion"
-    // InternalReqText.g:442:1: ruleVersion returns [EObject current=null] : ( ( (lv_major_0_0= RULE_INT ) ) otherlv_1= '.' ( (lv_minor_2_0= RULE_INT ) ) ) ;
+    // InternalReqText.g:498:1: ruleVersion returns [EObject current=null] : ( ( (lv_major_0_0= RULE_INT ) ) otherlv_1= '.' ( (lv_minor_2_0= RULE_INT ) ) ) ;
     public final EObject ruleVersion() throws RecognitionException {
         EObject current = null;
 
@@ -1002,17 +1136,17 @@ public class InternalReqTextParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalReqText.g:448:2: ( ( ( (lv_major_0_0= RULE_INT ) ) otherlv_1= '.' ( (lv_minor_2_0= RULE_INT ) ) ) )
-            // InternalReqText.g:449:2: ( ( (lv_major_0_0= RULE_INT ) ) otherlv_1= '.' ( (lv_minor_2_0= RULE_INT ) ) )
+            // InternalReqText.g:504:2: ( ( ( (lv_major_0_0= RULE_INT ) ) otherlv_1= '.' ( (lv_minor_2_0= RULE_INT ) ) ) )
+            // InternalReqText.g:505:2: ( ( (lv_major_0_0= RULE_INT ) ) otherlv_1= '.' ( (lv_minor_2_0= RULE_INT ) ) )
             {
-            // InternalReqText.g:449:2: ( ( (lv_major_0_0= RULE_INT ) ) otherlv_1= '.' ( (lv_minor_2_0= RULE_INT ) ) )
-            // InternalReqText.g:450:3: ( (lv_major_0_0= RULE_INT ) ) otherlv_1= '.' ( (lv_minor_2_0= RULE_INT ) )
+            // InternalReqText.g:505:2: ( ( (lv_major_0_0= RULE_INT ) ) otherlv_1= '.' ( (lv_minor_2_0= RULE_INT ) ) )
+            // InternalReqText.g:506:3: ( (lv_major_0_0= RULE_INT ) ) otherlv_1= '.' ( (lv_minor_2_0= RULE_INT ) )
             {
-            // InternalReqText.g:450:3: ( (lv_major_0_0= RULE_INT ) )
-            // InternalReqText.g:451:4: (lv_major_0_0= RULE_INT )
+            // InternalReqText.g:506:3: ( (lv_major_0_0= RULE_INT ) )
+            // InternalReqText.g:507:4: (lv_major_0_0= RULE_INT )
             {
-            // InternalReqText.g:451:4: (lv_major_0_0= RULE_INT )
-            // InternalReqText.g:452:5: lv_major_0_0= RULE_INT
+            // InternalReqText.g:507:4: (lv_major_0_0= RULE_INT )
+            // InternalReqText.g:508:5: lv_major_0_0= RULE_INT
             {
             lv_major_0_0=(Token)match(input,RULE_INT,FOLLOW_16); 
 
@@ -1038,11 +1172,11 @@ public class InternalReqTextParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_1, grammarAccess.getVersionAccess().getFullStopKeyword_1());
             		
-            // InternalReqText.g:472:3: ( (lv_minor_2_0= RULE_INT ) )
-            // InternalReqText.g:473:4: (lv_minor_2_0= RULE_INT )
+            // InternalReqText.g:528:3: ( (lv_minor_2_0= RULE_INT ) )
+            // InternalReqText.g:529:4: (lv_minor_2_0= RULE_INT )
             {
-            // InternalReqText.g:473:4: (lv_minor_2_0= RULE_INT )
-            // InternalReqText.g:474:5: lv_minor_2_0= RULE_INT
+            // InternalReqText.g:529:4: (lv_minor_2_0= RULE_INT )
+            // InternalReqText.g:530:5: lv_minor_2_0= RULE_INT
             {
             lv_minor_2_0=(Token)match(input,RULE_INT,FOLLOW_2); 
 
@@ -1087,7 +1221,7 @@ public class InternalReqTextParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleRImport"
-    // InternalReqText.g:494:1: entryRuleRImport returns [EObject current=null] : iv_ruleRImport= ruleRImport EOF ;
+    // InternalReqText.g:550:1: entryRuleRImport returns [EObject current=null] : iv_ruleRImport= ruleRImport EOF ;
     public final EObject entryRuleRImport() throws RecognitionException {
         EObject current = null;
 
@@ -1095,8 +1229,8 @@ public class InternalReqTextParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalReqText.g:494:48: (iv_ruleRImport= ruleRImport EOF )
-            // InternalReqText.g:495:2: iv_ruleRImport= ruleRImport EOF
+            // InternalReqText.g:550:48: (iv_ruleRImport= ruleRImport EOF )
+            // InternalReqText.g:551:2: iv_ruleRImport= ruleRImport EOF
             {
              newCompositeNode(grammarAccess.getRImportRule()); 
             pushFollow(FOLLOW_1);
@@ -1123,7 +1257,7 @@ public class InternalReqTextParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleRImport"
-    // InternalReqText.g:501:1: ruleRImport returns [EObject current=null] : (otherlv_0= 'import' ( (lv_importURI_1_0= RULE_STRING ) ) ) ;
+    // InternalReqText.g:557:1: ruleRImport returns [EObject current=null] : (otherlv_0= 'import' ( (lv_importURI_1_0= RULE_STRING ) ) ) ;
     public final EObject ruleRImport() throws RecognitionException {
         EObject current = null;
 
@@ -1134,21 +1268,21 @@ public class InternalReqTextParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalReqText.g:507:2: ( (otherlv_0= 'import' ( (lv_importURI_1_0= RULE_STRING ) ) ) )
-            // InternalReqText.g:508:2: (otherlv_0= 'import' ( (lv_importURI_1_0= RULE_STRING ) ) )
+            // InternalReqText.g:563:2: ( (otherlv_0= 'import' ( (lv_importURI_1_0= RULE_STRING ) ) ) )
+            // InternalReqText.g:564:2: (otherlv_0= 'import' ( (lv_importURI_1_0= RULE_STRING ) ) )
             {
-            // InternalReqText.g:508:2: (otherlv_0= 'import' ( (lv_importURI_1_0= RULE_STRING ) ) )
-            // InternalReqText.g:509:3: otherlv_0= 'import' ( (lv_importURI_1_0= RULE_STRING ) )
+            // InternalReqText.g:564:2: (otherlv_0= 'import' ( (lv_importURI_1_0= RULE_STRING ) ) )
+            // InternalReqText.g:565:3: otherlv_0= 'import' ( (lv_importURI_1_0= RULE_STRING ) )
             {
             otherlv_0=(Token)match(input,24,FOLLOW_17); 
 
             			newLeafNode(otherlv_0, grammarAccess.getRImportAccess().getImportKeyword_0());
             		
-            // InternalReqText.g:513:3: ( (lv_importURI_1_0= RULE_STRING ) )
-            // InternalReqText.g:514:4: (lv_importURI_1_0= RULE_STRING )
+            // InternalReqText.g:569:3: ( (lv_importURI_1_0= RULE_STRING ) )
+            // InternalReqText.g:570:4: (lv_importURI_1_0= RULE_STRING )
             {
-            // InternalReqText.g:514:4: (lv_importURI_1_0= RULE_STRING )
-            // InternalReqText.g:515:5: lv_importURI_1_0= RULE_STRING
+            // InternalReqText.g:570:4: (lv_importURI_1_0= RULE_STRING )
+            // InternalReqText.g:571:5: lv_importURI_1_0= RULE_STRING
             {
             lv_importURI_1_0=(Token)match(input,RULE_STRING,FOLLOW_2); 
 

@@ -17,10 +17,14 @@ SpecObject:
 		'state' state = [State]
 		'classification' class = [Class]
 		'version' version = Version
-		('image' image = CC_STRING)?
+		('image' image = Image)?
 		('reference' reference = [SpecObject])?
 		children += SpecObject*		
 	'}' 
+;
+
+Image:
+	name = CC_STRING url = CC_STRING 
 ;
 
 State:

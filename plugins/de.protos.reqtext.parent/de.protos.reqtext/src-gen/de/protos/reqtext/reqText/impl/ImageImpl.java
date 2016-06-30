@@ -3,8 +3,8 @@
  */
 package de.protos.reqtext.reqText.impl;
 
+import de.protos.reqtext.reqText.Image;
 import de.protos.reqtext.reqText.ReqTextPackage;
-import de.protos.reqtext.reqText.State;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -15,18 +15,19 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>State</b></em>'.
+ * An implementation of the model object '<em><b>Image</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link de.protos.reqtext.reqText.impl.StateImpl#getName <em>Name</em>}</li>
+ *   <li>{@link de.protos.reqtext.reqText.impl.ImageImpl#getName <em>Name</em>}</li>
+ *   <li>{@link de.protos.reqtext.reqText.impl.ImageImpl#getUrl <em>Url</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class StateImpl extends MinimalEObjectImpl.Container implements State
+public class ImageImpl extends MinimalEObjectImpl.Container implements Image
 {
   /**
    * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -49,11 +50,31 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State
   protected String name = NAME_EDEFAULT;
 
   /**
+   * The default value of the '{@link #getUrl() <em>Url</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getUrl()
+   * @generated
+   * @ordered
+   */
+  protected static final String URL_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getUrl() <em>Url</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getUrl()
+   * @generated
+   * @ordered
+   */
+  protected String url = URL_EDEFAULT;
+
+  /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected StateImpl()
+  protected ImageImpl()
   {
     super();
   }
@@ -66,7 +87,7 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State
   @Override
   protected EClass eStaticClass()
   {
-    return ReqTextPackage.Literals.STATE;
+    return ReqTextPackage.Literals.IMAGE;
   }
 
   /**
@@ -89,7 +110,30 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State
     String oldName = name;
     name = newName;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ReqTextPackage.STATE__NAME, oldName, name));
+      eNotify(new ENotificationImpl(this, Notification.SET, ReqTextPackage.IMAGE__NAME, oldName, name));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getUrl()
+  {
+    return url;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setUrl(String newUrl)
+  {
+    String oldUrl = url;
+    url = newUrl;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, ReqTextPackage.IMAGE__URL, oldUrl, url));
   }
 
   /**
@@ -102,8 +146,10 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State
   {
     switch (featureID)
     {
-      case ReqTextPackage.STATE__NAME:
+      case ReqTextPackage.IMAGE__NAME:
         return getName();
+      case ReqTextPackage.IMAGE__URL:
+        return getUrl();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -118,8 +164,11 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State
   {
     switch (featureID)
     {
-      case ReqTextPackage.STATE__NAME:
+      case ReqTextPackage.IMAGE__NAME:
         setName((String)newValue);
+        return;
+      case ReqTextPackage.IMAGE__URL:
+        setUrl((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -135,8 +184,11 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State
   {
     switch (featureID)
     {
-      case ReqTextPackage.STATE__NAME:
+      case ReqTextPackage.IMAGE__NAME:
         setName(NAME_EDEFAULT);
+        return;
+      case ReqTextPackage.IMAGE__URL:
+        setUrl(URL_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -152,8 +204,10 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State
   {
     switch (featureID)
     {
-      case ReqTextPackage.STATE__NAME:
+      case ReqTextPackage.IMAGE__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+      case ReqTextPackage.IMAGE__URL:
+        return URL_EDEFAULT == null ? url != null : !URL_EDEFAULT.equals(url);
     }
     return super.eIsSet(featureID);
   }
@@ -171,8 +225,10 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (name: ");
     result.append(name);
+    result.append(", url: ");
+    result.append(url);
     result.append(')');
     return result.toString();
   }
 
-} //StateImpl
+} //ImageImpl

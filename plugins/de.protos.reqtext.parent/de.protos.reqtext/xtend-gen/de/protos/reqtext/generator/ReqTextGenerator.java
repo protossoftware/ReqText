@@ -4,6 +4,7 @@
 package de.protos.reqtext.generator;
 
 import com.google.common.base.Objects;
+import de.protos.reqtext.reqText.Image;
 import de.protos.reqtext.reqText.RModel;
 import de.protos.reqtext.reqText.SpecObject;
 import de.protos.reqtext.reqText.State;
@@ -40,6 +41,9 @@ public class ReqTextGenerator extends AbstractGenerator {
       _builder.newLine();
       _builder.append("<head>");
       _builder.newLine();
+      _builder.append("\t");
+      _builder.append("<link rel=\"stylesheet\" type=\"text/css\" href=\"../doc/style/reqtext.css\">");
+      _builder.newLine();
       _builder.append("</head>");
       _builder.newLine();
       _builder.append("<body>");
@@ -48,44 +52,47 @@ public class ReqTextGenerator extends AbstractGenerator {
         for(final SpecObject specObj : specObjs) {
           _builder.append("\t");
           _builder.append("<h2>");
-          int _indexOf = specObjs.indexOf(specObj);
-          _builder.append(_indexOf, "\t");
-          _builder.append(" ");
           String _name = specObj.getName();
           _builder.append(_name, "\t");
           _builder.append("</h2>");
           _builder.newLineIfNotEmpty();
           _builder.append("\t");
+          _builder.append("<p>Description: ");
           String _description = specObj.getDescription();
           _builder.append(_description, "\t");
-          _builder.append("</br>");
+          _builder.append("</p>");
           _builder.newLineIfNotEmpty();
           _builder.append("\t");
-          _builder.append("state: ");
+          _builder.append("<p>State: ");
           State _state = specObj.getState();
           String _name_1 = _state.getName();
           _builder.append(_name_1, "\t");
-          _builder.append("</br>");
+          _builder.append("</p>");
           _builder.newLineIfNotEmpty();
           _builder.append("\t");
-          _builder.append("classification: ");
+          _builder.append("<p>Classification: ");
           de.protos.reqtext.reqText.Class _class_ = specObj.getClass_();
           String _name_2 = _class_.getName();
           _builder.append(_name_2, "\t");
-          _builder.append("</br>");
+          _builder.append("</p>");
           _builder.newLineIfNotEmpty();
-          _builder.append("\t");
           {
-            String _image = specObj.getImage();
+            Image _image = specObj.getImage();
             boolean _notEquals = (!Objects.equal(_image, null));
             if (_notEquals) {
-              _builder.append("<img src=\"");
-              String _image_1 = specObj.getImage();
-              _builder.append(_image_1, "\t");
-              _builder.append("\"/>");
+              _builder.append("\t");
+              _builder.append("<p><img src=\"");
+              Image _image_1 = specObj.getImage();
+              String _url = _image_1.getUrl();
+              _builder.append(_url, "\t");
+              _builder.append("\" alt=\"");
+              Image _image_2 = specObj.getImage();
+              String _name_3 = _image_2.getName();
+              _builder.append(_name_3, "\t");
+              _builder.append("\"/></p>");
+              _builder.newLineIfNotEmpty();
             }
           }
-          _builder.newLineIfNotEmpty();
           _builder.append("\t");
           _builder.newLine();
           {
@@ -93,47 +100,47 @@ public class ReqTextGenerator extends AbstractGenerator {
             for(final SpecObject child : _children) {
               _builder.append("\t");
               _builder.append("<h3>");
-              int _indexOf_1 = specObjs.indexOf(specObj);
-              _builder.append(_indexOf_1, "\t");
-              _builder.append(".");
-              EList<SpecObject> _children_1 = specObj.getChildren();
-              int _indexOf_2 = _children_1.indexOf(child);
-              _builder.append(_indexOf_2, "\t");
-              _builder.append(" ");
-              String _name_3 = child.getName();
-              _builder.append(_name_3, "\t");
+              String _name_4 = child.getName();
+              _builder.append(_name_4, "\t");
               _builder.append("</h3>");
               _builder.newLineIfNotEmpty();
               _builder.append("\t");
+              _builder.append("<p>Description: ");
               String _description_1 = child.getDescription();
               _builder.append(_description_1, "\t");
+              _builder.append("</p>");
               _builder.newLineIfNotEmpty();
               _builder.append("\t");
-              _builder.append("state: ");
+              _builder.append("<p>State: state: ");
               State _state_1 = child.getState();
-              String _name_4 = _state_1.getName();
-              _builder.append(_name_4, "\t");
-              _builder.append("</br>");
-              _builder.newLineIfNotEmpty();
-              _builder.append("\t");
-              _builder.append("classification: ");
-              de.protos.reqtext.reqText.Class _class__1 = child.getClass_();
-              String _name_5 = _class__1.getName();
+              String _name_5 = _state_1.getName();
               _builder.append(_name_5, "\t");
-              _builder.append("</br>");
+              _builder.append("</p>");
               _builder.newLineIfNotEmpty();
               _builder.append("\t");
+              _builder.append("<p>Classification: classification: ");
+              de.protos.reqtext.reqText.Class _class__1 = child.getClass_();
+              String _name_6 = _class__1.getName();
+              _builder.append(_name_6, "\t");
+              _builder.append("</p>");
+              _builder.newLineIfNotEmpty();
               {
-                String _image_2 = child.getImage();
-                boolean _notEquals_1 = (!Objects.equal(_image_2, null));
+                Image _image_3 = child.getImage();
+                boolean _notEquals_1 = (!Objects.equal(_image_3, null));
                 if (_notEquals_1) {
-                  _builder.append("<img src=\"");
-                  String _image_3 = child.getImage();
-                  _builder.append(_image_3, "\t");
-                  _builder.append("\"/>");
+                  _builder.append("\t");
+                  _builder.append("<p><img src=\"");
+                  Image _image_4 = child.getImage();
+                  String _url_1 = _image_4.getUrl();
+                  _builder.append(_url_1, "\t");
+                  _builder.append("\" alt=\"");
+                  Image _image_5 = child.getImage();
+                  String _name_7 = _image_5.getName();
+                  _builder.append(_name_7, "\t");
+                  _builder.append("\"/></p>");
+                  _builder.newLineIfNotEmpty();
                 }
               }
-              _builder.newLineIfNotEmpty();
             }
           }
         }

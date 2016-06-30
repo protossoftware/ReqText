@@ -25,22 +25,26 @@ class ReqTextGenerator extends AbstractGenerator {
 		'''
 			<html>
 			<head>
+				<link rel="stylesheet" type="text/css" href="../doc/style/reqtext.css">
 			</head>
 			<body>
 				«FOR specObj : specObjs»
-					<h2>«specObjs.indexOf(specObj)» «specObj.name»</h2>
-					«specObj.description»</br>
-					state: «specObj.state.name»</br>
-					classification: «specObj.class_.name»</br>
-					«IF specObj.image != null»<img src="«specObj.image»"/>«ENDIF»
+					<h2>«specObj.name»</h2>
+					<p>Description: «specObj.description»</p>
+					<p>State: «specObj.state.name»</p>
+					<p>Classification: «specObj.class_.name»</p>
+					«IF specObj.image != null»
+						<p><img src="«specObj.image.url»" alt="«specObj.image.name»"/></p>
+					«ENDIF»
 					
 					«FOR child : specObj.children»
-						<h3>«specObjs.indexOf(specObj)».«specObj.children.indexOf(child)» «child.name»</h3>
-						«child.description»
-						state: «child.state.name»</br>
-						classification: «child.class_.name»</br>
-						«IF child.image != null»<img src="«child.image»"/>«ENDIF»
-					«ENDFOR»
+						<h3>«child.name»</h3>
+						<p>Description: «child.description»</p>
+						<p>State: state: «child.state.name»</p>
+						<p>Classification: classification: «child.class_.name»</p>
+						«IF child.image != null»
+							<p><img src="«child.image.url»" alt="«child.image.name»"/></p>
+						«ENDIF»					«ENDFOR»
 				«ENDFOR»
 			</body>
 			</html>
