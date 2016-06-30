@@ -100,7 +100,7 @@ public class ReqTextSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *     RModel returns RModel
 	 *
 	 * Constraint:
-	 *     (imports+=RImport* (states+=State | classes+=Class | objs+=SpecObject))
+	 *     (imports+=RImport+ | (imports+=RImport+ (states+=State | classes+=Class | objs+=SpecObject)+))?
 	 */
 	protected void sequence_RModel(ISerializationContext context, RModel semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -115,7 +115,11 @@ public class ReqTextSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *     (
 	 *         name=ID 
 	 *         description=CC_STRING 
-	 *         (state=[State|ID] | class=[Class|ID] | version=Version | image=CC_STRING | reference=[SpecObject|ID])* 
+	 *         state=[State|ID] 
+	 *         class=[Class|ID] 
+	 *         version=Version 
+	 *         image=CC_STRING? 
+	 *         reference=[SpecObject|ID]? 
 	 *         children+=SpecObject*
 	 *     )
 	 */

@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalReqTextParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_CC_STRING", "RULE_INT", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'SpecObject'", "'{'", "'description'", "'}'", "'state'", "'classification'", "'version'", "'image'", "'reference'", "'State'", "'Classification'", "'.'", "'import'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_CC_STRING", "RULE_INT", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'SpecObject'", "'{'", "'description'", "'state'", "'classification'", "'version'", "'}'", "'image'", "'reference'", "'State'", "'Classification'", "'.'", "'import'"
     };
     public static final int RULE_STRING=7;
     public static final int RULE_SL_COMMENT=9;
@@ -806,29 +806,47 @@ public class InternalReqTextParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__RModel__Group__1__Impl"
-    // InternalReqText.g:267:1: rule__RModel__Group__1__Impl : ( ( rule__RModel__Alternatives_1 ) ) ;
+    // InternalReqText.g:267:1: rule__RModel__Group__1__Impl : ( ( rule__RModel__Alternatives_1 )* ) ;
     public final void rule__RModel__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalReqText.g:271:1: ( ( ( rule__RModel__Alternatives_1 ) ) )
-            // InternalReqText.g:272:1: ( ( rule__RModel__Alternatives_1 ) )
+            // InternalReqText.g:271:1: ( ( ( rule__RModel__Alternatives_1 )* ) )
+            // InternalReqText.g:272:1: ( ( rule__RModel__Alternatives_1 )* )
             {
-            // InternalReqText.g:272:1: ( ( rule__RModel__Alternatives_1 ) )
-            // InternalReqText.g:273:2: ( rule__RModel__Alternatives_1 )
+            // InternalReqText.g:272:1: ( ( rule__RModel__Alternatives_1 )* )
+            // InternalReqText.g:273:2: ( rule__RModel__Alternatives_1 )*
             {
              before(grammarAccess.getRModelAccess().getAlternatives_1()); 
-            // InternalReqText.g:274:2: ( rule__RModel__Alternatives_1 )
-            // InternalReqText.g:274:3: rule__RModel__Alternatives_1
-            {
-            pushFollow(FOLLOW_2);
-            rule__RModel__Alternatives_1();
+            // InternalReqText.g:274:2: ( rule__RModel__Alternatives_1 )*
+            loop3:
+            do {
+                int alt3=2;
+                int LA3_0 = input.LA(1);
 
-            state._fsp--;
+                if ( (LA3_0==12||(LA3_0>=21 && LA3_0<=22)) ) {
+                    alt3=1;
+                }
 
 
-            }
+                switch (alt3) {
+            	case 1 :
+            	    // InternalReqText.g:274:3: rule__RModel__Alternatives_1
+            	    {
+            	    pushFollow(FOLLOW_5);
+            	    rule__RModel__Alternatives_1();
+
+            	    state._fsp--;
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop3;
+                }
+            } while (true);
 
              after(grammarAccess.getRModelAccess().getAlternatives_1()); 
 
@@ -862,7 +880,7 @@ public class InternalReqTextParser extends AbstractInternalContentAssistParser {
             // InternalReqText.g:287:1: ( rule__SpecObject__Group__0__Impl rule__SpecObject__Group__1 )
             // InternalReqText.g:288:2: rule__SpecObject__Group__0__Impl rule__SpecObject__Group__1
             {
-            pushFollow(FOLLOW_5);
+            pushFollow(FOLLOW_6);
             rule__SpecObject__Group__0__Impl();
 
             state._fsp--;
@@ -937,7 +955,7 @@ public class InternalReqTextParser extends AbstractInternalContentAssistParser {
             // InternalReqText.g:314:1: ( rule__SpecObject__Group__1__Impl rule__SpecObject__Group__2 )
             // InternalReqText.g:315:2: rule__SpecObject__Group__1__Impl rule__SpecObject__Group__2
             {
-            pushFollow(FOLLOW_6);
+            pushFollow(FOLLOW_7);
             rule__SpecObject__Group__1__Impl();
 
             state._fsp--;
@@ -1022,7 +1040,7 @@ public class InternalReqTextParser extends AbstractInternalContentAssistParser {
             // InternalReqText.g:341:1: ( rule__SpecObject__Group__2__Impl rule__SpecObject__Group__3 )
             // InternalReqText.g:342:2: rule__SpecObject__Group__2__Impl rule__SpecObject__Group__3
             {
-            pushFollow(FOLLOW_7);
+            pushFollow(FOLLOW_8);
             rule__SpecObject__Group__2__Impl();
 
             state._fsp--;
@@ -1097,7 +1115,7 @@ public class InternalReqTextParser extends AbstractInternalContentAssistParser {
             // InternalReqText.g:368:1: ( rule__SpecObject__Group__3__Impl rule__SpecObject__Group__4 )
             // InternalReqText.g:369:2: rule__SpecObject__Group__3__Impl rule__SpecObject__Group__4
             {
-            pushFollow(FOLLOW_8);
+            pushFollow(FOLLOW_9);
             rule__SpecObject__Group__3__Impl();
 
             state._fsp--;
@@ -1172,7 +1190,7 @@ public class InternalReqTextParser extends AbstractInternalContentAssistParser {
             // InternalReqText.g:395:1: ( rule__SpecObject__Group__4__Impl rule__SpecObject__Group__5 )
             // InternalReqText.g:396:2: rule__SpecObject__Group__4__Impl rule__SpecObject__Group__5
             {
-            pushFollow(FOLLOW_9);
+            pushFollow(FOLLOW_10);
             rule__SpecObject__Group__4__Impl();
 
             state._fsp--;
@@ -1257,7 +1275,7 @@ public class InternalReqTextParser extends AbstractInternalContentAssistParser {
             // InternalReqText.g:422:1: ( rule__SpecObject__Group__5__Impl rule__SpecObject__Group__6 )
             // InternalReqText.g:423:2: rule__SpecObject__Group__5__Impl rule__SpecObject__Group__6
             {
-            pushFollow(FOLLOW_10);
+            pushFollow(FOLLOW_6);
             rule__SpecObject__Group__5__Impl();
 
             state._fsp--;
@@ -1286,31 +1304,21 @@ public class InternalReqTextParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SpecObject__Group__5__Impl"
-    // InternalReqText.g:430:1: rule__SpecObject__Group__5__Impl : ( ( rule__SpecObject__UnorderedGroup_5 ) ) ;
+    // InternalReqText.g:430:1: rule__SpecObject__Group__5__Impl : ( 'state' ) ;
     public final void rule__SpecObject__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalReqText.g:434:1: ( ( ( rule__SpecObject__UnorderedGroup_5 ) ) )
-            // InternalReqText.g:435:1: ( ( rule__SpecObject__UnorderedGroup_5 ) )
+            // InternalReqText.g:434:1: ( ( 'state' ) )
+            // InternalReqText.g:435:1: ( 'state' )
             {
-            // InternalReqText.g:435:1: ( ( rule__SpecObject__UnorderedGroup_5 ) )
-            // InternalReqText.g:436:2: ( rule__SpecObject__UnorderedGroup_5 )
+            // InternalReqText.g:435:1: ( 'state' )
+            // InternalReqText.g:436:2: 'state'
             {
-             before(grammarAccess.getSpecObjectAccess().getUnorderedGroup_5()); 
-            // InternalReqText.g:437:2: ( rule__SpecObject__UnorderedGroup_5 )
-            // InternalReqText.g:437:3: rule__SpecObject__UnorderedGroup_5
-            {
-            pushFollow(FOLLOW_2);
-            rule__SpecObject__UnorderedGroup_5();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getSpecObjectAccess().getUnorderedGroup_5()); 
+             before(grammarAccess.getSpecObjectAccess().getStateKeyword_5()); 
+            match(input,15,FOLLOW_2); 
+             after(grammarAccess.getSpecObjectAccess().getStateKeyword_5()); 
 
             }
 
@@ -1342,7 +1350,7 @@ public class InternalReqTextParser extends AbstractInternalContentAssistParser {
             // InternalReqText.g:449:1: ( rule__SpecObject__Group__6__Impl rule__SpecObject__Group__7 )
             // InternalReqText.g:450:2: rule__SpecObject__Group__6__Impl rule__SpecObject__Group__7
             {
-            pushFollow(FOLLOW_10);
+            pushFollow(FOLLOW_11);
             rule__SpecObject__Group__6__Impl();
 
             state._fsp--;
@@ -1371,49 +1379,31 @@ public class InternalReqTextParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SpecObject__Group__6__Impl"
-    // InternalReqText.g:457:1: rule__SpecObject__Group__6__Impl : ( ( rule__SpecObject__ChildrenAssignment_6 )* ) ;
+    // InternalReqText.g:457:1: rule__SpecObject__Group__6__Impl : ( ( rule__SpecObject__StateAssignment_6 ) ) ;
     public final void rule__SpecObject__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalReqText.g:461:1: ( ( ( rule__SpecObject__ChildrenAssignment_6 )* ) )
-            // InternalReqText.g:462:1: ( ( rule__SpecObject__ChildrenAssignment_6 )* )
+            // InternalReqText.g:461:1: ( ( ( rule__SpecObject__StateAssignment_6 ) ) )
+            // InternalReqText.g:462:1: ( ( rule__SpecObject__StateAssignment_6 ) )
             {
-            // InternalReqText.g:462:1: ( ( rule__SpecObject__ChildrenAssignment_6 )* )
-            // InternalReqText.g:463:2: ( rule__SpecObject__ChildrenAssignment_6 )*
+            // InternalReqText.g:462:1: ( ( rule__SpecObject__StateAssignment_6 ) )
+            // InternalReqText.g:463:2: ( rule__SpecObject__StateAssignment_6 )
             {
-             before(grammarAccess.getSpecObjectAccess().getChildrenAssignment_6()); 
-            // InternalReqText.g:464:2: ( rule__SpecObject__ChildrenAssignment_6 )*
-            loop3:
-            do {
-                int alt3=2;
-                int LA3_0 = input.LA(1);
+             before(grammarAccess.getSpecObjectAccess().getStateAssignment_6()); 
+            // InternalReqText.g:464:2: ( rule__SpecObject__StateAssignment_6 )
+            // InternalReqText.g:464:3: rule__SpecObject__StateAssignment_6
+            {
+            pushFollow(FOLLOW_2);
+            rule__SpecObject__StateAssignment_6();
 
-                if ( (LA3_0==12) ) {
-                    alt3=1;
-                }
+            state._fsp--;
 
 
-                switch (alt3) {
-            	case 1 :
-            	    // InternalReqText.g:464:3: rule__SpecObject__ChildrenAssignment_6
-            	    {
-            	    pushFollow(FOLLOW_11);
-            	    rule__SpecObject__ChildrenAssignment_6();
+            }
 
-            	    state._fsp--;
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop3;
-                }
-            } while (true);
-
-             after(grammarAccess.getSpecObjectAccess().getChildrenAssignment_6()); 
+             after(grammarAccess.getSpecObjectAccess().getStateAssignment_6()); 
 
             }
 
@@ -1436,17 +1426,22 @@ public class InternalReqTextParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SpecObject__Group__7"
-    // InternalReqText.g:472:1: rule__SpecObject__Group__7 : rule__SpecObject__Group__7__Impl ;
+    // InternalReqText.g:472:1: rule__SpecObject__Group__7 : rule__SpecObject__Group__7__Impl rule__SpecObject__Group__8 ;
     public final void rule__SpecObject__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalReqText.g:476:1: ( rule__SpecObject__Group__7__Impl )
-            // InternalReqText.g:477:2: rule__SpecObject__Group__7__Impl
+            // InternalReqText.g:476:1: ( rule__SpecObject__Group__7__Impl rule__SpecObject__Group__8 )
+            // InternalReqText.g:477:2: rule__SpecObject__Group__7__Impl rule__SpecObject__Group__8
             {
-            pushFollow(FOLLOW_2);
+            pushFollow(FOLLOW_6);
             rule__SpecObject__Group__7__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_2);
+            rule__SpecObject__Group__8();
 
             state._fsp--;
 
@@ -1469,21 +1464,21 @@ public class InternalReqTextParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SpecObject__Group__7__Impl"
-    // InternalReqText.g:483:1: rule__SpecObject__Group__7__Impl : ( '}' ) ;
+    // InternalReqText.g:484:1: rule__SpecObject__Group__7__Impl : ( 'classification' ) ;
     public final void rule__SpecObject__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalReqText.g:487:1: ( ( '}' ) )
-            // InternalReqText.g:488:1: ( '}' )
+            // InternalReqText.g:488:1: ( ( 'classification' ) )
+            // InternalReqText.g:489:1: ( 'classification' )
             {
-            // InternalReqText.g:488:1: ( '}' )
-            // InternalReqText.g:489:2: '}'
+            // InternalReqText.g:489:1: ( 'classification' )
+            // InternalReqText.g:490:2: 'classification'
             {
-             before(grammarAccess.getSpecObjectAccess().getRightCurlyBracketKeyword_7()); 
-            match(input,15,FOLLOW_2); 
-             after(grammarAccess.getSpecObjectAccess().getRightCurlyBracketKeyword_7()); 
+             before(grammarAccess.getSpecObjectAccess().getClassificationKeyword_7()); 
+            match(input,16,FOLLOW_2); 
+             after(grammarAccess.getSpecObjectAccess().getClassificationKeyword_7()); 
 
             }
 
@@ -1505,333 +1500,23 @@ public class InternalReqTextParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__SpecObject__Group__7__Impl"
 
 
-    // $ANTLR start "rule__SpecObject__Group_5_0__0"
-    // InternalReqText.g:499:1: rule__SpecObject__Group_5_0__0 : rule__SpecObject__Group_5_0__0__Impl rule__SpecObject__Group_5_0__1 ;
-    public final void rule__SpecObject__Group_5_0__0() throws RecognitionException {
+    // $ANTLR start "rule__SpecObject__Group__8"
+    // InternalReqText.g:499:1: rule__SpecObject__Group__8 : rule__SpecObject__Group__8__Impl rule__SpecObject__Group__9 ;
+    public final void rule__SpecObject__Group__8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalReqText.g:503:1: ( rule__SpecObject__Group_5_0__0__Impl rule__SpecObject__Group_5_0__1 )
-            // InternalReqText.g:504:2: rule__SpecObject__Group_5_0__0__Impl rule__SpecObject__Group_5_0__1
-            {
-            pushFollow(FOLLOW_5);
-            rule__SpecObject__Group_5_0__0__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_2);
-            rule__SpecObject__Group_5_0__1();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__SpecObject__Group_5_0__0"
-
-
-    // $ANTLR start "rule__SpecObject__Group_5_0__0__Impl"
-    // InternalReqText.g:511:1: rule__SpecObject__Group_5_0__0__Impl : ( 'state' ) ;
-    public final void rule__SpecObject__Group_5_0__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalReqText.g:515:1: ( ( 'state' ) )
-            // InternalReqText.g:516:1: ( 'state' )
-            {
-            // InternalReqText.g:516:1: ( 'state' )
-            // InternalReqText.g:517:2: 'state'
-            {
-             before(grammarAccess.getSpecObjectAccess().getStateKeyword_5_0_0()); 
-            match(input,16,FOLLOW_2); 
-             after(grammarAccess.getSpecObjectAccess().getStateKeyword_5_0_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__SpecObject__Group_5_0__0__Impl"
-
-
-    // $ANTLR start "rule__SpecObject__Group_5_0__1"
-    // InternalReqText.g:526:1: rule__SpecObject__Group_5_0__1 : rule__SpecObject__Group_5_0__1__Impl ;
-    public final void rule__SpecObject__Group_5_0__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalReqText.g:530:1: ( rule__SpecObject__Group_5_0__1__Impl )
-            // InternalReqText.g:531:2: rule__SpecObject__Group_5_0__1__Impl
-            {
-            pushFollow(FOLLOW_2);
-            rule__SpecObject__Group_5_0__1__Impl();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__SpecObject__Group_5_0__1"
-
-
-    // $ANTLR start "rule__SpecObject__Group_5_0__1__Impl"
-    // InternalReqText.g:537:1: rule__SpecObject__Group_5_0__1__Impl : ( ( rule__SpecObject__StateAssignment_5_0_1 ) ) ;
-    public final void rule__SpecObject__Group_5_0__1__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalReqText.g:541:1: ( ( ( rule__SpecObject__StateAssignment_5_0_1 ) ) )
-            // InternalReqText.g:542:1: ( ( rule__SpecObject__StateAssignment_5_0_1 ) )
-            {
-            // InternalReqText.g:542:1: ( ( rule__SpecObject__StateAssignment_5_0_1 ) )
-            // InternalReqText.g:543:2: ( rule__SpecObject__StateAssignment_5_0_1 )
-            {
-             before(grammarAccess.getSpecObjectAccess().getStateAssignment_5_0_1()); 
-            // InternalReqText.g:544:2: ( rule__SpecObject__StateAssignment_5_0_1 )
-            // InternalReqText.g:544:3: rule__SpecObject__StateAssignment_5_0_1
-            {
-            pushFollow(FOLLOW_2);
-            rule__SpecObject__StateAssignment_5_0_1();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getSpecObjectAccess().getStateAssignment_5_0_1()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__SpecObject__Group_5_0__1__Impl"
-
-
-    // $ANTLR start "rule__SpecObject__Group_5_1__0"
-    // InternalReqText.g:553:1: rule__SpecObject__Group_5_1__0 : rule__SpecObject__Group_5_1__0__Impl rule__SpecObject__Group_5_1__1 ;
-    public final void rule__SpecObject__Group_5_1__0() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalReqText.g:557:1: ( rule__SpecObject__Group_5_1__0__Impl rule__SpecObject__Group_5_1__1 )
-            // InternalReqText.g:558:2: rule__SpecObject__Group_5_1__0__Impl rule__SpecObject__Group_5_1__1
-            {
-            pushFollow(FOLLOW_5);
-            rule__SpecObject__Group_5_1__0__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_2);
-            rule__SpecObject__Group_5_1__1();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__SpecObject__Group_5_1__0"
-
-
-    // $ANTLR start "rule__SpecObject__Group_5_1__0__Impl"
-    // InternalReqText.g:565:1: rule__SpecObject__Group_5_1__0__Impl : ( 'classification' ) ;
-    public final void rule__SpecObject__Group_5_1__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalReqText.g:569:1: ( ( 'classification' ) )
-            // InternalReqText.g:570:1: ( 'classification' )
-            {
-            // InternalReqText.g:570:1: ( 'classification' )
-            // InternalReqText.g:571:2: 'classification'
-            {
-             before(grammarAccess.getSpecObjectAccess().getClassificationKeyword_5_1_0()); 
-            match(input,17,FOLLOW_2); 
-             after(grammarAccess.getSpecObjectAccess().getClassificationKeyword_5_1_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__SpecObject__Group_5_1__0__Impl"
-
-
-    // $ANTLR start "rule__SpecObject__Group_5_1__1"
-    // InternalReqText.g:580:1: rule__SpecObject__Group_5_1__1 : rule__SpecObject__Group_5_1__1__Impl ;
-    public final void rule__SpecObject__Group_5_1__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalReqText.g:584:1: ( rule__SpecObject__Group_5_1__1__Impl )
-            // InternalReqText.g:585:2: rule__SpecObject__Group_5_1__1__Impl
-            {
-            pushFollow(FOLLOW_2);
-            rule__SpecObject__Group_5_1__1__Impl();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__SpecObject__Group_5_1__1"
-
-
-    // $ANTLR start "rule__SpecObject__Group_5_1__1__Impl"
-    // InternalReqText.g:591:1: rule__SpecObject__Group_5_1__1__Impl : ( ( rule__SpecObject__ClassAssignment_5_1_1 ) ) ;
-    public final void rule__SpecObject__Group_5_1__1__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalReqText.g:595:1: ( ( ( rule__SpecObject__ClassAssignment_5_1_1 ) ) )
-            // InternalReqText.g:596:1: ( ( rule__SpecObject__ClassAssignment_5_1_1 ) )
-            {
-            // InternalReqText.g:596:1: ( ( rule__SpecObject__ClassAssignment_5_1_1 ) )
-            // InternalReqText.g:597:2: ( rule__SpecObject__ClassAssignment_5_1_1 )
-            {
-             before(grammarAccess.getSpecObjectAccess().getClassAssignment_5_1_1()); 
-            // InternalReqText.g:598:2: ( rule__SpecObject__ClassAssignment_5_1_1 )
-            // InternalReqText.g:598:3: rule__SpecObject__ClassAssignment_5_1_1
-            {
-            pushFollow(FOLLOW_2);
-            rule__SpecObject__ClassAssignment_5_1_1();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getSpecObjectAccess().getClassAssignment_5_1_1()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__SpecObject__Group_5_1__1__Impl"
-
-
-    // $ANTLR start "rule__SpecObject__Group_5_2__0"
-    // InternalReqText.g:607:1: rule__SpecObject__Group_5_2__0 : rule__SpecObject__Group_5_2__0__Impl rule__SpecObject__Group_5_2__1 ;
-    public final void rule__SpecObject__Group_5_2__0() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalReqText.g:611:1: ( rule__SpecObject__Group_5_2__0__Impl rule__SpecObject__Group_5_2__1 )
-            // InternalReqText.g:612:2: rule__SpecObject__Group_5_2__0__Impl rule__SpecObject__Group_5_2__1
+            // InternalReqText.g:503:1: ( rule__SpecObject__Group__8__Impl rule__SpecObject__Group__9 )
+            // InternalReqText.g:504:2: rule__SpecObject__Group__8__Impl rule__SpecObject__Group__9
             {
             pushFollow(FOLLOW_12);
-            rule__SpecObject__Group_5_2__0__Impl();
+            rule__SpecObject__Group__8__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__SpecObject__Group_5_2__1();
+            rule__SpecObject__Group__9();
 
             state._fsp--;
 
@@ -1850,25 +1535,560 @@ public class InternalReqTextParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__SpecObject__Group_5_2__0"
+    // $ANTLR end "rule__SpecObject__Group__8"
 
 
-    // $ANTLR start "rule__SpecObject__Group_5_2__0__Impl"
-    // InternalReqText.g:619:1: rule__SpecObject__Group_5_2__0__Impl : ( 'version' ) ;
-    public final void rule__SpecObject__Group_5_2__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__SpecObject__Group__8__Impl"
+    // InternalReqText.g:511:1: rule__SpecObject__Group__8__Impl : ( ( rule__SpecObject__ClassAssignment_8 ) ) ;
+    public final void rule__SpecObject__Group__8__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalReqText.g:623:1: ( ( 'version' ) )
-            // InternalReqText.g:624:1: ( 'version' )
+            // InternalReqText.g:515:1: ( ( ( rule__SpecObject__ClassAssignment_8 ) ) )
+            // InternalReqText.g:516:1: ( ( rule__SpecObject__ClassAssignment_8 ) )
             {
-            // InternalReqText.g:624:1: ( 'version' )
-            // InternalReqText.g:625:2: 'version'
+            // InternalReqText.g:516:1: ( ( rule__SpecObject__ClassAssignment_8 ) )
+            // InternalReqText.g:517:2: ( rule__SpecObject__ClassAssignment_8 )
             {
-             before(grammarAccess.getSpecObjectAccess().getVersionKeyword_5_2_0()); 
+             before(grammarAccess.getSpecObjectAccess().getClassAssignment_8()); 
+            // InternalReqText.g:518:2: ( rule__SpecObject__ClassAssignment_8 )
+            // InternalReqText.g:518:3: rule__SpecObject__ClassAssignment_8
+            {
+            pushFollow(FOLLOW_2);
+            rule__SpecObject__ClassAssignment_8();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getSpecObjectAccess().getClassAssignment_8()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SpecObject__Group__8__Impl"
+
+
+    // $ANTLR start "rule__SpecObject__Group__9"
+    // InternalReqText.g:526:1: rule__SpecObject__Group__9 : rule__SpecObject__Group__9__Impl rule__SpecObject__Group__10 ;
+    public final void rule__SpecObject__Group__9() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalReqText.g:530:1: ( rule__SpecObject__Group__9__Impl rule__SpecObject__Group__10 )
+            // InternalReqText.g:531:2: rule__SpecObject__Group__9__Impl rule__SpecObject__Group__10
+            {
+            pushFollow(FOLLOW_13);
+            rule__SpecObject__Group__9__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_2);
+            rule__SpecObject__Group__10();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SpecObject__Group__9"
+
+
+    // $ANTLR start "rule__SpecObject__Group__9__Impl"
+    // InternalReqText.g:538:1: rule__SpecObject__Group__9__Impl : ( 'version' ) ;
+    public final void rule__SpecObject__Group__9__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalReqText.g:542:1: ( ( 'version' ) )
+            // InternalReqText.g:543:1: ( 'version' )
+            {
+            // InternalReqText.g:543:1: ( 'version' )
+            // InternalReqText.g:544:2: 'version'
+            {
+             before(grammarAccess.getSpecObjectAccess().getVersionKeyword_9()); 
+            match(input,17,FOLLOW_2); 
+             after(grammarAccess.getSpecObjectAccess().getVersionKeyword_9()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SpecObject__Group__9__Impl"
+
+
+    // $ANTLR start "rule__SpecObject__Group__10"
+    // InternalReqText.g:553:1: rule__SpecObject__Group__10 : rule__SpecObject__Group__10__Impl rule__SpecObject__Group__11 ;
+    public final void rule__SpecObject__Group__10() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalReqText.g:557:1: ( rule__SpecObject__Group__10__Impl rule__SpecObject__Group__11 )
+            // InternalReqText.g:558:2: rule__SpecObject__Group__10__Impl rule__SpecObject__Group__11
+            {
+            pushFollow(FOLLOW_14);
+            rule__SpecObject__Group__10__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_2);
+            rule__SpecObject__Group__11();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SpecObject__Group__10"
+
+
+    // $ANTLR start "rule__SpecObject__Group__10__Impl"
+    // InternalReqText.g:565:1: rule__SpecObject__Group__10__Impl : ( ( rule__SpecObject__VersionAssignment_10 ) ) ;
+    public final void rule__SpecObject__Group__10__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalReqText.g:569:1: ( ( ( rule__SpecObject__VersionAssignment_10 ) ) )
+            // InternalReqText.g:570:1: ( ( rule__SpecObject__VersionAssignment_10 ) )
+            {
+            // InternalReqText.g:570:1: ( ( rule__SpecObject__VersionAssignment_10 ) )
+            // InternalReqText.g:571:2: ( rule__SpecObject__VersionAssignment_10 )
+            {
+             before(grammarAccess.getSpecObjectAccess().getVersionAssignment_10()); 
+            // InternalReqText.g:572:2: ( rule__SpecObject__VersionAssignment_10 )
+            // InternalReqText.g:572:3: rule__SpecObject__VersionAssignment_10
+            {
+            pushFollow(FOLLOW_2);
+            rule__SpecObject__VersionAssignment_10();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getSpecObjectAccess().getVersionAssignment_10()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SpecObject__Group__10__Impl"
+
+
+    // $ANTLR start "rule__SpecObject__Group__11"
+    // InternalReqText.g:580:1: rule__SpecObject__Group__11 : rule__SpecObject__Group__11__Impl rule__SpecObject__Group__12 ;
+    public final void rule__SpecObject__Group__11() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalReqText.g:584:1: ( rule__SpecObject__Group__11__Impl rule__SpecObject__Group__12 )
+            // InternalReqText.g:585:2: rule__SpecObject__Group__11__Impl rule__SpecObject__Group__12
+            {
+            pushFollow(FOLLOW_14);
+            rule__SpecObject__Group__11__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_2);
+            rule__SpecObject__Group__12();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SpecObject__Group__11"
+
+
+    // $ANTLR start "rule__SpecObject__Group__11__Impl"
+    // InternalReqText.g:592:1: rule__SpecObject__Group__11__Impl : ( ( rule__SpecObject__Group_11__0 )? ) ;
+    public final void rule__SpecObject__Group__11__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalReqText.g:596:1: ( ( ( rule__SpecObject__Group_11__0 )? ) )
+            // InternalReqText.g:597:1: ( ( rule__SpecObject__Group_11__0 )? )
+            {
+            // InternalReqText.g:597:1: ( ( rule__SpecObject__Group_11__0 )? )
+            // InternalReqText.g:598:2: ( rule__SpecObject__Group_11__0 )?
+            {
+             before(grammarAccess.getSpecObjectAccess().getGroup_11()); 
+            // InternalReqText.g:599:2: ( rule__SpecObject__Group_11__0 )?
+            int alt4=2;
+            int LA4_0 = input.LA(1);
+
+            if ( (LA4_0==19) ) {
+                alt4=1;
+            }
+            switch (alt4) {
+                case 1 :
+                    // InternalReqText.g:599:3: rule__SpecObject__Group_11__0
+                    {
+                    pushFollow(FOLLOW_2);
+                    rule__SpecObject__Group_11__0();
+
+                    state._fsp--;
+
+
+                    }
+                    break;
+
+            }
+
+             after(grammarAccess.getSpecObjectAccess().getGroup_11()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SpecObject__Group__11__Impl"
+
+
+    // $ANTLR start "rule__SpecObject__Group__12"
+    // InternalReqText.g:607:1: rule__SpecObject__Group__12 : rule__SpecObject__Group__12__Impl rule__SpecObject__Group__13 ;
+    public final void rule__SpecObject__Group__12() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalReqText.g:611:1: ( rule__SpecObject__Group__12__Impl rule__SpecObject__Group__13 )
+            // InternalReqText.g:612:2: rule__SpecObject__Group__12__Impl rule__SpecObject__Group__13
+            {
+            pushFollow(FOLLOW_14);
+            rule__SpecObject__Group__12__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_2);
+            rule__SpecObject__Group__13();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SpecObject__Group__12"
+
+
+    // $ANTLR start "rule__SpecObject__Group__12__Impl"
+    // InternalReqText.g:619:1: rule__SpecObject__Group__12__Impl : ( ( rule__SpecObject__Group_12__0 )? ) ;
+    public final void rule__SpecObject__Group__12__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalReqText.g:623:1: ( ( ( rule__SpecObject__Group_12__0 )? ) )
+            // InternalReqText.g:624:1: ( ( rule__SpecObject__Group_12__0 )? )
+            {
+            // InternalReqText.g:624:1: ( ( rule__SpecObject__Group_12__0 )? )
+            // InternalReqText.g:625:2: ( rule__SpecObject__Group_12__0 )?
+            {
+             before(grammarAccess.getSpecObjectAccess().getGroup_12()); 
+            // InternalReqText.g:626:2: ( rule__SpecObject__Group_12__0 )?
+            int alt5=2;
+            int LA5_0 = input.LA(1);
+
+            if ( (LA5_0==20) ) {
+                alt5=1;
+            }
+            switch (alt5) {
+                case 1 :
+                    // InternalReqText.g:626:3: rule__SpecObject__Group_12__0
+                    {
+                    pushFollow(FOLLOW_2);
+                    rule__SpecObject__Group_12__0();
+
+                    state._fsp--;
+
+
+                    }
+                    break;
+
+            }
+
+             after(grammarAccess.getSpecObjectAccess().getGroup_12()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SpecObject__Group__12__Impl"
+
+
+    // $ANTLR start "rule__SpecObject__Group__13"
+    // InternalReqText.g:634:1: rule__SpecObject__Group__13 : rule__SpecObject__Group__13__Impl rule__SpecObject__Group__14 ;
+    public final void rule__SpecObject__Group__13() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalReqText.g:638:1: ( rule__SpecObject__Group__13__Impl rule__SpecObject__Group__14 )
+            // InternalReqText.g:639:2: rule__SpecObject__Group__13__Impl rule__SpecObject__Group__14
+            {
+            pushFollow(FOLLOW_14);
+            rule__SpecObject__Group__13__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_2);
+            rule__SpecObject__Group__14();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SpecObject__Group__13"
+
+
+    // $ANTLR start "rule__SpecObject__Group__13__Impl"
+    // InternalReqText.g:646:1: rule__SpecObject__Group__13__Impl : ( ( rule__SpecObject__ChildrenAssignment_13 )* ) ;
+    public final void rule__SpecObject__Group__13__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalReqText.g:650:1: ( ( ( rule__SpecObject__ChildrenAssignment_13 )* ) )
+            // InternalReqText.g:651:1: ( ( rule__SpecObject__ChildrenAssignment_13 )* )
+            {
+            // InternalReqText.g:651:1: ( ( rule__SpecObject__ChildrenAssignment_13 )* )
+            // InternalReqText.g:652:2: ( rule__SpecObject__ChildrenAssignment_13 )*
+            {
+             before(grammarAccess.getSpecObjectAccess().getChildrenAssignment_13()); 
+            // InternalReqText.g:653:2: ( rule__SpecObject__ChildrenAssignment_13 )*
+            loop6:
+            do {
+                int alt6=2;
+                int LA6_0 = input.LA(1);
+
+                if ( (LA6_0==12) ) {
+                    alt6=1;
+                }
+
+
+                switch (alt6) {
+            	case 1 :
+            	    // InternalReqText.g:653:3: rule__SpecObject__ChildrenAssignment_13
+            	    {
+            	    pushFollow(FOLLOW_5);
+            	    rule__SpecObject__ChildrenAssignment_13();
+
+            	    state._fsp--;
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop6;
+                }
+            } while (true);
+
+             after(grammarAccess.getSpecObjectAccess().getChildrenAssignment_13()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SpecObject__Group__13__Impl"
+
+
+    // $ANTLR start "rule__SpecObject__Group__14"
+    // InternalReqText.g:661:1: rule__SpecObject__Group__14 : rule__SpecObject__Group__14__Impl ;
+    public final void rule__SpecObject__Group__14() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalReqText.g:665:1: ( rule__SpecObject__Group__14__Impl )
+            // InternalReqText.g:666:2: rule__SpecObject__Group__14__Impl
+            {
+            pushFollow(FOLLOW_2);
+            rule__SpecObject__Group__14__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SpecObject__Group__14"
+
+
+    // $ANTLR start "rule__SpecObject__Group__14__Impl"
+    // InternalReqText.g:672:1: rule__SpecObject__Group__14__Impl : ( '}' ) ;
+    public final void rule__SpecObject__Group__14__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalReqText.g:676:1: ( ( '}' ) )
+            // InternalReqText.g:677:1: ( '}' )
+            {
+            // InternalReqText.g:677:1: ( '}' )
+            // InternalReqText.g:678:2: '}'
+            {
+             before(grammarAccess.getSpecObjectAccess().getRightCurlyBracketKeyword_14()); 
             match(input,18,FOLLOW_2); 
-             after(grammarAccess.getSpecObjectAccess().getVersionKeyword_5_2_0()); 
+             after(grammarAccess.getSpecObjectAccess().getRightCurlyBracketKeyword_14()); 
 
             }
 
@@ -1887,106 +2107,26 @@ public class InternalReqTextParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__SpecObject__Group_5_2__0__Impl"
+    // $ANTLR end "rule__SpecObject__Group__14__Impl"
 
 
-    // $ANTLR start "rule__SpecObject__Group_5_2__1"
-    // InternalReqText.g:634:1: rule__SpecObject__Group_5_2__1 : rule__SpecObject__Group_5_2__1__Impl ;
-    public final void rule__SpecObject__Group_5_2__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalReqText.g:638:1: ( rule__SpecObject__Group_5_2__1__Impl )
-            // InternalReqText.g:639:2: rule__SpecObject__Group_5_2__1__Impl
-            {
-            pushFollow(FOLLOW_2);
-            rule__SpecObject__Group_5_2__1__Impl();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__SpecObject__Group_5_2__1"
-
-
-    // $ANTLR start "rule__SpecObject__Group_5_2__1__Impl"
-    // InternalReqText.g:645:1: rule__SpecObject__Group_5_2__1__Impl : ( ( rule__SpecObject__VersionAssignment_5_2_1 ) ) ;
-    public final void rule__SpecObject__Group_5_2__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__SpecObject__Group_11__0"
+    // InternalReqText.g:688:1: rule__SpecObject__Group_11__0 : rule__SpecObject__Group_11__0__Impl rule__SpecObject__Group_11__1 ;
+    public final void rule__SpecObject__Group_11__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalReqText.g:649:1: ( ( ( rule__SpecObject__VersionAssignment_5_2_1 ) ) )
-            // InternalReqText.g:650:1: ( ( rule__SpecObject__VersionAssignment_5_2_1 ) )
+            // InternalReqText.g:692:1: ( rule__SpecObject__Group_11__0__Impl rule__SpecObject__Group_11__1 )
+            // InternalReqText.g:693:2: rule__SpecObject__Group_11__0__Impl rule__SpecObject__Group_11__1
             {
-            // InternalReqText.g:650:1: ( ( rule__SpecObject__VersionAssignment_5_2_1 ) )
-            // InternalReqText.g:651:2: ( rule__SpecObject__VersionAssignment_5_2_1 )
-            {
-             before(grammarAccess.getSpecObjectAccess().getVersionAssignment_5_2_1()); 
-            // InternalReqText.g:652:2: ( rule__SpecObject__VersionAssignment_5_2_1 )
-            // InternalReqText.g:652:3: rule__SpecObject__VersionAssignment_5_2_1
-            {
-            pushFollow(FOLLOW_2);
-            rule__SpecObject__VersionAssignment_5_2_1();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getSpecObjectAccess().getVersionAssignment_5_2_1()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__SpecObject__Group_5_2__1__Impl"
-
-
-    // $ANTLR start "rule__SpecObject__Group_5_3__0"
-    // InternalReqText.g:661:1: rule__SpecObject__Group_5_3__0 : rule__SpecObject__Group_5_3__0__Impl rule__SpecObject__Group_5_3__1 ;
-    public final void rule__SpecObject__Group_5_3__0() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalReqText.g:665:1: ( rule__SpecObject__Group_5_3__0__Impl rule__SpecObject__Group_5_3__1 )
-            // InternalReqText.g:666:2: rule__SpecObject__Group_5_3__0__Impl rule__SpecObject__Group_5_3__1
-            {
-            pushFollow(FOLLOW_8);
-            rule__SpecObject__Group_5_3__0__Impl();
+            pushFollow(FOLLOW_9);
+            rule__SpecObject__Group_11__0__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__SpecObject__Group_5_3__1();
+            rule__SpecObject__Group_11__1();
 
             state._fsp--;
 
@@ -2005,25 +2145,25 @@ public class InternalReqTextParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__SpecObject__Group_5_3__0"
+    // $ANTLR end "rule__SpecObject__Group_11__0"
 
 
-    // $ANTLR start "rule__SpecObject__Group_5_3__0__Impl"
-    // InternalReqText.g:673:1: rule__SpecObject__Group_5_3__0__Impl : ( 'image' ) ;
-    public final void rule__SpecObject__Group_5_3__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__SpecObject__Group_11__0__Impl"
+    // InternalReqText.g:700:1: rule__SpecObject__Group_11__0__Impl : ( 'image' ) ;
+    public final void rule__SpecObject__Group_11__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalReqText.g:677:1: ( ( 'image' ) )
-            // InternalReqText.g:678:1: ( 'image' )
+            // InternalReqText.g:704:1: ( ( 'image' ) )
+            // InternalReqText.g:705:1: ( 'image' )
             {
-            // InternalReqText.g:678:1: ( 'image' )
-            // InternalReqText.g:679:2: 'image'
+            // InternalReqText.g:705:1: ( 'image' )
+            // InternalReqText.g:706:2: 'image'
             {
-             before(grammarAccess.getSpecObjectAccess().getImageKeyword_5_3_0()); 
+             before(grammarAccess.getSpecObjectAccess().getImageKeyword_11_0()); 
             match(input,19,FOLLOW_2); 
-             after(grammarAccess.getSpecObjectAccess().getImageKeyword_5_3_0()); 
+             after(grammarAccess.getSpecObjectAccess().getImageKeyword_11_0()); 
 
             }
 
@@ -2042,21 +2182,21 @@ public class InternalReqTextParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__SpecObject__Group_5_3__0__Impl"
+    // $ANTLR end "rule__SpecObject__Group_11__0__Impl"
 
 
-    // $ANTLR start "rule__SpecObject__Group_5_3__1"
-    // InternalReqText.g:688:1: rule__SpecObject__Group_5_3__1 : rule__SpecObject__Group_5_3__1__Impl ;
-    public final void rule__SpecObject__Group_5_3__1() throws RecognitionException {
+    // $ANTLR start "rule__SpecObject__Group_11__1"
+    // InternalReqText.g:715:1: rule__SpecObject__Group_11__1 : rule__SpecObject__Group_11__1__Impl ;
+    public final void rule__SpecObject__Group_11__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalReqText.g:692:1: ( rule__SpecObject__Group_5_3__1__Impl )
-            // InternalReqText.g:693:2: rule__SpecObject__Group_5_3__1__Impl
+            // InternalReqText.g:719:1: ( rule__SpecObject__Group_11__1__Impl )
+            // InternalReqText.g:720:2: rule__SpecObject__Group_11__1__Impl
             {
             pushFollow(FOLLOW_2);
-            rule__SpecObject__Group_5_3__1__Impl();
+            rule__SpecObject__Group_11__1__Impl();
 
             state._fsp--;
 
@@ -2075,35 +2215,35 @@ public class InternalReqTextParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__SpecObject__Group_5_3__1"
+    // $ANTLR end "rule__SpecObject__Group_11__1"
 
 
-    // $ANTLR start "rule__SpecObject__Group_5_3__1__Impl"
-    // InternalReqText.g:699:1: rule__SpecObject__Group_5_3__1__Impl : ( ( rule__SpecObject__ImageAssignment_5_3_1 ) ) ;
-    public final void rule__SpecObject__Group_5_3__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__SpecObject__Group_11__1__Impl"
+    // InternalReqText.g:726:1: rule__SpecObject__Group_11__1__Impl : ( ( rule__SpecObject__ImageAssignment_11_1 ) ) ;
+    public final void rule__SpecObject__Group_11__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalReqText.g:703:1: ( ( ( rule__SpecObject__ImageAssignment_5_3_1 ) ) )
-            // InternalReqText.g:704:1: ( ( rule__SpecObject__ImageAssignment_5_3_1 ) )
+            // InternalReqText.g:730:1: ( ( ( rule__SpecObject__ImageAssignment_11_1 ) ) )
+            // InternalReqText.g:731:1: ( ( rule__SpecObject__ImageAssignment_11_1 ) )
             {
-            // InternalReqText.g:704:1: ( ( rule__SpecObject__ImageAssignment_5_3_1 ) )
-            // InternalReqText.g:705:2: ( rule__SpecObject__ImageAssignment_5_3_1 )
+            // InternalReqText.g:731:1: ( ( rule__SpecObject__ImageAssignment_11_1 ) )
+            // InternalReqText.g:732:2: ( rule__SpecObject__ImageAssignment_11_1 )
             {
-             before(grammarAccess.getSpecObjectAccess().getImageAssignment_5_3_1()); 
-            // InternalReqText.g:706:2: ( rule__SpecObject__ImageAssignment_5_3_1 )
-            // InternalReqText.g:706:3: rule__SpecObject__ImageAssignment_5_3_1
+             before(grammarAccess.getSpecObjectAccess().getImageAssignment_11_1()); 
+            // InternalReqText.g:733:2: ( rule__SpecObject__ImageAssignment_11_1 )
+            // InternalReqText.g:733:3: rule__SpecObject__ImageAssignment_11_1
             {
             pushFollow(FOLLOW_2);
-            rule__SpecObject__ImageAssignment_5_3_1();
+            rule__SpecObject__ImageAssignment_11_1();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getSpecObjectAccess().getImageAssignment_5_3_1()); 
+             after(grammarAccess.getSpecObjectAccess().getImageAssignment_11_1()); 
 
             }
 
@@ -2122,26 +2262,26 @@ public class InternalReqTextParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__SpecObject__Group_5_3__1__Impl"
+    // $ANTLR end "rule__SpecObject__Group_11__1__Impl"
 
 
-    // $ANTLR start "rule__SpecObject__Group_5_4__0"
-    // InternalReqText.g:715:1: rule__SpecObject__Group_5_4__0 : rule__SpecObject__Group_5_4__0__Impl rule__SpecObject__Group_5_4__1 ;
-    public final void rule__SpecObject__Group_5_4__0() throws RecognitionException {
+    // $ANTLR start "rule__SpecObject__Group_12__0"
+    // InternalReqText.g:742:1: rule__SpecObject__Group_12__0 : rule__SpecObject__Group_12__0__Impl rule__SpecObject__Group_12__1 ;
+    public final void rule__SpecObject__Group_12__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalReqText.g:719:1: ( rule__SpecObject__Group_5_4__0__Impl rule__SpecObject__Group_5_4__1 )
-            // InternalReqText.g:720:2: rule__SpecObject__Group_5_4__0__Impl rule__SpecObject__Group_5_4__1
+            // InternalReqText.g:746:1: ( rule__SpecObject__Group_12__0__Impl rule__SpecObject__Group_12__1 )
+            // InternalReqText.g:747:2: rule__SpecObject__Group_12__0__Impl rule__SpecObject__Group_12__1
             {
-            pushFollow(FOLLOW_5);
-            rule__SpecObject__Group_5_4__0__Impl();
+            pushFollow(FOLLOW_6);
+            rule__SpecObject__Group_12__0__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__SpecObject__Group_5_4__1();
+            rule__SpecObject__Group_12__1();
 
             state._fsp--;
 
@@ -2160,25 +2300,25 @@ public class InternalReqTextParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__SpecObject__Group_5_4__0"
+    // $ANTLR end "rule__SpecObject__Group_12__0"
 
 
-    // $ANTLR start "rule__SpecObject__Group_5_4__0__Impl"
-    // InternalReqText.g:727:1: rule__SpecObject__Group_5_4__0__Impl : ( 'reference' ) ;
-    public final void rule__SpecObject__Group_5_4__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__SpecObject__Group_12__0__Impl"
+    // InternalReqText.g:754:1: rule__SpecObject__Group_12__0__Impl : ( 'reference' ) ;
+    public final void rule__SpecObject__Group_12__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalReqText.g:731:1: ( ( 'reference' ) )
-            // InternalReqText.g:732:1: ( 'reference' )
+            // InternalReqText.g:758:1: ( ( 'reference' ) )
+            // InternalReqText.g:759:1: ( 'reference' )
             {
-            // InternalReqText.g:732:1: ( 'reference' )
-            // InternalReqText.g:733:2: 'reference'
+            // InternalReqText.g:759:1: ( 'reference' )
+            // InternalReqText.g:760:2: 'reference'
             {
-             before(grammarAccess.getSpecObjectAccess().getReferenceKeyword_5_4_0()); 
+             before(grammarAccess.getSpecObjectAccess().getReferenceKeyword_12_0()); 
             match(input,20,FOLLOW_2); 
-             after(grammarAccess.getSpecObjectAccess().getReferenceKeyword_5_4_0()); 
+             after(grammarAccess.getSpecObjectAccess().getReferenceKeyword_12_0()); 
 
             }
 
@@ -2197,21 +2337,21 @@ public class InternalReqTextParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__SpecObject__Group_5_4__0__Impl"
+    // $ANTLR end "rule__SpecObject__Group_12__0__Impl"
 
 
-    // $ANTLR start "rule__SpecObject__Group_5_4__1"
-    // InternalReqText.g:742:1: rule__SpecObject__Group_5_4__1 : rule__SpecObject__Group_5_4__1__Impl ;
-    public final void rule__SpecObject__Group_5_4__1() throws RecognitionException {
+    // $ANTLR start "rule__SpecObject__Group_12__1"
+    // InternalReqText.g:769:1: rule__SpecObject__Group_12__1 : rule__SpecObject__Group_12__1__Impl ;
+    public final void rule__SpecObject__Group_12__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalReqText.g:746:1: ( rule__SpecObject__Group_5_4__1__Impl )
-            // InternalReqText.g:747:2: rule__SpecObject__Group_5_4__1__Impl
+            // InternalReqText.g:773:1: ( rule__SpecObject__Group_12__1__Impl )
+            // InternalReqText.g:774:2: rule__SpecObject__Group_12__1__Impl
             {
             pushFollow(FOLLOW_2);
-            rule__SpecObject__Group_5_4__1__Impl();
+            rule__SpecObject__Group_12__1__Impl();
 
             state._fsp--;
 
@@ -2230,35 +2370,35 @@ public class InternalReqTextParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__SpecObject__Group_5_4__1"
+    // $ANTLR end "rule__SpecObject__Group_12__1"
 
 
-    // $ANTLR start "rule__SpecObject__Group_5_4__1__Impl"
-    // InternalReqText.g:753:1: rule__SpecObject__Group_5_4__1__Impl : ( ( rule__SpecObject__ReferenceAssignment_5_4_1 ) ) ;
-    public final void rule__SpecObject__Group_5_4__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__SpecObject__Group_12__1__Impl"
+    // InternalReqText.g:780:1: rule__SpecObject__Group_12__1__Impl : ( ( rule__SpecObject__ReferenceAssignment_12_1 ) ) ;
+    public final void rule__SpecObject__Group_12__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalReqText.g:757:1: ( ( ( rule__SpecObject__ReferenceAssignment_5_4_1 ) ) )
-            // InternalReqText.g:758:1: ( ( rule__SpecObject__ReferenceAssignment_5_4_1 ) )
+            // InternalReqText.g:784:1: ( ( ( rule__SpecObject__ReferenceAssignment_12_1 ) ) )
+            // InternalReqText.g:785:1: ( ( rule__SpecObject__ReferenceAssignment_12_1 ) )
             {
-            // InternalReqText.g:758:1: ( ( rule__SpecObject__ReferenceAssignment_5_4_1 ) )
-            // InternalReqText.g:759:2: ( rule__SpecObject__ReferenceAssignment_5_4_1 )
+            // InternalReqText.g:785:1: ( ( rule__SpecObject__ReferenceAssignment_12_1 ) )
+            // InternalReqText.g:786:2: ( rule__SpecObject__ReferenceAssignment_12_1 )
             {
-             before(grammarAccess.getSpecObjectAccess().getReferenceAssignment_5_4_1()); 
-            // InternalReqText.g:760:2: ( rule__SpecObject__ReferenceAssignment_5_4_1 )
-            // InternalReqText.g:760:3: rule__SpecObject__ReferenceAssignment_5_4_1
+             before(grammarAccess.getSpecObjectAccess().getReferenceAssignment_12_1()); 
+            // InternalReqText.g:787:2: ( rule__SpecObject__ReferenceAssignment_12_1 )
+            // InternalReqText.g:787:3: rule__SpecObject__ReferenceAssignment_12_1
             {
             pushFollow(FOLLOW_2);
-            rule__SpecObject__ReferenceAssignment_5_4_1();
+            rule__SpecObject__ReferenceAssignment_12_1();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getSpecObjectAccess().getReferenceAssignment_5_4_1()); 
+             after(grammarAccess.getSpecObjectAccess().getReferenceAssignment_12_1()); 
 
             }
 
@@ -2277,20 +2417,20 @@ public class InternalReqTextParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__SpecObject__Group_5_4__1__Impl"
+    // $ANTLR end "rule__SpecObject__Group_12__1__Impl"
 
 
     // $ANTLR start "rule__State__Group__0"
-    // InternalReqText.g:769:1: rule__State__Group__0 : rule__State__Group__0__Impl rule__State__Group__1 ;
+    // InternalReqText.g:796:1: rule__State__Group__0 : rule__State__Group__0__Impl rule__State__Group__1 ;
     public final void rule__State__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalReqText.g:773:1: ( rule__State__Group__0__Impl rule__State__Group__1 )
-            // InternalReqText.g:774:2: rule__State__Group__0__Impl rule__State__Group__1
+            // InternalReqText.g:800:1: ( rule__State__Group__0__Impl rule__State__Group__1 )
+            // InternalReqText.g:801:2: rule__State__Group__0__Impl rule__State__Group__1
             {
-            pushFollow(FOLLOW_5);
+            pushFollow(FOLLOW_6);
             rule__State__Group__0__Impl();
 
             state._fsp--;
@@ -2319,17 +2459,17 @@ public class InternalReqTextParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__State__Group__0__Impl"
-    // InternalReqText.g:781:1: rule__State__Group__0__Impl : ( 'State' ) ;
+    // InternalReqText.g:808:1: rule__State__Group__0__Impl : ( 'State' ) ;
     public final void rule__State__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalReqText.g:785:1: ( ( 'State' ) )
-            // InternalReqText.g:786:1: ( 'State' )
+            // InternalReqText.g:812:1: ( ( 'State' ) )
+            // InternalReqText.g:813:1: ( 'State' )
             {
-            // InternalReqText.g:786:1: ( 'State' )
-            // InternalReqText.g:787:2: 'State'
+            // InternalReqText.g:813:1: ( 'State' )
+            // InternalReqText.g:814:2: 'State'
             {
              before(grammarAccess.getStateAccess().getStateKeyword_0()); 
             match(input,21,FOLLOW_2); 
@@ -2356,14 +2496,14 @@ public class InternalReqTextParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__State__Group__1"
-    // InternalReqText.g:796:1: rule__State__Group__1 : rule__State__Group__1__Impl ;
+    // InternalReqText.g:823:1: rule__State__Group__1 : rule__State__Group__1__Impl ;
     public final void rule__State__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalReqText.g:800:1: ( rule__State__Group__1__Impl )
-            // InternalReqText.g:801:2: rule__State__Group__1__Impl
+            // InternalReqText.g:827:1: ( rule__State__Group__1__Impl )
+            // InternalReqText.g:828:2: rule__State__Group__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__State__Group__1__Impl();
@@ -2389,21 +2529,21 @@ public class InternalReqTextParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__State__Group__1__Impl"
-    // InternalReqText.g:807:1: rule__State__Group__1__Impl : ( ( rule__State__NameAssignment_1 ) ) ;
+    // InternalReqText.g:834:1: rule__State__Group__1__Impl : ( ( rule__State__NameAssignment_1 ) ) ;
     public final void rule__State__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalReqText.g:811:1: ( ( ( rule__State__NameAssignment_1 ) ) )
-            // InternalReqText.g:812:1: ( ( rule__State__NameAssignment_1 ) )
+            // InternalReqText.g:838:1: ( ( ( rule__State__NameAssignment_1 ) ) )
+            // InternalReqText.g:839:1: ( ( rule__State__NameAssignment_1 ) )
             {
-            // InternalReqText.g:812:1: ( ( rule__State__NameAssignment_1 ) )
-            // InternalReqText.g:813:2: ( rule__State__NameAssignment_1 )
+            // InternalReqText.g:839:1: ( ( rule__State__NameAssignment_1 ) )
+            // InternalReqText.g:840:2: ( rule__State__NameAssignment_1 )
             {
              before(grammarAccess.getStateAccess().getNameAssignment_1()); 
-            // InternalReqText.g:814:2: ( rule__State__NameAssignment_1 )
-            // InternalReqText.g:814:3: rule__State__NameAssignment_1
+            // InternalReqText.g:841:2: ( rule__State__NameAssignment_1 )
+            // InternalReqText.g:841:3: rule__State__NameAssignment_1
             {
             pushFollow(FOLLOW_2);
             rule__State__NameAssignment_1();
@@ -2436,16 +2576,16 @@ public class InternalReqTextParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Class__Group__0"
-    // InternalReqText.g:823:1: rule__Class__Group__0 : rule__Class__Group__0__Impl rule__Class__Group__1 ;
+    // InternalReqText.g:850:1: rule__Class__Group__0 : rule__Class__Group__0__Impl rule__Class__Group__1 ;
     public final void rule__Class__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalReqText.g:827:1: ( rule__Class__Group__0__Impl rule__Class__Group__1 )
-            // InternalReqText.g:828:2: rule__Class__Group__0__Impl rule__Class__Group__1
+            // InternalReqText.g:854:1: ( rule__Class__Group__0__Impl rule__Class__Group__1 )
+            // InternalReqText.g:855:2: rule__Class__Group__0__Impl rule__Class__Group__1
             {
-            pushFollow(FOLLOW_5);
+            pushFollow(FOLLOW_6);
             rule__Class__Group__0__Impl();
 
             state._fsp--;
@@ -2474,17 +2614,17 @@ public class InternalReqTextParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Class__Group__0__Impl"
-    // InternalReqText.g:835:1: rule__Class__Group__0__Impl : ( 'Classification' ) ;
+    // InternalReqText.g:862:1: rule__Class__Group__0__Impl : ( 'Classification' ) ;
     public final void rule__Class__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalReqText.g:839:1: ( ( 'Classification' ) )
-            // InternalReqText.g:840:1: ( 'Classification' )
+            // InternalReqText.g:866:1: ( ( 'Classification' ) )
+            // InternalReqText.g:867:1: ( 'Classification' )
             {
-            // InternalReqText.g:840:1: ( 'Classification' )
-            // InternalReqText.g:841:2: 'Classification'
+            // InternalReqText.g:867:1: ( 'Classification' )
+            // InternalReqText.g:868:2: 'Classification'
             {
              before(grammarAccess.getClassAccess().getClassificationKeyword_0()); 
             match(input,22,FOLLOW_2); 
@@ -2511,14 +2651,14 @@ public class InternalReqTextParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Class__Group__1"
-    // InternalReqText.g:850:1: rule__Class__Group__1 : rule__Class__Group__1__Impl ;
+    // InternalReqText.g:877:1: rule__Class__Group__1 : rule__Class__Group__1__Impl ;
     public final void rule__Class__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalReqText.g:854:1: ( rule__Class__Group__1__Impl )
-            // InternalReqText.g:855:2: rule__Class__Group__1__Impl
+            // InternalReqText.g:881:1: ( rule__Class__Group__1__Impl )
+            // InternalReqText.g:882:2: rule__Class__Group__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Class__Group__1__Impl();
@@ -2544,21 +2684,21 @@ public class InternalReqTextParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Class__Group__1__Impl"
-    // InternalReqText.g:861:1: rule__Class__Group__1__Impl : ( ( rule__Class__NameAssignment_1 ) ) ;
+    // InternalReqText.g:888:1: rule__Class__Group__1__Impl : ( ( rule__Class__NameAssignment_1 ) ) ;
     public final void rule__Class__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalReqText.g:865:1: ( ( ( rule__Class__NameAssignment_1 ) ) )
-            // InternalReqText.g:866:1: ( ( rule__Class__NameAssignment_1 ) )
+            // InternalReqText.g:892:1: ( ( ( rule__Class__NameAssignment_1 ) ) )
+            // InternalReqText.g:893:1: ( ( rule__Class__NameAssignment_1 ) )
             {
-            // InternalReqText.g:866:1: ( ( rule__Class__NameAssignment_1 ) )
-            // InternalReqText.g:867:2: ( rule__Class__NameAssignment_1 )
+            // InternalReqText.g:893:1: ( ( rule__Class__NameAssignment_1 ) )
+            // InternalReqText.g:894:2: ( rule__Class__NameAssignment_1 )
             {
              before(grammarAccess.getClassAccess().getNameAssignment_1()); 
-            // InternalReqText.g:868:2: ( rule__Class__NameAssignment_1 )
-            // InternalReqText.g:868:3: rule__Class__NameAssignment_1
+            // InternalReqText.g:895:2: ( rule__Class__NameAssignment_1 )
+            // InternalReqText.g:895:3: rule__Class__NameAssignment_1
             {
             pushFollow(FOLLOW_2);
             rule__Class__NameAssignment_1();
@@ -2591,16 +2731,16 @@ public class InternalReqTextParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Version__Group__0"
-    // InternalReqText.g:877:1: rule__Version__Group__0 : rule__Version__Group__0__Impl rule__Version__Group__1 ;
+    // InternalReqText.g:904:1: rule__Version__Group__0 : rule__Version__Group__0__Impl rule__Version__Group__1 ;
     public final void rule__Version__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalReqText.g:881:1: ( rule__Version__Group__0__Impl rule__Version__Group__1 )
-            // InternalReqText.g:882:2: rule__Version__Group__0__Impl rule__Version__Group__1
+            // InternalReqText.g:908:1: ( rule__Version__Group__0__Impl rule__Version__Group__1 )
+            // InternalReqText.g:909:2: rule__Version__Group__0__Impl rule__Version__Group__1
             {
-            pushFollow(FOLLOW_13);
+            pushFollow(FOLLOW_15);
             rule__Version__Group__0__Impl();
 
             state._fsp--;
@@ -2629,21 +2769,21 @@ public class InternalReqTextParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Version__Group__0__Impl"
-    // InternalReqText.g:889:1: rule__Version__Group__0__Impl : ( ( rule__Version__MajorAssignment_0 ) ) ;
+    // InternalReqText.g:916:1: rule__Version__Group__0__Impl : ( ( rule__Version__MajorAssignment_0 ) ) ;
     public final void rule__Version__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalReqText.g:893:1: ( ( ( rule__Version__MajorAssignment_0 ) ) )
-            // InternalReqText.g:894:1: ( ( rule__Version__MajorAssignment_0 ) )
+            // InternalReqText.g:920:1: ( ( ( rule__Version__MajorAssignment_0 ) ) )
+            // InternalReqText.g:921:1: ( ( rule__Version__MajorAssignment_0 ) )
             {
-            // InternalReqText.g:894:1: ( ( rule__Version__MajorAssignment_0 ) )
-            // InternalReqText.g:895:2: ( rule__Version__MajorAssignment_0 )
+            // InternalReqText.g:921:1: ( ( rule__Version__MajorAssignment_0 ) )
+            // InternalReqText.g:922:2: ( rule__Version__MajorAssignment_0 )
             {
              before(grammarAccess.getVersionAccess().getMajorAssignment_0()); 
-            // InternalReqText.g:896:2: ( rule__Version__MajorAssignment_0 )
-            // InternalReqText.g:896:3: rule__Version__MajorAssignment_0
+            // InternalReqText.g:923:2: ( rule__Version__MajorAssignment_0 )
+            // InternalReqText.g:923:3: rule__Version__MajorAssignment_0
             {
             pushFollow(FOLLOW_2);
             rule__Version__MajorAssignment_0();
@@ -2676,16 +2816,16 @@ public class InternalReqTextParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Version__Group__1"
-    // InternalReqText.g:904:1: rule__Version__Group__1 : rule__Version__Group__1__Impl rule__Version__Group__2 ;
+    // InternalReqText.g:931:1: rule__Version__Group__1 : rule__Version__Group__1__Impl rule__Version__Group__2 ;
     public final void rule__Version__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalReqText.g:908:1: ( rule__Version__Group__1__Impl rule__Version__Group__2 )
-            // InternalReqText.g:909:2: rule__Version__Group__1__Impl rule__Version__Group__2
+            // InternalReqText.g:935:1: ( rule__Version__Group__1__Impl rule__Version__Group__2 )
+            // InternalReqText.g:936:2: rule__Version__Group__1__Impl rule__Version__Group__2
             {
-            pushFollow(FOLLOW_12);
+            pushFollow(FOLLOW_13);
             rule__Version__Group__1__Impl();
 
             state._fsp--;
@@ -2714,17 +2854,17 @@ public class InternalReqTextParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Version__Group__1__Impl"
-    // InternalReqText.g:916:1: rule__Version__Group__1__Impl : ( '.' ) ;
+    // InternalReqText.g:943:1: rule__Version__Group__1__Impl : ( '.' ) ;
     public final void rule__Version__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalReqText.g:920:1: ( ( '.' ) )
-            // InternalReqText.g:921:1: ( '.' )
+            // InternalReqText.g:947:1: ( ( '.' ) )
+            // InternalReqText.g:948:1: ( '.' )
             {
-            // InternalReqText.g:921:1: ( '.' )
-            // InternalReqText.g:922:2: '.'
+            // InternalReqText.g:948:1: ( '.' )
+            // InternalReqText.g:949:2: '.'
             {
              before(grammarAccess.getVersionAccess().getFullStopKeyword_1()); 
             match(input,23,FOLLOW_2); 
@@ -2751,14 +2891,14 @@ public class InternalReqTextParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Version__Group__2"
-    // InternalReqText.g:931:1: rule__Version__Group__2 : rule__Version__Group__2__Impl ;
+    // InternalReqText.g:958:1: rule__Version__Group__2 : rule__Version__Group__2__Impl ;
     public final void rule__Version__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalReqText.g:935:1: ( rule__Version__Group__2__Impl )
-            // InternalReqText.g:936:2: rule__Version__Group__2__Impl
+            // InternalReqText.g:962:1: ( rule__Version__Group__2__Impl )
+            // InternalReqText.g:963:2: rule__Version__Group__2__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Version__Group__2__Impl();
@@ -2784,21 +2924,21 @@ public class InternalReqTextParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Version__Group__2__Impl"
-    // InternalReqText.g:942:1: rule__Version__Group__2__Impl : ( ( rule__Version__MinorAssignment_2 ) ) ;
+    // InternalReqText.g:969:1: rule__Version__Group__2__Impl : ( ( rule__Version__MinorAssignment_2 ) ) ;
     public final void rule__Version__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalReqText.g:946:1: ( ( ( rule__Version__MinorAssignment_2 ) ) )
-            // InternalReqText.g:947:1: ( ( rule__Version__MinorAssignment_2 ) )
+            // InternalReqText.g:973:1: ( ( ( rule__Version__MinorAssignment_2 ) ) )
+            // InternalReqText.g:974:1: ( ( rule__Version__MinorAssignment_2 ) )
             {
-            // InternalReqText.g:947:1: ( ( rule__Version__MinorAssignment_2 ) )
-            // InternalReqText.g:948:2: ( rule__Version__MinorAssignment_2 )
+            // InternalReqText.g:974:1: ( ( rule__Version__MinorAssignment_2 ) )
+            // InternalReqText.g:975:2: ( rule__Version__MinorAssignment_2 )
             {
              before(grammarAccess.getVersionAccess().getMinorAssignment_2()); 
-            // InternalReqText.g:949:2: ( rule__Version__MinorAssignment_2 )
-            // InternalReqText.g:949:3: rule__Version__MinorAssignment_2
+            // InternalReqText.g:976:2: ( rule__Version__MinorAssignment_2 )
+            // InternalReqText.g:976:3: rule__Version__MinorAssignment_2
             {
             pushFollow(FOLLOW_2);
             rule__Version__MinorAssignment_2();
@@ -2831,16 +2971,16 @@ public class InternalReqTextParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__RImport__Group__0"
-    // InternalReqText.g:958:1: rule__RImport__Group__0 : rule__RImport__Group__0__Impl rule__RImport__Group__1 ;
+    // InternalReqText.g:985:1: rule__RImport__Group__0 : rule__RImport__Group__0__Impl rule__RImport__Group__1 ;
     public final void rule__RImport__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalReqText.g:962:1: ( rule__RImport__Group__0__Impl rule__RImport__Group__1 )
-            // InternalReqText.g:963:2: rule__RImport__Group__0__Impl rule__RImport__Group__1
+            // InternalReqText.g:989:1: ( rule__RImport__Group__0__Impl rule__RImport__Group__1 )
+            // InternalReqText.g:990:2: rule__RImport__Group__0__Impl rule__RImport__Group__1
             {
-            pushFollow(FOLLOW_14);
+            pushFollow(FOLLOW_16);
             rule__RImport__Group__0__Impl();
 
             state._fsp--;
@@ -2869,17 +3009,17 @@ public class InternalReqTextParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__RImport__Group__0__Impl"
-    // InternalReqText.g:970:1: rule__RImport__Group__0__Impl : ( 'import' ) ;
+    // InternalReqText.g:997:1: rule__RImport__Group__0__Impl : ( 'import' ) ;
     public final void rule__RImport__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalReqText.g:974:1: ( ( 'import' ) )
-            // InternalReqText.g:975:1: ( 'import' )
+            // InternalReqText.g:1001:1: ( ( 'import' ) )
+            // InternalReqText.g:1002:1: ( 'import' )
             {
-            // InternalReqText.g:975:1: ( 'import' )
-            // InternalReqText.g:976:2: 'import'
+            // InternalReqText.g:1002:1: ( 'import' )
+            // InternalReqText.g:1003:2: 'import'
             {
              before(grammarAccess.getRImportAccess().getImportKeyword_0()); 
             match(input,24,FOLLOW_2); 
@@ -2906,14 +3046,14 @@ public class InternalReqTextParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__RImport__Group__1"
-    // InternalReqText.g:985:1: rule__RImport__Group__1 : rule__RImport__Group__1__Impl ;
+    // InternalReqText.g:1012:1: rule__RImport__Group__1 : rule__RImport__Group__1__Impl ;
     public final void rule__RImport__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalReqText.g:989:1: ( rule__RImport__Group__1__Impl )
-            // InternalReqText.g:990:2: rule__RImport__Group__1__Impl
+            // InternalReqText.g:1016:1: ( rule__RImport__Group__1__Impl )
+            // InternalReqText.g:1017:2: rule__RImport__Group__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__RImport__Group__1__Impl();
@@ -2939,21 +3079,21 @@ public class InternalReqTextParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__RImport__Group__1__Impl"
-    // InternalReqText.g:996:1: rule__RImport__Group__1__Impl : ( ( rule__RImport__ImportURIAssignment_1 ) ) ;
+    // InternalReqText.g:1023:1: rule__RImport__Group__1__Impl : ( ( rule__RImport__ImportURIAssignment_1 ) ) ;
     public final void rule__RImport__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalReqText.g:1000:1: ( ( ( rule__RImport__ImportURIAssignment_1 ) ) )
-            // InternalReqText.g:1001:1: ( ( rule__RImport__ImportURIAssignment_1 ) )
+            // InternalReqText.g:1027:1: ( ( ( rule__RImport__ImportURIAssignment_1 ) ) )
+            // InternalReqText.g:1028:1: ( ( rule__RImport__ImportURIAssignment_1 ) )
             {
-            // InternalReqText.g:1001:1: ( ( rule__RImport__ImportURIAssignment_1 ) )
-            // InternalReqText.g:1002:2: ( rule__RImport__ImportURIAssignment_1 )
+            // InternalReqText.g:1028:1: ( ( rule__RImport__ImportURIAssignment_1 ) )
+            // InternalReqText.g:1029:2: ( rule__RImport__ImportURIAssignment_1 )
             {
              before(grammarAccess.getRImportAccess().getImportURIAssignment_1()); 
-            // InternalReqText.g:1003:2: ( rule__RImport__ImportURIAssignment_1 )
-            // InternalReqText.g:1003:3: rule__RImport__ImportURIAssignment_1
+            // InternalReqText.g:1030:2: ( rule__RImport__ImportURIAssignment_1 )
+            // InternalReqText.g:1030:3: rule__RImport__ImportURIAssignment_1
             {
             pushFollow(FOLLOW_2);
             rule__RImport__ImportURIAssignment_1();
@@ -2985,647 +3125,18 @@ public class InternalReqTextParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__RImport__Group__1__Impl"
 
 
-    // $ANTLR start "rule__SpecObject__UnorderedGroup_5"
-    // InternalReqText.g:1012:1: rule__SpecObject__UnorderedGroup_5 : rule__SpecObject__UnorderedGroup_5__0 {...}?;
-    public final void rule__SpecObject__UnorderedGroup_5() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        		getUnorderedGroupHelper().enter(grammarAccess.getSpecObjectAccess().getUnorderedGroup_5());
-        	
-        try {
-            // InternalReqText.g:1017:1: ( rule__SpecObject__UnorderedGroup_5__0 {...}?)
-            // InternalReqText.g:1018:2: rule__SpecObject__UnorderedGroup_5__0 {...}?
-            {
-            pushFollow(FOLLOW_2);
-            rule__SpecObject__UnorderedGroup_5__0();
-
-            state._fsp--;
-
-            if ( ! getUnorderedGroupHelper().canLeave(grammarAccess.getSpecObjectAccess().getUnorderedGroup_5()) ) {
-                throw new FailedPredicateException(input, "rule__SpecObject__UnorderedGroup_5", "getUnorderedGroupHelper().canLeave(grammarAccess.getSpecObjectAccess().getUnorderedGroup_5())");
-            }
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	getUnorderedGroupHelper().leave(grammarAccess.getSpecObjectAccess().getUnorderedGroup_5());
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__SpecObject__UnorderedGroup_5"
-
-
-    // $ANTLR start "rule__SpecObject__UnorderedGroup_5__Impl"
-    // InternalReqText.g:1026:1: rule__SpecObject__UnorderedGroup_5__Impl : ( ({...}? => ( ( ( rule__SpecObject__Group_5_0__0 ) ) ) ) | ({...}? => ( ( ( rule__SpecObject__Group_5_1__0 ) ) ) ) | ({...}? => ( ( ( rule__SpecObject__Group_5_2__0 ) ) ) ) | ({...}? => ( ( ( rule__SpecObject__Group_5_3__0 ) ) ) ) | ({...}? => ( ( ( rule__SpecObject__Group_5_4__0 ) ) ) ) ) ;
-    public final void rule__SpecObject__UnorderedGroup_5__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        		boolean selected = false;
-        	
-        try {
-            // InternalReqText.g:1031:1: ( ( ({...}? => ( ( ( rule__SpecObject__Group_5_0__0 ) ) ) ) | ({...}? => ( ( ( rule__SpecObject__Group_5_1__0 ) ) ) ) | ({...}? => ( ( ( rule__SpecObject__Group_5_2__0 ) ) ) ) | ({...}? => ( ( ( rule__SpecObject__Group_5_3__0 ) ) ) ) | ({...}? => ( ( ( rule__SpecObject__Group_5_4__0 ) ) ) ) ) )
-            // InternalReqText.g:1032:3: ( ({...}? => ( ( ( rule__SpecObject__Group_5_0__0 ) ) ) ) | ({...}? => ( ( ( rule__SpecObject__Group_5_1__0 ) ) ) ) | ({...}? => ( ( ( rule__SpecObject__Group_5_2__0 ) ) ) ) | ({...}? => ( ( ( rule__SpecObject__Group_5_3__0 ) ) ) ) | ({...}? => ( ( ( rule__SpecObject__Group_5_4__0 ) ) ) ) )
-            {
-            // InternalReqText.g:1032:3: ( ({...}? => ( ( ( rule__SpecObject__Group_5_0__0 ) ) ) ) | ({...}? => ( ( ( rule__SpecObject__Group_5_1__0 ) ) ) ) | ({...}? => ( ( ( rule__SpecObject__Group_5_2__0 ) ) ) ) | ({...}? => ( ( ( rule__SpecObject__Group_5_3__0 ) ) ) ) | ({...}? => ( ( ( rule__SpecObject__Group_5_4__0 ) ) ) ) )
-            int alt4=5;
-            int LA4_0 = input.LA(1);
-
-            if ( LA4_0 == 16 && getUnorderedGroupHelper().canSelect(grammarAccess.getSpecObjectAccess().getUnorderedGroup_5(), 0) ) {
-                alt4=1;
-            }
-            else if ( LA4_0 == 17 && getUnorderedGroupHelper().canSelect(grammarAccess.getSpecObjectAccess().getUnorderedGroup_5(), 1) ) {
-                alt4=2;
-            }
-            else if ( LA4_0 == 18 && getUnorderedGroupHelper().canSelect(grammarAccess.getSpecObjectAccess().getUnorderedGroup_5(), 2) ) {
-                alt4=3;
-            }
-            else if ( LA4_0 == 19 && getUnorderedGroupHelper().canSelect(grammarAccess.getSpecObjectAccess().getUnorderedGroup_5(), 3) ) {
-                alt4=4;
-            }
-            else if ( LA4_0 == 20 && getUnorderedGroupHelper().canSelect(grammarAccess.getSpecObjectAccess().getUnorderedGroup_5(), 4) ) {
-                alt4=5;
-            }
-            else {
-                NoViableAltException nvae =
-                    new NoViableAltException("", 4, 0, input);
-
-                throw nvae;
-            }
-            switch (alt4) {
-                case 1 :
-                    // InternalReqText.g:1033:3: ({...}? => ( ( ( rule__SpecObject__Group_5_0__0 ) ) ) )
-                    {
-                    // InternalReqText.g:1033:3: ({...}? => ( ( ( rule__SpecObject__Group_5_0__0 ) ) ) )
-                    // InternalReqText.g:1034:4: {...}? => ( ( ( rule__SpecObject__Group_5_0__0 ) ) )
-                    {
-                    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getSpecObjectAccess().getUnorderedGroup_5(), 0) ) {
-                        throw new FailedPredicateException(input, "rule__SpecObject__UnorderedGroup_5__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getSpecObjectAccess().getUnorderedGroup_5(), 0)");
-                    }
-                    // InternalReqText.g:1034:106: ( ( ( rule__SpecObject__Group_5_0__0 ) ) )
-                    // InternalReqText.g:1035:5: ( ( rule__SpecObject__Group_5_0__0 ) )
-                    {
-
-                    					getUnorderedGroupHelper().select(grammarAccess.getSpecObjectAccess().getUnorderedGroup_5(), 0);
-                    				
-
-                    					selected = true;
-                    				
-                    // InternalReqText.g:1041:5: ( ( rule__SpecObject__Group_5_0__0 ) )
-                    // InternalReqText.g:1042:6: ( rule__SpecObject__Group_5_0__0 )
-                    {
-                     before(grammarAccess.getSpecObjectAccess().getGroup_5_0()); 
-                    // InternalReqText.g:1043:6: ( rule__SpecObject__Group_5_0__0 )
-                    // InternalReqText.g:1043:7: rule__SpecObject__Group_5_0__0
-                    {
-                    pushFollow(FOLLOW_2);
-                    rule__SpecObject__Group_5_0__0();
-
-                    state._fsp--;
-
-
-                    }
-
-                     after(grammarAccess.getSpecObjectAccess().getGroup_5_0()); 
-
-                    }
-
-
-                    }
-
-
-                    }
-
-
-                    }
-                    break;
-                case 2 :
-                    // InternalReqText.g:1048:3: ({...}? => ( ( ( rule__SpecObject__Group_5_1__0 ) ) ) )
-                    {
-                    // InternalReqText.g:1048:3: ({...}? => ( ( ( rule__SpecObject__Group_5_1__0 ) ) ) )
-                    // InternalReqText.g:1049:4: {...}? => ( ( ( rule__SpecObject__Group_5_1__0 ) ) )
-                    {
-                    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getSpecObjectAccess().getUnorderedGroup_5(), 1) ) {
-                        throw new FailedPredicateException(input, "rule__SpecObject__UnorderedGroup_5__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getSpecObjectAccess().getUnorderedGroup_5(), 1)");
-                    }
-                    // InternalReqText.g:1049:106: ( ( ( rule__SpecObject__Group_5_1__0 ) ) )
-                    // InternalReqText.g:1050:5: ( ( rule__SpecObject__Group_5_1__0 ) )
-                    {
-
-                    					getUnorderedGroupHelper().select(grammarAccess.getSpecObjectAccess().getUnorderedGroup_5(), 1);
-                    				
-
-                    					selected = true;
-                    				
-                    // InternalReqText.g:1056:5: ( ( rule__SpecObject__Group_5_1__0 ) )
-                    // InternalReqText.g:1057:6: ( rule__SpecObject__Group_5_1__0 )
-                    {
-                     before(grammarAccess.getSpecObjectAccess().getGroup_5_1()); 
-                    // InternalReqText.g:1058:6: ( rule__SpecObject__Group_5_1__0 )
-                    // InternalReqText.g:1058:7: rule__SpecObject__Group_5_1__0
-                    {
-                    pushFollow(FOLLOW_2);
-                    rule__SpecObject__Group_5_1__0();
-
-                    state._fsp--;
-
-
-                    }
-
-                     after(grammarAccess.getSpecObjectAccess().getGroup_5_1()); 
-
-                    }
-
-
-                    }
-
-
-                    }
-
-
-                    }
-                    break;
-                case 3 :
-                    // InternalReqText.g:1063:3: ({...}? => ( ( ( rule__SpecObject__Group_5_2__0 ) ) ) )
-                    {
-                    // InternalReqText.g:1063:3: ({...}? => ( ( ( rule__SpecObject__Group_5_2__0 ) ) ) )
-                    // InternalReqText.g:1064:4: {...}? => ( ( ( rule__SpecObject__Group_5_2__0 ) ) )
-                    {
-                    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getSpecObjectAccess().getUnorderedGroup_5(), 2) ) {
-                        throw new FailedPredicateException(input, "rule__SpecObject__UnorderedGroup_5__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getSpecObjectAccess().getUnorderedGroup_5(), 2)");
-                    }
-                    // InternalReqText.g:1064:106: ( ( ( rule__SpecObject__Group_5_2__0 ) ) )
-                    // InternalReqText.g:1065:5: ( ( rule__SpecObject__Group_5_2__0 ) )
-                    {
-
-                    					getUnorderedGroupHelper().select(grammarAccess.getSpecObjectAccess().getUnorderedGroup_5(), 2);
-                    				
-
-                    					selected = true;
-                    				
-                    // InternalReqText.g:1071:5: ( ( rule__SpecObject__Group_5_2__0 ) )
-                    // InternalReqText.g:1072:6: ( rule__SpecObject__Group_5_2__0 )
-                    {
-                     before(grammarAccess.getSpecObjectAccess().getGroup_5_2()); 
-                    // InternalReqText.g:1073:6: ( rule__SpecObject__Group_5_2__0 )
-                    // InternalReqText.g:1073:7: rule__SpecObject__Group_5_2__0
-                    {
-                    pushFollow(FOLLOW_2);
-                    rule__SpecObject__Group_5_2__0();
-
-                    state._fsp--;
-
-
-                    }
-
-                     after(grammarAccess.getSpecObjectAccess().getGroup_5_2()); 
-
-                    }
-
-
-                    }
-
-
-                    }
-
-
-                    }
-                    break;
-                case 4 :
-                    // InternalReqText.g:1078:3: ({...}? => ( ( ( rule__SpecObject__Group_5_3__0 ) ) ) )
-                    {
-                    // InternalReqText.g:1078:3: ({...}? => ( ( ( rule__SpecObject__Group_5_3__0 ) ) ) )
-                    // InternalReqText.g:1079:4: {...}? => ( ( ( rule__SpecObject__Group_5_3__0 ) ) )
-                    {
-                    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getSpecObjectAccess().getUnorderedGroup_5(), 3) ) {
-                        throw new FailedPredicateException(input, "rule__SpecObject__UnorderedGroup_5__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getSpecObjectAccess().getUnorderedGroup_5(), 3)");
-                    }
-                    // InternalReqText.g:1079:106: ( ( ( rule__SpecObject__Group_5_3__0 ) ) )
-                    // InternalReqText.g:1080:5: ( ( rule__SpecObject__Group_5_3__0 ) )
-                    {
-
-                    					getUnorderedGroupHelper().select(grammarAccess.getSpecObjectAccess().getUnorderedGroup_5(), 3);
-                    				
-
-                    					selected = true;
-                    				
-                    // InternalReqText.g:1086:5: ( ( rule__SpecObject__Group_5_3__0 ) )
-                    // InternalReqText.g:1087:6: ( rule__SpecObject__Group_5_3__0 )
-                    {
-                     before(grammarAccess.getSpecObjectAccess().getGroup_5_3()); 
-                    // InternalReqText.g:1088:6: ( rule__SpecObject__Group_5_3__0 )
-                    // InternalReqText.g:1088:7: rule__SpecObject__Group_5_3__0
-                    {
-                    pushFollow(FOLLOW_2);
-                    rule__SpecObject__Group_5_3__0();
-
-                    state._fsp--;
-
-
-                    }
-
-                     after(grammarAccess.getSpecObjectAccess().getGroup_5_3()); 
-
-                    }
-
-
-                    }
-
-
-                    }
-
-
-                    }
-                    break;
-                case 5 :
-                    // InternalReqText.g:1093:3: ({...}? => ( ( ( rule__SpecObject__Group_5_4__0 ) ) ) )
-                    {
-                    // InternalReqText.g:1093:3: ({...}? => ( ( ( rule__SpecObject__Group_5_4__0 ) ) ) )
-                    // InternalReqText.g:1094:4: {...}? => ( ( ( rule__SpecObject__Group_5_4__0 ) ) )
-                    {
-                    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getSpecObjectAccess().getUnorderedGroup_5(), 4) ) {
-                        throw new FailedPredicateException(input, "rule__SpecObject__UnorderedGroup_5__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getSpecObjectAccess().getUnorderedGroup_5(), 4)");
-                    }
-                    // InternalReqText.g:1094:106: ( ( ( rule__SpecObject__Group_5_4__0 ) ) )
-                    // InternalReqText.g:1095:5: ( ( rule__SpecObject__Group_5_4__0 ) )
-                    {
-
-                    					getUnorderedGroupHelper().select(grammarAccess.getSpecObjectAccess().getUnorderedGroup_5(), 4);
-                    				
-
-                    					selected = true;
-                    				
-                    // InternalReqText.g:1101:5: ( ( rule__SpecObject__Group_5_4__0 ) )
-                    // InternalReqText.g:1102:6: ( rule__SpecObject__Group_5_4__0 )
-                    {
-                     before(grammarAccess.getSpecObjectAccess().getGroup_5_4()); 
-                    // InternalReqText.g:1103:6: ( rule__SpecObject__Group_5_4__0 )
-                    // InternalReqText.g:1103:7: rule__SpecObject__Group_5_4__0
-                    {
-                    pushFollow(FOLLOW_2);
-                    rule__SpecObject__Group_5_4__0();
-
-                    state._fsp--;
-
-
-                    }
-
-                     after(grammarAccess.getSpecObjectAccess().getGroup_5_4()); 
-
-                    }
-
-
-                    }
-
-
-                    }
-
-
-                    }
-                    break;
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	if (selected)
-            		getUnorderedGroupHelper().returnFromSelection(grammarAccess.getSpecObjectAccess().getUnorderedGroup_5());
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__SpecObject__UnorderedGroup_5__Impl"
-
-
-    // $ANTLR start "rule__SpecObject__UnorderedGroup_5__0"
-    // InternalReqText.g:1116:1: rule__SpecObject__UnorderedGroup_5__0 : rule__SpecObject__UnorderedGroup_5__Impl ( rule__SpecObject__UnorderedGroup_5__1 )? ;
-    public final void rule__SpecObject__UnorderedGroup_5__0() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalReqText.g:1120:1: ( rule__SpecObject__UnorderedGroup_5__Impl ( rule__SpecObject__UnorderedGroup_5__1 )? )
-            // InternalReqText.g:1121:2: rule__SpecObject__UnorderedGroup_5__Impl ( rule__SpecObject__UnorderedGroup_5__1 )?
-            {
-            pushFollow(FOLLOW_15);
-            rule__SpecObject__UnorderedGroup_5__Impl();
-
-            state._fsp--;
-
-            // InternalReqText.g:1122:2: ( rule__SpecObject__UnorderedGroup_5__1 )?
-            int alt5=2;
-            int LA5_0 = input.LA(1);
-
-            if ( LA5_0 == 16 && getUnorderedGroupHelper().canSelect(grammarAccess.getSpecObjectAccess().getUnorderedGroup_5(), 0) ) {
-                alt5=1;
-            }
-            else if ( LA5_0 == 17 && getUnorderedGroupHelper().canSelect(grammarAccess.getSpecObjectAccess().getUnorderedGroup_5(), 1) ) {
-                alt5=1;
-            }
-            else if ( LA5_0 == 18 && getUnorderedGroupHelper().canSelect(grammarAccess.getSpecObjectAccess().getUnorderedGroup_5(), 2) ) {
-                alt5=1;
-            }
-            else if ( LA5_0 == 19 && getUnorderedGroupHelper().canSelect(grammarAccess.getSpecObjectAccess().getUnorderedGroup_5(), 3) ) {
-                alt5=1;
-            }
-            else if ( LA5_0 == 20 && getUnorderedGroupHelper().canSelect(grammarAccess.getSpecObjectAccess().getUnorderedGroup_5(), 4) ) {
-                alt5=1;
-            }
-            switch (alt5) {
-                case 1 :
-                    // InternalReqText.g:1122:2: rule__SpecObject__UnorderedGroup_5__1
-                    {
-                    pushFollow(FOLLOW_2);
-                    rule__SpecObject__UnorderedGroup_5__1();
-
-                    state._fsp--;
-
-
-                    }
-                    break;
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__SpecObject__UnorderedGroup_5__0"
-
-
-    // $ANTLR start "rule__SpecObject__UnorderedGroup_5__1"
-    // InternalReqText.g:1128:1: rule__SpecObject__UnorderedGroup_5__1 : rule__SpecObject__UnorderedGroup_5__Impl ( rule__SpecObject__UnorderedGroup_5__2 )? ;
-    public final void rule__SpecObject__UnorderedGroup_5__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalReqText.g:1132:1: ( rule__SpecObject__UnorderedGroup_5__Impl ( rule__SpecObject__UnorderedGroup_5__2 )? )
-            // InternalReqText.g:1133:2: rule__SpecObject__UnorderedGroup_5__Impl ( rule__SpecObject__UnorderedGroup_5__2 )?
-            {
-            pushFollow(FOLLOW_15);
-            rule__SpecObject__UnorderedGroup_5__Impl();
-
-            state._fsp--;
-
-            // InternalReqText.g:1134:2: ( rule__SpecObject__UnorderedGroup_5__2 )?
-            int alt6=2;
-            int LA6_0 = input.LA(1);
-
-            if ( LA6_0 == 16 && getUnorderedGroupHelper().canSelect(grammarAccess.getSpecObjectAccess().getUnorderedGroup_5(), 0) ) {
-                alt6=1;
-            }
-            else if ( LA6_0 == 17 && getUnorderedGroupHelper().canSelect(grammarAccess.getSpecObjectAccess().getUnorderedGroup_5(), 1) ) {
-                alt6=1;
-            }
-            else if ( LA6_0 == 18 && getUnorderedGroupHelper().canSelect(grammarAccess.getSpecObjectAccess().getUnorderedGroup_5(), 2) ) {
-                alt6=1;
-            }
-            else if ( LA6_0 == 19 && getUnorderedGroupHelper().canSelect(grammarAccess.getSpecObjectAccess().getUnorderedGroup_5(), 3) ) {
-                alt6=1;
-            }
-            else if ( LA6_0 == 20 && getUnorderedGroupHelper().canSelect(grammarAccess.getSpecObjectAccess().getUnorderedGroup_5(), 4) ) {
-                alt6=1;
-            }
-            switch (alt6) {
-                case 1 :
-                    // InternalReqText.g:1134:2: rule__SpecObject__UnorderedGroup_5__2
-                    {
-                    pushFollow(FOLLOW_2);
-                    rule__SpecObject__UnorderedGroup_5__2();
-
-                    state._fsp--;
-
-
-                    }
-                    break;
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__SpecObject__UnorderedGroup_5__1"
-
-
-    // $ANTLR start "rule__SpecObject__UnorderedGroup_5__2"
-    // InternalReqText.g:1140:1: rule__SpecObject__UnorderedGroup_5__2 : rule__SpecObject__UnorderedGroup_5__Impl ( rule__SpecObject__UnorderedGroup_5__3 )? ;
-    public final void rule__SpecObject__UnorderedGroup_5__2() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalReqText.g:1144:1: ( rule__SpecObject__UnorderedGroup_5__Impl ( rule__SpecObject__UnorderedGroup_5__3 )? )
-            // InternalReqText.g:1145:2: rule__SpecObject__UnorderedGroup_5__Impl ( rule__SpecObject__UnorderedGroup_5__3 )?
-            {
-            pushFollow(FOLLOW_15);
-            rule__SpecObject__UnorderedGroup_5__Impl();
-
-            state._fsp--;
-
-            // InternalReqText.g:1146:2: ( rule__SpecObject__UnorderedGroup_5__3 )?
-            int alt7=2;
-            int LA7_0 = input.LA(1);
-
-            if ( LA7_0 == 16 && getUnorderedGroupHelper().canSelect(grammarAccess.getSpecObjectAccess().getUnorderedGroup_5(), 0) ) {
-                alt7=1;
-            }
-            else if ( LA7_0 == 17 && getUnorderedGroupHelper().canSelect(grammarAccess.getSpecObjectAccess().getUnorderedGroup_5(), 1) ) {
-                alt7=1;
-            }
-            else if ( LA7_0 == 18 && getUnorderedGroupHelper().canSelect(grammarAccess.getSpecObjectAccess().getUnorderedGroup_5(), 2) ) {
-                alt7=1;
-            }
-            else if ( LA7_0 == 19 && getUnorderedGroupHelper().canSelect(grammarAccess.getSpecObjectAccess().getUnorderedGroup_5(), 3) ) {
-                alt7=1;
-            }
-            else if ( LA7_0 == 20 && getUnorderedGroupHelper().canSelect(grammarAccess.getSpecObjectAccess().getUnorderedGroup_5(), 4) ) {
-                alt7=1;
-            }
-            switch (alt7) {
-                case 1 :
-                    // InternalReqText.g:1146:2: rule__SpecObject__UnorderedGroup_5__3
-                    {
-                    pushFollow(FOLLOW_2);
-                    rule__SpecObject__UnorderedGroup_5__3();
-
-                    state._fsp--;
-
-
-                    }
-                    break;
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__SpecObject__UnorderedGroup_5__2"
-
-
-    // $ANTLR start "rule__SpecObject__UnorderedGroup_5__3"
-    // InternalReqText.g:1152:1: rule__SpecObject__UnorderedGroup_5__3 : rule__SpecObject__UnorderedGroup_5__Impl ( rule__SpecObject__UnorderedGroup_5__4 )? ;
-    public final void rule__SpecObject__UnorderedGroup_5__3() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalReqText.g:1156:1: ( rule__SpecObject__UnorderedGroup_5__Impl ( rule__SpecObject__UnorderedGroup_5__4 )? )
-            // InternalReqText.g:1157:2: rule__SpecObject__UnorderedGroup_5__Impl ( rule__SpecObject__UnorderedGroup_5__4 )?
-            {
-            pushFollow(FOLLOW_15);
-            rule__SpecObject__UnorderedGroup_5__Impl();
-
-            state._fsp--;
-
-            // InternalReqText.g:1158:2: ( rule__SpecObject__UnorderedGroup_5__4 )?
-            int alt8=2;
-            int LA8_0 = input.LA(1);
-
-            if ( LA8_0 == 16 && getUnorderedGroupHelper().canSelect(grammarAccess.getSpecObjectAccess().getUnorderedGroup_5(), 0) ) {
-                alt8=1;
-            }
-            else if ( LA8_0 == 17 && getUnorderedGroupHelper().canSelect(grammarAccess.getSpecObjectAccess().getUnorderedGroup_5(), 1) ) {
-                alt8=1;
-            }
-            else if ( LA8_0 == 18 && getUnorderedGroupHelper().canSelect(grammarAccess.getSpecObjectAccess().getUnorderedGroup_5(), 2) ) {
-                alt8=1;
-            }
-            else if ( LA8_0 == 19 && getUnorderedGroupHelper().canSelect(grammarAccess.getSpecObjectAccess().getUnorderedGroup_5(), 3) ) {
-                alt8=1;
-            }
-            else if ( LA8_0 == 20 && getUnorderedGroupHelper().canSelect(grammarAccess.getSpecObjectAccess().getUnorderedGroup_5(), 4) ) {
-                alt8=1;
-            }
-            switch (alt8) {
-                case 1 :
-                    // InternalReqText.g:1158:2: rule__SpecObject__UnorderedGroup_5__4
-                    {
-                    pushFollow(FOLLOW_2);
-                    rule__SpecObject__UnorderedGroup_5__4();
-
-                    state._fsp--;
-
-
-                    }
-                    break;
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__SpecObject__UnorderedGroup_5__3"
-
-
-    // $ANTLR start "rule__SpecObject__UnorderedGroup_5__4"
-    // InternalReqText.g:1164:1: rule__SpecObject__UnorderedGroup_5__4 : rule__SpecObject__UnorderedGroup_5__Impl ;
-    public final void rule__SpecObject__UnorderedGroup_5__4() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalReqText.g:1168:1: ( rule__SpecObject__UnorderedGroup_5__Impl )
-            // InternalReqText.g:1169:2: rule__SpecObject__UnorderedGroup_5__Impl
-            {
-            pushFollow(FOLLOW_2);
-            rule__SpecObject__UnorderedGroup_5__Impl();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__SpecObject__UnorderedGroup_5__4"
-
-
     // $ANTLR start "rule__RModel__ImportsAssignment_0"
-    // InternalReqText.g:1176:1: rule__RModel__ImportsAssignment_0 : ( ruleRImport ) ;
+    // InternalReqText.g:1039:1: rule__RModel__ImportsAssignment_0 : ( ruleRImport ) ;
     public final void rule__RModel__ImportsAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalReqText.g:1180:1: ( ( ruleRImport ) )
-            // InternalReqText.g:1181:2: ( ruleRImport )
+            // InternalReqText.g:1043:1: ( ( ruleRImport ) )
+            // InternalReqText.g:1044:2: ( ruleRImport )
             {
-            // InternalReqText.g:1181:2: ( ruleRImport )
-            // InternalReqText.g:1182:3: ruleRImport
+            // InternalReqText.g:1044:2: ( ruleRImport )
+            // InternalReqText.g:1045:3: ruleRImport
             {
              before(grammarAccess.getRModelAccess().getImportsRImportParserRuleCall_0_0()); 
             pushFollow(FOLLOW_2);
@@ -3656,17 +3167,17 @@ public class InternalReqTextParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__RModel__StatesAssignment_1_0"
-    // InternalReqText.g:1191:1: rule__RModel__StatesAssignment_1_0 : ( ruleState ) ;
+    // InternalReqText.g:1054:1: rule__RModel__StatesAssignment_1_0 : ( ruleState ) ;
     public final void rule__RModel__StatesAssignment_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalReqText.g:1195:1: ( ( ruleState ) )
-            // InternalReqText.g:1196:2: ( ruleState )
+            // InternalReqText.g:1058:1: ( ( ruleState ) )
+            // InternalReqText.g:1059:2: ( ruleState )
             {
-            // InternalReqText.g:1196:2: ( ruleState )
-            // InternalReqText.g:1197:3: ruleState
+            // InternalReqText.g:1059:2: ( ruleState )
+            // InternalReqText.g:1060:3: ruleState
             {
              before(grammarAccess.getRModelAccess().getStatesStateParserRuleCall_1_0_0()); 
             pushFollow(FOLLOW_2);
@@ -3697,17 +3208,17 @@ public class InternalReqTextParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__RModel__ClassesAssignment_1_1"
-    // InternalReqText.g:1206:1: rule__RModel__ClassesAssignment_1_1 : ( ruleClass ) ;
+    // InternalReqText.g:1069:1: rule__RModel__ClassesAssignment_1_1 : ( ruleClass ) ;
     public final void rule__RModel__ClassesAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalReqText.g:1210:1: ( ( ruleClass ) )
-            // InternalReqText.g:1211:2: ( ruleClass )
+            // InternalReqText.g:1073:1: ( ( ruleClass ) )
+            // InternalReqText.g:1074:2: ( ruleClass )
             {
-            // InternalReqText.g:1211:2: ( ruleClass )
-            // InternalReqText.g:1212:3: ruleClass
+            // InternalReqText.g:1074:2: ( ruleClass )
+            // InternalReqText.g:1075:3: ruleClass
             {
              before(grammarAccess.getRModelAccess().getClassesClassParserRuleCall_1_1_0()); 
             pushFollow(FOLLOW_2);
@@ -3738,17 +3249,17 @@ public class InternalReqTextParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__RModel__ObjsAssignment_1_2"
-    // InternalReqText.g:1221:1: rule__RModel__ObjsAssignment_1_2 : ( ruleSpecObject ) ;
+    // InternalReqText.g:1084:1: rule__RModel__ObjsAssignment_1_2 : ( ruleSpecObject ) ;
     public final void rule__RModel__ObjsAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalReqText.g:1225:1: ( ( ruleSpecObject ) )
-            // InternalReqText.g:1226:2: ( ruleSpecObject )
+            // InternalReqText.g:1088:1: ( ( ruleSpecObject ) )
+            // InternalReqText.g:1089:2: ( ruleSpecObject )
             {
-            // InternalReqText.g:1226:2: ( ruleSpecObject )
-            // InternalReqText.g:1227:3: ruleSpecObject
+            // InternalReqText.g:1089:2: ( ruleSpecObject )
+            // InternalReqText.g:1090:3: ruleSpecObject
             {
              before(grammarAccess.getRModelAccess().getObjsSpecObjectParserRuleCall_1_2_0()); 
             pushFollow(FOLLOW_2);
@@ -3779,17 +3290,17 @@ public class InternalReqTextParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SpecObject__NameAssignment_1"
-    // InternalReqText.g:1236:1: rule__SpecObject__NameAssignment_1 : ( RULE_ID ) ;
+    // InternalReqText.g:1099:1: rule__SpecObject__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__SpecObject__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalReqText.g:1240:1: ( ( RULE_ID ) )
-            // InternalReqText.g:1241:2: ( RULE_ID )
+            // InternalReqText.g:1103:1: ( ( RULE_ID ) )
+            // InternalReqText.g:1104:2: ( RULE_ID )
             {
-            // InternalReqText.g:1241:2: ( RULE_ID )
-            // InternalReqText.g:1242:3: RULE_ID
+            // InternalReqText.g:1104:2: ( RULE_ID )
+            // InternalReqText.g:1105:3: RULE_ID
             {
              before(grammarAccess.getSpecObjectAccess().getNameIDTerminalRuleCall_1_0()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -3816,17 +3327,17 @@ public class InternalReqTextParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SpecObject__DescriptionAssignment_4"
-    // InternalReqText.g:1251:1: rule__SpecObject__DescriptionAssignment_4 : ( RULE_CC_STRING ) ;
+    // InternalReqText.g:1114:1: rule__SpecObject__DescriptionAssignment_4 : ( RULE_CC_STRING ) ;
     public final void rule__SpecObject__DescriptionAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalReqText.g:1255:1: ( ( RULE_CC_STRING ) )
-            // InternalReqText.g:1256:2: ( RULE_CC_STRING )
+            // InternalReqText.g:1118:1: ( ( RULE_CC_STRING ) )
+            // InternalReqText.g:1119:2: ( RULE_CC_STRING )
             {
-            // InternalReqText.g:1256:2: ( RULE_CC_STRING )
-            // InternalReqText.g:1257:3: RULE_CC_STRING
+            // InternalReqText.g:1119:2: ( RULE_CC_STRING )
+            // InternalReqText.g:1120:3: RULE_CC_STRING
             {
              before(grammarAccess.getSpecObjectAccess().getDescriptionCC_STRINGTerminalRuleCall_4_0()); 
             match(input,RULE_CC_STRING,FOLLOW_2); 
@@ -3852,30 +3363,30 @@ public class InternalReqTextParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__SpecObject__DescriptionAssignment_4"
 
 
-    // $ANTLR start "rule__SpecObject__StateAssignment_5_0_1"
-    // InternalReqText.g:1266:1: rule__SpecObject__StateAssignment_5_0_1 : ( ( RULE_ID ) ) ;
-    public final void rule__SpecObject__StateAssignment_5_0_1() throws RecognitionException {
+    // $ANTLR start "rule__SpecObject__StateAssignment_6"
+    // InternalReqText.g:1129:1: rule__SpecObject__StateAssignment_6 : ( ( RULE_ID ) ) ;
+    public final void rule__SpecObject__StateAssignment_6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalReqText.g:1270:1: ( ( ( RULE_ID ) ) )
-            // InternalReqText.g:1271:2: ( ( RULE_ID ) )
+            // InternalReqText.g:1133:1: ( ( ( RULE_ID ) ) )
+            // InternalReqText.g:1134:2: ( ( RULE_ID ) )
             {
-            // InternalReqText.g:1271:2: ( ( RULE_ID ) )
-            // InternalReqText.g:1272:3: ( RULE_ID )
+            // InternalReqText.g:1134:2: ( ( RULE_ID ) )
+            // InternalReqText.g:1135:3: ( RULE_ID )
             {
-             before(grammarAccess.getSpecObjectAccess().getStateStateCrossReference_5_0_1_0()); 
-            // InternalReqText.g:1273:3: ( RULE_ID )
-            // InternalReqText.g:1274:4: RULE_ID
+             before(grammarAccess.getSpecObjectAccess().getStateStateCrossReference_6_0()); 
+            // InternalReqText.g:1136:3: ( RULE_ID )
+            // InternalReqText.g:1137:4: RULE_ID
             {
-             before(grammarAccess.getSpecObjectAccess().getStateStateIDTerminalRuleCall_5_0_1_0_1()); 
+             before(grammarAccess.getSpecObjectAccess().getStateStateIDTerminalRuleCall_6_0_1()); 
             match(input,RULE_ID,FOLLOW_2); 
-             after(grammarAccess.getSpecObjectAccess().getStateStateIDTerminalRuleCall_5_0_1_0_1()); 
+             after(grammarAccess.getSpecObjectAccess().getStateStateIDTerminalRuleCall_6_0_1()); 
 
             }
 
-             after(grammarAccess.getSpecObjectAccess().getStateStateCrossReference_5_0_1_0()); 
+             after(grammarAccess.getSpecObjectAccess().getStateStateCrossReference_6_0()); 
 
             }
 
@@ -3894,33 +3405,33 @@ public class InternalReqTextParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__SpecObject__StateAssignment_5_0_1"
+    // $ANTLR end "rule__SpecObject__StateAssignment_6"
 
 
-    // $ANTLR start "rule__SpecObject__ClassAssignment_5_1_1"
-    // InternalReqText.g:1285:1: rule__SpecObject__ClassAssignment_5_1_1 : ( ( RULE_ID ) ) ;
-    public final void rule__SpecObject__ClassAssignment_5_1_1() throws RecognitionException {
+    // $ANTLR start "rule__SpecObject__ClassAssignment_8"
+    // InternalReqText.g:1148:1: rule__SpecObject__ClassAssignment_8 : ( ( RULE_ID ) ) ;
+    public final void rule__SpecObject__ClassAssignment_8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalReqText.g:1289:1: ( ( ( RULE_ID ) ) )
-            // InternalReqText.g:1290:2: ( ( RULE_ID ) )
+            // InternalReqText.g:1152:1: ( ( ( RULE_ID ) ) )
+            // InternalReqText.g:1153:2: ( ( RULE_ID ) )
             {
-            // InternalReqText.g:1290:2: ( ( RULE_ID ) )
-            // InternalReqText.g:1291:3: ( RULE_ID )
+            // InternalReqText.g:1153:2: ( ( RULE_ID ) )
+            // InternalReqText.g:1154:3: ( RULE_ID )
             {
-             before(grammarAccess.getSpecObjectAccess().getClassClassCrossReference_5_1_1_0()); 
-            // InternalReqText.g:1292:3: ( RULE_ID )
-            // InternalReqText.g:1293:4: RULE_ID
+             before(grammarAccess.getSpecObjectAccess().getClassClassCrossReference_8_0()); 
+            // InternalReqText.g:1155:3: ( RULE_ID )
+            // InternalReqText.g:1156:4: RULE_ID
             {
-             before(grammarAccess.getSpecObjectAccess().getClassClassIDTerminalRuleCall_5_1_1_0_1()); 
+             before(grammarAccess.getSpecObjectAccess().getClassClassIDTerminalRuleCall_8_0_1()); 
             match(input,RULE_ID,FOLLOW_2); 
-             after(grammarAccess.getSpecObjectAccess().getClassClassIDTerminalRuleCall_5_1_1_0_1()); 
+             after(grammarAccess.getSpecObjectAccess().getClassClassIDTerminalRuleCall_8_0_1()); 
 
             }
 
-             after(grammarAccess.getSpecObjectAccess().getClassClassCrossReference_5_1_1_0()); 
+             after(grammarAccess.getSpecObjectAccess().getClassClassCrossReference_8_0()); 
 
             }
 
@@ -3939,29 +3450,29 @@ public class InternalReqTextParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__SpecObject__ClassAssignment_5_1_1"
+    // $ANTLR end "rule__SpecObject__ClassAssignment_8"
 
 
-    // $ANTLR start "rule__SpecObject__VersionAssignment_5_2_1"
-    // InternalReqText.g:1304:1: rule__SpecObject__VersionAssignment_5_2_1 : ( ruleVersion ) ;
-    public final void rule__SpecObject__VersionAssignment_5_2_1() throws RecognitionException {
+    // $ANTLR start "rule__SpecObject__VersionAssignment_10"
+    // InternalReqText.g:1167:1: rule__SpecObject__VersionAssignment_10 : ( ruleVersion ) ;
+    public final void rule__SpecObject__VersionAssignment_10() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalReqText.g:1308:1: ( ( ruleVersion ) )
-            // InternalReqText.g:1309:2: ( ruleVersion )
+            // InternalReqText.g:1171:1: ( ( ruleVersion ) )
+            // InternalReqText.g:1172:2: ( ruleVersion )
             {
-            // InternalReqText.g:1309:2: ( ruleVersion )
-            // InternalReqText.g:1310:3: ruleVersion
+            // InternalReqText.g:1172:2: ( ruleVersion )
+            // InternalReqText.g:1173:3: ruleVersion
             {
-             before(grammarAccess.getSpecObjectAccess().getVersionVersionParserRuleCall_5_2_1_0()); 
+             before(grammarAccess.getSpecObjectAccess().getVersionVersionParserRuleCall_10_0()); 
             pushFollow(FOLLOW_2);
             ruleVersion();
 
             state._fsp--;
 
-             after(grammarAccess.getSpecObjectAccess().getVersionVersionParserRuleCall_5_2_1_0()); 
+             after(grammarAccess.getSpecObjectAccess().getVersionVersionParserRuleCall_10_0()); 
 
             }
 
@@ -3980,25 +3491,25 @@ public class InternalReqTextParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__SpecObject__VersionAssignment_5_2_1"
+    // $ANTLR end "rule__SpecObject__VersionAssignment_10"
 
 
-    // $ANTLR start "rule__SpecObject__ImageAssignment_5_3_1"
-    // InternalReqText.g:1319:1: rule__SpecObject__ImageAssignment_5_3_1 : ( RULE_CC_STRING ) ;
-    public final void rule__SpecObject__ImageAssignment_5_3_1() throws RecognitionException {
+    // $ANTLR start "rule__SpecObject__ImageAssignment_11_1"
+    // InternalReqText.g:1182:1: rule__SpecObject__ImageAssignment_11_1 : ( RULE_CC_STRING ) ;
+    public final void rule__SpecObject__ImageAssignment_11_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalReqText.g:1323:1: ( ( RULE_CC_STRING ) )
-            // InternalReqText.g:1324:2: ( RULE_CC_STRING )
+            // InternalReqText.g:1186:1: ( ( RULE_CC_STRING ) )
+            // InternalReqText.g:1187:2: ( RULE_CC_STRING )
             {
-            // InternalReqText.g:1324:2: ( RULE_CC_STRING )
-            // InternalReqText.g:1325:3: RULE_CC_STRING
+            // InternalReqText.g:1187:2: ( RULE_CC_STRING )
+            // InternalReqText.g:1188:3: RULE_CC_STRING
             {
-             before(grammarAccess.getSpecObjectAccess().getImageCC_STRINGTerminalRuleCall_5_3_1_0()); 
+             before(grammarAccess.getSpecObjectAccess().getImageCC_STRINGTerminalRuleCall_11_1_0()); 
             match(input,RULE_CC_STRING,FOLLOW_2); 
-             after(grammarAccess.getSpecObjectAccess().getImageCC_STRINGTerminalRuleCall_5_3_1_0()); 
+             after(grammarAccess.getSpecObjectAccess().getImageCC_STRINGTerminalRuleCall_11_1_0()); 
 
             }
 
@@ -4017,33 +3528,33 @@ public class InternalReqTextParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__SpecObject__ImageAssignment_5_3_1"
+    // $ANTLR end "rule__SpecObject__ImageAssignment_11_1"
 
 
-    // $ANTLR start "rule__SpecObject__ReferenceAssignment_5_4_1"
-    // InternalReqText.g:1334:1: rule__SpecObject__ReferenceAssignment_5_4_1 : ( ( RULE_ID ) ) ;
-    public final void rule__SpecObject__ReferenceAssignment_5_4_1() throws RecognitionException {
+    // $ANTLR start "rule__SpecObject__ReferenceAssignment_12_1"
+    // InternalReqText.g:1197:1: rule__SpecObject__ReferenceAssignment_12_1 : ( ( RULE_ID ) ) ;
+    public final void rule__SpecObject__ReferenceAssignment_12_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalReqText.g:1338:1: ( ( ( RULE_ID ) ) )
-            // InternalReqText.g:1339:2: ( ( RULE_ID ) )
+            // InternalReqText.g:1201:1: ( ( ( RULE_ID ) ) )
+            // InternalReqText.g:1202:2: ( ( RULE_ID ) )
             {
-            // InternalReqText.g:1339:2: ( ( RULE_ID ) )
-            // InternalReqText.g:1340:3: ( RULE_ID )
+            // InternalReqText.g:1202:2: ( ( RULE_ID ) )
+            // InternalReqText.g:1203:3: ( RULE_ID )
             {
-             before(grammarAccess.getSpecObjectAccess().getReferenceSpecObjectCrossReference_5_4_1_0()); 
-            // InternalReqText.g:1341:3: ( RULE_ID )
-            // InternalReqText.g:1342:4: RULE_ID
+             before(grammarAccess.getSpecObjectAccess().getReferenceSpecObjectCrossReference_12_1_0()); 
+            // InternalReqText.g:1204:3: ( RULE_ID )
+            // InternalReqText.g:1205:4: RULE_ID
             {
-             before(grammarAccess.getSpecObjectAccess().getReferenceSpecObjectIDTerminalRuleCall_5_4_1_0_1()); 
+             before(grammarAccess.getSpecObjectAccess().getReferenceSpecObjectIDTerminalRuleCall_12_1_0_1()); 
             match(input,RULE_ID,FOLLOW_2); 
-             after(grammarAccess.getSpecObjectAccess().getReferenceSpecObjectIDTerminalRuleCall_5_4_1_0_1()); 
+             after(grammarAccess.getSpecObjectAccess().getReferenceSpecObjectIDTerminalRuleCall_12_1_0_1()); 
 
             }
 
-             after(grammarAccess.getSpecObjectAccess().getReferenceSpecObjectCrossReference_5_4_1_0()); 
+             after(grammarAccess.getSpecObjectAccess().getReferenceSpecObjectCrossReference_12_1_0()); 
 
             }
 
@@ -4062,29 +3573,29 @@ public class InternalReqTextParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__SpecObject__ReferenceAssignment_5_4_1"
+    // $ANTLR end "rule__SpecObject__ReferenceAssignment_12_1"
 
 
-    // $ANTLR start "rule__SpecObject__ChildrenAssignment_6"
-    // InternalReqText.g:1353:1: rule__SpecObject__ChildrenAssignment_6 : ( ruleSpecObject ) ;
-    public final void rule__SpecObject__ChildrenAssignment_6() throws RecognitionException {
+    // $ANTLR start "rule__SpecObject__ChildrenAssignment_13"
+    // InternalReqText.g:1216:1: rule__SpecObject__ChildrenAssignment_13 : ( ruleSpecObject ) ;
+    public final void rule__SpecObject__ChildrenAssignment_13() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalReqText.g:1357:1: ( ( ruleSpecObject ) )
-            // InternalReqText.g:1358:2: ( ruleSpecObject )
+            // InternalReqText.g:1220:1: ( ( ruleSpecObject ) )
+            // InternalReqText.g:1221:2: ( ruleSpecObject )
             {
-            // InternalReqText.g:1358:2: ( ruleSpecObject )
-            // InternalReqText.g:1359:3: ruleSpecObject
+            // InternalReqText.g:1221:2: ( ruleSpecObject )
+            // InternalReqText.g:1222:3: ruleSpecObject
             {
-             before(grammarAccess.getSpecObjectAccess().getChildrenSpecObjectParserRuleCall_6_0()); 
+             before(grammarAccess.getSpecObjectAccess().getChildrenSpecObjectParserRuleCall_13_0()); 
             pushFollow(FOLLOW_2);
             ruleSpecObject();
 
             state._fsp--;
 
-             after(grammarAccess.getSpecObjectAccess().getChildrenSpecObjectParserRuleCall_6_0()); 
+             after(grammarAccess.getSpecObjectAccess().getChildrenSpecObjectParserRuleCall_13_0()); 
 
             }
 
@@ -4103,21 +3614,21 @@ public class InternalReqTextParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__SpecObject__ChildrenAssignment_6"
+    // $ANTLR end "rule__SpecObject__ChildrenAssignment_13"
 
 
     // $ANTLR start "rule__State__NameAssignment_1"
-    // InternalReqText.g:1368:1: rule__State__NameAssignment_1 : ( RULE_ID ) ;
+    // InternalReqText.g:1231:1: rule__State__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__State__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalReqText.g:1372:1: ( ( RULE_ID ) )
-            // InternalReqText.g:1373:2: ( RULE_ID )
+            // InternalReqText.g:1235:1: ( ( RULE_ID ) )
+            // InternalReqText.g:1236:2: ( RULE_ID )
             {
-            // InternalReqText.g:1373:2: ( RULE_ID )
-            // InternalReqText.g:1374:3: RULE_ID
+            // InternalReqText.g:1236:2: ( RULE_ID )
+            // InternalReqText.g:1237:3: RULE_ID
             {
              before(grammarAccess.getStateAccess().getNameIDTerminalRuleCall_1_0()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -4144,17 +3655,17 @@ public class InternalReqTextParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Class__NameAssignment_1"
-    // InternalReqText.g:1383:1: rule__Class__NameAssignment_1 : ( RULE_ID ) ;
+    // InternalReqText.g:1246:1: rule__Class__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__Class__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalReqText.g:1387:1: ( ( RULE_ID ) )
-            // InternalReqText.g:1388:2: ( RULE_ID )
+            // InternalReqText.g:1250:1: ( ( RULE_ID ) )
+            // InternalReqText.g:1251:2: ( RULE_ID )
             {
-            // InternalReqText.g:1388:2: ( RULE_ID )
-            // InternalReqText.g:1389:3: RULE_ID
+            // InternalReqText.g:1251:2: ( RULE_ID )
+            // InternalReqText.g:1252:3: RULE_ID
             {
              before(grammarAccess.getClassAccess().getNameIDTerminalRuleCall_1_0()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -4181,17 +3692,17 @@ public class InternalReqTextParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Version__MajorAssignment_0"
-    // InternalReqText.g:1398:1: rule__Version__MajorAssignment_0 : ( RULE_INT ) ;
+    // InternalReqText.g:1261:1: rule__Version__MajorAssignment_0 : ( RULE_INT ) ;
     public final void rule__Version__MajorAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalReqText.g:1402:1: ( ( RULE_INT ) )
-            // InternalReqText.g:1403:2: ( RULE_INT )
+            // InternalReqText.g:1265:1: ( ( RULE_INT ) )
+            // InternalReqText.g:1266:2: ( RULE_INT )
             {
-            // InternalReqText.g:1403:2: ( RULE_INT )
-            // InternalReqText.g:1404:3: RULE_INT
+            // InternalReqText.g:1266:2: ( RULE_INT )
+            // InternalReqText.g:1267:3: RULE_INT
             {
              before(grammarAccess.getVersionAccess().getMajorINTTerminalRuleCall_0_0()); 
             match(input,RULE_INT,FOLLOW_2); 
@@ -4218,17 +3729,17 @@ public class InternalReqTextParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Version__MinorAssignment_2"
-    // InternalReqText.g:1413:1: rule__Version__MinorAssignment_2 : ( RULE_INT ) ;
+    // InternalReqText.g:1276:1: rule__Version__MinorAssignment_2 : ( RULE_INT ) ;
     public final void rule__Version__MinorAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalReqText.g:1417:1: ( ( RULE_INT ) )
-            // InternalReqText.g:1418:2: ( RULE_INT )
+            // InternalReqText.g:1280:1: ( ( RULE_INT ) )
+            // InternalReqText.g:1281:2: ( RULE_INT )
             {
-            // InternalReqText.g:1418:2: ( RULE_INT )
-            // InternalReqText.g:1419:3: RULE_INT
+            // InternalReqText.g:1281:2: ( RULE_INT )
+            // InternalReqText.g:1282:3: RULE_INT
             {
              before(grammarAccess.getVersionAccess().getMinorINTTerminalRuleCall_2_0()); 
             match(input,RULE_INT,FOLLOW_2); 
@@ -4255,17 +3766,17 @@ public class InternalReqTextParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__RImport__ImportURIAssignment_1"
-    // InternalReqText.g:1428:1: rule__RImport__ImportURIAssignment_1 : ( RULE_STRING ) ;
+    // InternalReqText.g:1291:1: rule__RImport__ImportURIAssignment_1 : ( RULE_STRING ) ;
     public final void rule__RImport__ImportURIAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalReqText.g:1432:1: ( ( RULE_STRING ) )
-            // InternalReqText.g:1433:2: ( RULE_STRING )
+            // InternalReqText.g:1295:1: ( ( RULE_STRING ) )
+            // InternalReqText.g:1296:2: ( RULE_STRING )
             {
-            // InternalReqText.g:1433:2: ( RULE_STRING )
-            // InternalReqText.g:1434:3: RULE_STRING
+            // InternalReqText.g:1296:2: ( RULE_STRING )
+            // InternalReqText.g:1297:3: RULE_STRING
             {
              before(grammarAccess.getRImportAccess().getImportURISTRINGTerminalRuleCall_1_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -4299,16 +3810,17 @@ public class InternalReqTextParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_2 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0000000000601000L});
     public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000000001000002L});
-    public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x00000000001F0000L});
-    public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000000609000L});
-    public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000000601002L});
-    public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0000000000800000L});
-    public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000000000000080L});
-    public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x00000000001F0002L});
+    public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000000601002L});
+    public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x00000000007C1000L});
+    public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000000000800000L});
+    public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000000000000080L});
 
 }

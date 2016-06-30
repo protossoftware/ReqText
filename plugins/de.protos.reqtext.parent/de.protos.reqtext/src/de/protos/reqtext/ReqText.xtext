@@ -8,17 +8,17 @@ RModel:
 		states 	+= State 		|
 		classes += Class 		|
 		objs 	+= SpecObject
-	)
+	)*
 ;
 
 SpecObject:
 	'SpecObject' name=ID '{'
 		'description' description=CC_STRING
-		(('state' state = [State]) &
-		('classification' class = [Class]) &
-		('version' version = Version) &
-		('image' image = CC_STRING)? &
-		('reference' reference = [SpecObject])?)
+		'state' state = [State]
+		'classification' class = [Class]
+		'version' version = Version
+		('image' image = CC_STRING)?
+		('reference' reference = [SpecObject])?
 		children += SpecObject*		
 	'}' 
 ;

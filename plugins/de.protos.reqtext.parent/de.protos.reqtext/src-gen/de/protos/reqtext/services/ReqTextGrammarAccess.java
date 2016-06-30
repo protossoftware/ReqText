@@ -16,7 +16,6 @@ import org.eclipse.xtext.Keyword;
 import org.eclipse.xtext.ParserRule;
 import org.eclipse.xtext.RuleCall;
 import org.eclipse.xtext.TerminalRule;
-import org.eclipse.xtext.UnorderedGroup;
 import org.eclipse.xtext.common.services.TerminalsGrammarAccess;
 import org.eclipse.xtext.service.AbstractElementFinder.AbstractGrammarElementFinder;
 import org.eclipse.xtext.service.GrammarProvider;
@@ -38,10 +37,10 @@ public class ReqTextGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cObjsSpecObjectParserRuleCall_1_2_0 = (RuleCall)cObjsAssignment_1_2.eContents().get(0);
 		
 		//RModel:
-		//	imports+=RImport* (states+=State | classes+=Class | objs+=SpecObject);
+		//	imports+=RImport* (states+=State | classes+=Class | objs+=SpecObject)*;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//imports+=RImport* (states+=State | classes+=Class | objs+=SpecObject)
+		//imports+=RImport* (states+=State | classes+=Class | objs+=SpecObject)*
 		public Group getGroup() { return cGroup; }
 		
 		//imports+=RImport*
@@ -50,7 +49,7 @@ public class ReqTextGrammarAccess extends AbstractGrammarElementFinder {
 		//RImport
 		public RuleCall getImportsRImportParserRuleCall_0_0() { return cImportsRImportParserRuleCall_0_0; }
 		
-		//(states+=State | classes+=Class | objs+=SpecObject)
+		//(states+=State | classes+=Class | objs+=SpecObject)*
 		public Alternatives getAlternatives_1() { return cAlternatives_1; }
 		
 		//states+=State
@@ -81,44 +80,42 @@ public class ReqTextGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cDescriptionKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Assignment cDescriptionAssignment_4 = (Assignment)cGroup.eContents().get(4);
 		private final RuleCall cDescriptionCC_STRINGTerminalRuleCall_4_0 = (RuleCall)cDescriptionAssignment_4.eContents().get(0);
-		private final UnorderedGroup cUnorderedGroup_5 = (UnorderedGroup)cGroup.eContents().get(5);
-		private final Group cGroup_5_0 = (Group)cUnorderedGroup_5.eContents().get(0);
-		private final Keyword cStateKeyword_5_0_0 = (Keyword)cGroup_5_0.eContents().get(0);
-		private final Assignment cStateAssignment_5_0_1 = (Assignment)cGroup_5_0.eContents().get(1);
-		private final CrossReference cStateStateCrossReference_5_0_1_0 = (CrossReference)cStateAssignment_5_0_1.eContents().get(0);
-		private final RuleCall cStateStateIDTerminalRuleCall_5_0_1_0_1 = (RuleCall)cStateStateCrossReference_5_0_1_0.eContents().get(1);
-		private final Group cGroup_5_1 = (Group)cUnorderedGroup_5.eContents().get(1);
-		private final Keyword cClassificationKeyword_5_1_0 = (Keyword)cGroup_5_1.eContents().get(0);
-		private final Assignment cClassAssignment_5_1_1 = (Assignment)cGroup_5_1.eContents().get(1);
-		private final CrossReference cClassClassCrossReference_5_1_1_0 = (CrossReference)cClassAssignment_5_1_1.eContents().get(0);
-		private final RuleCall cClassClassIDTerminalRuleCall_5_1_1_0_1 = (RuleCall)cClassClassCrossReference_5_1_1_0.eContents().get(1);
-		private final Group cGroup_5_2 = (Group)cUnorderedGroup_5.eContents().get(2);
-		private final Keyword cVersionKeyword_5_2_0 = (Keyword)cGroup_5_2.eContents().get(0);
-		private final Assignment cVersionAssignment_5_2_1 = (Assignment)cGroup_5_2.eContents().get(1);
-		private final RuleCall cVersionVersionParserRuleCall_5_2_1_0 = (RuleCall)cVersionAssignment_5_2_1.eContents().get(0);
-		private final Group cGroup_5_3 = (Group)cUnorderedGroup_5.eContents().get(3);
-		private final Keyword cImageKeyword_5_3_0 = (Keyword)cGroup_5_3.eContents().get(0);
-		private final Assignment cImageAssignment_5_3_1 = (Assignment)cGroup_5_3.eContents().get(1);
-		private final RuleCall cImageCC_STRINGTerminalRuleCall_5_3_1_0 = (RuleCall)cImageAssignment_5_3_1.eContents().get(0);
-		private final Group cGroup_5_4 = (Group)cUnorderedGroup_5.eContents().get(4);
-		private final Keyword cReferenceKeyword_5_4_0 = (Keyword)cGroup_5_4.eContents().get(0);
-		private final Assignment cReferenceAssignment_5_4_1 = (Assignment)cGroup_5_4.eContents().get(1);
-		private final CrossReference cReferenceSpecObjectCrossReference_5_4_1_0 = (CrossReference)cReferenceAssignment_5_4_1.eContents().get(0);
-		private final RuleCall cReferenceSpecObjectIDTerminalRuleCall_5_4_1_0_1 = (RuleCall)cReferenceSpecObjectCrossReference_5_4_1_0.eContents().get(1);
-		private final Assignment cChildrenAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final RuleCall cChildrenSpecObjectParserRuleCall_6_0 = (RuleCall)cChildrenAssignment_6.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
+		private final Keyword cStateKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Assignment cStateAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final CrossReference cStateStateCrossReference_6_0 = (CrossReference)cStateAssignment_6.eContents().get(0);
+		private final RuleCall cStateStateIDTerminalRuleCall_6_0_1 = (RuleCall)cStateStateCrossReference_6_0.eContents().get(1);
+		private final Keyword cClassificationKeyword_7 = (Keyword)cGroup.eContents().get(7);
+		private final Assignment cClassAssignment_8 = (Assignment)cGroup.eContents().get(8);
+		private final CrossReference cClassClassCrossReference_8_0 = (CrossReference)cClassAssignment_8.eContents().get(0);
+		private final RuleCall cClassClassIDTerminalRuleCall_8_0_1 = (RuleCall)cClassClassCrossReference_8_0.eContents().get(1);
+		private final Keyword cVersionKeyword_9 = (Keyword)cGroup.eContents().get(9);
+		private final Assignment cVersionAssignment_10 = (Assignment)cGroup.eContents().get(10);
+		private final RuleCall cVersionVersionParserRuleCall_10_0 = (RuleCall)cVersionAssignment_10.eContents().get(0);
+		private final Group cGroup_11 = (Group)cGroup.eContents().get(11);
+		private final Keyword cImageKeyword_11_0 = (Keyword)cGroup_11.eContents().get(0);
+		private final Assignment cImageAssignment_11_1 = (Assignment)cGroup_11.eContents().get(1);
+		private final RuleCall cImageCC_STRINGTerminalRuleCall_11_1_0 = (RuleCall)cImageAssignment_11_1.eContents().get(0);
+		private final Group cGroup_12 = (Group)cGroup.eContents().get(12);
+		private final Keyword cReferenceKeyword_12_0 = (Keyword)cGroup_12.eContents().get(0);
+		private final Assignment cReferenceAssignment_12_1 = (Assignment)cGroup_12.eContents().get(1);
+		private final CrossReference cReferenceSpecObjectCrossReference_12_1_0 = (CrossReference)cReferenceAssignment_12_1.eContents().get(0);
+		private final RuleCall cReferenceSpecObjectIDTerminalRuleCall_12_1_0_1 = (RuleCall)cReferenceSpecObjectCrossReference_12_1_0.eContents().get(1);
+		private final Assignment cChildrenAssignment_13 = (Assignment)cGroup.eContents().get(13);
+		private final RuleCall cChildrenSpecObjectParserRuleCall_13_0 = (RuleCall)cChildrenAssignment_13.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_14 = (Keyword)cGroup.eContents().get(14);
 		
 		//SpecObject:
 		//	'SpecObject' name=ID '{'
-		//	'description' description=CC_STRING ('state' state=[State] & 'classification' class=[Class] & 'version'
-		//	version=Version & ('image' image=CC_STRING)? & ('reference' reference=[SpecObject])?) children+=SpecObject*
+		//	'description' description=CC_STRING
+		//	'state' state=[State]
+		//	'classification' class=[Class]
+		//	'version' version=Version ('image' image=CC_STRING)? ('reference' reference=[SpecObject])?
+		//	children+=SpecObject*
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'SpecObject' name=ID '{' 'description' description=CC_STRING ('state' state=[State] & 'classification' class=[Class] &
-		//'version' version=Version & ('image' image=CC_STRING)? & ('reference' reference=[SpecObject])?) children+=SpecObject*
-		//'}'
+		//'SpecObject' name=ID '{' 'description' description=CC_STRING 'state' state=[State] 'classification' class=[Class]
+		//'version' version=Version ('image' image=CC_STRING)? ('reference' reference=[SpecObject])? children+=SpecObject* '}'
 		public Group getGroup() { return cGroup; }
 		
 		//'SpecObject'
@@ -142,87 +139,74 @@ public class ReqTextGrammarAccess extends AbstractGrammarElementFinder {
 		//CC_STRING
 		public RuleCall getDescriptionCC_STRINGTerminalRuleCall_4_0() { return cDescriptionCC_STRINGTerminalRuleCall_4_0; }
 		
-		//('state' state=[State] & 'classification' class=[Class] & 'version' version=Version & ('image' image=CC_STRING)? &
-		//('reference' reference=[SpecObject])?)
-		public UnorderedGroup getUnorderedGroup_5() { return cUnorderedGroup_5; }
-		
-		//'state' state=[State]
-		public Group getGroup_5_0() { return cGroup_5_0; }
-		
 		//'state'
-		public Keyword getStateKeyword_5_0_0() { return cStateKeyword_5_0_0; }
+		public Keyword getStateKeyword_5() { return cStateKeyword_5; }
 		
 		//state=[State]
-		public Assignment getStateAssignment_5_0_1() { return cStateAssignment_5_0_1; }
+		public Assignment getStateAssignment_6() { return cStateAssignment_6; }
 		
 		//[State]
-		public CrossReference getStateStateCrossReference_5_0_1_0() { return cStateStateCrossReference_5_0_1_0; }
+		public CrossReference getStateStateCrossReference_6_0() { return cStateStateCrossReference_6_0; }
 		
 		//ID
-		public RuleCall getStateStateIDTerminalRuleCall_5_0_1_0_1() { return cStateStateIDTerminalRuleCall_5_0_1_0_1; }
-		
-		//'classification' class=[Class]
-		public Group getGroup_5_1() { return cGroup_5_1; }
+		public RuleCall getStateStateIDTerminalRuleCall_6_0_1() { return cStateStateIDTerminalRuleCall_6_0_1; }
 		
 		//'classification'
-		public Keyword getClassificationKeyword_5_1_0() { return cClassificationKeyword_5_1_0; }
+		public Keyword getClassificationKeyword_7() { return cClassificationKeyword_7; }
 		
 		//class=[Class]
-		public Assignment getClassAssignment_5_1_1() { return cClassAssignment_5_1_1; }
+		public Assignment getClassAssignment_8() { return cClassAssignment_8; }
 		
 		//[Class]
-		public CrossReference getClassClassCrossReference_5_1_1_0() { return cClassClassCrossReference_5_1_1_0; }
+		public CrossReference getClassClassCrossReference_8_0() { return cClassClassCrossReference_8_0; }
 		
 		//ID
-		public RuleCall getClassClassIDTerminalRuleCall_5_1_1_0_1() { return cClassClassIDTerminalRuleCall_5_1_1_0_1; }
-		
-		//'version' version=Version
-		public Group getGroup_5_2() { return cGroup_5_2; }
+		public RuleCall getClassClassIDTerminalRuleCall_8_0_1() { return cClassClassIDTerminalRuleCall_8_0_1; }
 		
 		//'version'
-		public Keyword getVersionKeyword_5_2_0() { return cVersionKeyword_5_2_0; }
+		public Keyword getVersionKeyword_9() { return cVersionKeyword_9; }
 		
 		//version=Version
-		public Assignment getVersionAssignment_5_2_1() { return cVersionAssignment_5_2_1; }
+		public Assignment getVersionAssignment_10() { return cVersionAssignment_10; }
 		
 		//Version
-		public RuleCall getVersionVersionParserRuleCall_5_2_1_0() { return cVersionVersionParserRuleCall_5_2_1_0; }
+		public RuleCall getVersionVersionParserRuleCall_10_0() { return cVersionVersionParserRuleCall_10_0; }
 		
 		//('image' image=CC_STRING)?
-		public Group getGroup_5_3() { return cGroup_5_3; }
+		public Group getGroup_11() { return cGroup_11; }
 		
 		//'image'
-		public Keyword getImageKeyword_5_3_0() { return cImageKeyword_5_3_0; }
+		public Keyword getImageKeyword_11_0() { return cImageKeyword_11_0; }
 		
 		//image=CC_STRING
-		public Assignment getImageAssignment_5_3_1() { return cImageAssignment_5_3_1; }
+		public Assignment getImageAssignment_11_1() { return cImageAssignment_11_1; }
 		
 		//CC_STRING
-		public RuleCall getImageCC_STRINGTerminalRuleCall_5_3_1_0() { return cImageCC_STRINGTerminalRuleCall_5_3_1_0; }
+		public RuleCall getImageCC_STRINGTerminalRuleCall_11_1_0() { return cImageCC_STRINGTerminalRuleCall_11_1_0; }
 		
 		//('reference' reference=[SpecObject])?
-		public Group getGroup_5_4() { return cGroup_5_4; }
+		public Group getGroup_12() { return cGroup_12; }
 		
 		//'reference'
-		public Keyword getReferenceKeyword_5_4_0() { return cReferenceKeyword_5_4_0; }
+		public Keyword getReferenceKeyword_12_0() { return cReferenceKeyword_12_0; }
 		
 		//reference=[SpecObject]
-		public Assignment getReferenceAssignment_5_4_1() { return cReferenceAssignment_5_4_1; }
+		public Assignment getReferenceAssignment_12_1() { return cReferenceAssignment_12_1; }
 		
 		//[SpecObject]
-		public CrossReference getReferenceSpecObjectCrossReference_5_4_1_0() { return cReferenceSpecObjectCrossReference_5_4_1_0; }
+		public CrossReference getReferenceSpecObjectCrossReference_12_1_0() { return cReferenceSpecObjectCrossReference_12_1_0; }
 		
 		//ID
-		public RuleCall getReferenceSpecObjectIDTerminalRuleCall_5_4_1_0_1() { return cReferenceSpecObjectIDTerminalRuleCall_5_4_1_0_1; }
+		public RuleCall getReferenceSpecObjectIDTerminalRuleCall_12_1_0_1() { return cReferenceSpecObjectIDTerminalRuleCall_12_1_0_1; }
 		
 		//children+=SpecObject*
-		public Assignment getChildrenAssignment_6() { return cChildrenAssignment_6; }
+		public Assignment getChildrenAssignment_13() { return cChildrenAssignment_13; }
 		
 		//SpecObject
-		public RuleCall getChildrenSpecObjectParserRuleCall_6_0() { return cChildrenSpecObjectParserRuleCall_6_0; }
+		public RuleCall getChildrenSpecObjectParserRuleCall_13_0() { return cChildrenSpecObjectParserRuleCall_13_0; }
 		
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_7() { return cRightCurlyBracketKeyword_7; }
+		public Keyword getRightCurlyBracketKeyword_14() { return cRightCurlyBracketKeyword_14; }
 	}
 	public class StateElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "de.protos.reqtext.ReqText.State");
@@ -380,7 +364,7 @@ public class ReqTextGrammarAccess extends AbstractGrammarElementFinder {
 
 	
 	//RModel:
-	//	imports+=RImport* (states+=State | classes+=Class | objs+=SpecObject);
+	//	imports+=RImport* (states+=State | classes+=Class | objs+=SpecObject)*;
 	public RModelElements getRModelAccess() {
 		return pRModel;
 	}
@@ -391,8 +375,11 @@ public class ReqTextGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//SpecObject:
 	//	'SpecObject' name=ID '{'
-	//	'description' description=CC_STRING ('state' state=[State] & 'classification' class=[Class] & 'version'
-	//	version=Version & ('image' image=CC_STRING)? & ('reference' reference=[SpecObject])?) children+=SpecObject*
+	//	'description' description=CC_STRING
+	//	'state' state=[State]
+	//	'classification' class=[Class]
+	//	'version' version=Version ('image' image=CC_STRING)? ('reference' reference=[SpecObject])?
+	//	children+=SpecObject*
 	//	'}';
 	public SpecObjectElements getSpecObjectAccess() {
 		return pSpecObject;

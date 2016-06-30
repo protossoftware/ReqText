@@ -38,11 +38,8 @@ public class ReqTextParser extends AbstractContentAssistParser {
 					put(grammarAccess.getRModelAccess().getAlternatives_1(), "rule__RModel__Alternatives_1");
 					put(grammarAccess.getRModelAccess().getGroup(), "rule__RModel__Group__0");
 					put(grammarAccess.getSpecObjectAccess().getGroup(), "rule__SpecObject__Group__0");
-					put(grammarAccess.getSpecObjectAccess().getGroup_5_0(), "rule__SpecObject__Group_5_0__0");
-					put(grammarAccess.getSpecObjectAccess().getGroup_5_1(), "rule__SpecObject__Group_5_1__0");
-					put(grammarAccess.getSpecObjectAccess().getGroup_5_2(), "rule__SpecObject__Group_5_2__0");
-					put(grammarAccess.getSpecObjectAccess().getGroup_5_3(), "rule__SpecObject__Group_5_3__0");
-					put(grammarAccess.getSpecObjectAccess().getGroup_5_4(), "rule__SpecObject__Group_5_4__0");
+					put(grammarAccess.getSpecObjectAccess().getGroup_11(), "rule__SpecObject__Group_11__0");
+					put(grammarAccess.getSpecObjectAccess().getGroup_12(), "rule__SpecObject__Group_12__0");
 					put(grammarAccess.getStateAccess().getGroup(), "rule__State__Group__0");
 					put(grammarAccess.getClassAccess().getGroup(), "rule__Class__Group__0");
 					put(grammarAccess.getVersionAccess().getGroup(), "rule__Version__Group__0");
@@ -53,18 +50,17 @@ public class ReqTextParser extends AbstractContentAssistParser {
 					put(grammarAccess.getRModelAccess().getObjsAssignment_1_2(), "rule__RModel__ObjsAssignment_1_2");
 					put(grammarAccess.getSpecObjectAccess().getNameAssignment_1(), "rule__SpecObject__NameAssignment_1");
 					put(grammarAccess.getSpecObjectAccess().getDescriptionAssignment_4(), "rule__SpecObject__DescriptionAssignment_4");
-					put(grammarAccess.getSpecObjectAccess().getStateAssignment_5_0_1(), "rule__SpecObject__StateAssignment_5_0_1");
-					put(grammarAccess.getSpecObjectAccess().getClassAssignment_5_1_1(), "rule__SpecObject__ClassAssignment_5_1_1");
-					put(grammarAccess.getSpecObjectAccess().getVersionAssignment_5_2_1(), "rule__SpecObject__VersionAssignment_5_2_1");
-					put(grammarAccess.getSpecObjectAccess().getImageAssignment_5_3_1(), "rule__SpecObject__ImageAssignment_5_3_1");
-					put(grammarAccess.getSpecObjectAccess().getReferenceAssignment_5_4_1(), "rule__SpecObject__ReferenceAssignment_5_4_1");
-					put(grammarAccess.getSpecObjectAccess().getChildrenAssignment_6(), "rule__SpecObject__ChildrenAssignment_6");
+					put(grammarAccess.getSpecObjectAccess().getStateAssignment_6(), "rule__SpecObject__StateAssignment_6");
+					put(grammarAccess.getSpecObjectAccess().getClassAssignment_8(), "rule__SpecObject__ClassAssignment_8");
+					put(grammarAccess.getSpecObjectAccess().getVersionAssignment_10(), "rule__SpecObject__VersionAssignment_10");
+					put(grammarAccess.getSpecObjectAccess().getImageAssignment_11_1(), "rule__SpecObject__ImageAssignment_11_1");
+					put(grammarAccess.getSpecObjectAccess().getReferenceAssignment_12_1(), "rule__SpecObject__ReferenceAssignment_12_1");
+					put(grammarAccess.getSpecObjectAccess().getChildrenAssignment_13(), "rule__SpecObject__ChildrenAssignment_13");
 					put(grammarAccess.getStateAccess().getNameAssignment_1(), "rule__State__NameAssignment_1");
 					put(grammarAccess.getClassAccess().getNameAssignment_1(), "rule__Class__NameAssignment_1");
 					put(grammarAccess.getVersionAccess().getMajorAssignment_0(), "rule__Version__MajorAssignment_0");
 					put(grammarAccess.getVersionAccess().getMinorAssignment_2(), "rule__Version__MinorAssignment_2");
 					put(grammarAccess.getRImportAccess().getImportURIAssignment_1(), "rule__RImport__ImportURIAssignment_1");
-					put(grammarAccess.getSpecObjectAccess().getUnorderedGroup_5(), "rule__SpecObject__UnorderedGroup_5");
 				}
 			};
 		}
