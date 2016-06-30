@@ -27,5 +27,6 @@ Export-Package: de.protos.reqtext,
  de.protos.reqtext.serializer,
  de.protos.reqtext.services,
  de.protos.reqtext.util,
- de.protos.reqtext.validation
+ de.protos.reqtext.validation,
+ de.protos.reqtext.formatting2
 Import-Package: org.apache.log4j

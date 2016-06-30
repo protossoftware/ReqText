@@ -3,11 +3,7 @@
  */
 package de.protos.reqtext.validation;
 
-import de.protos.reqtext.reqText.RMapEntry;
-import de.protos.reqtext.reqText.ReqTextPackage;
-import de.protos.reqtext.util.CCStringIndentation;
 import de.protos.reqtext.validation.AbstractReqTextValidator;
-import org.eclipse.xtext.validation.Check;
 
 /**
  * This class contains custom validation rules.
@@ -16,14 +12,4 @@ import org.eclipse.xtext.validation.Check;
  */
 @SuppressWarnings("all")
 public class ReqTextValidator extends AbstractReqTextValidator {
-  @Check
-  public void checkMyMap(final RMapEntry element) {
-    String _value = element.getValue();
-    final CCStringIndentation ccStringIndent = new CCStringIndentation(_value);
-    boolean _validateIndentation = ccStringIndent.validateIndentation();
-    boolean _not = (!_validateIndentation);
-    if (_not) {
-      this.warning("Inconsistent indentation", element, ReqTextPackage.Literals.RMAP_ENTRY__VALUE);
-    }
-  }
 }

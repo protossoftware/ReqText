@@ -7,6 +7,7 @@ import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.xtext.generator.AbstractGenerator
 import org.eclipse.xtext.generator.IFileSystemAccess2
 import org.eclipse.xtext.generator.IGeneratorContext
+import de.protos.reqtext.reqText.RModel
 
 /**
  * Generates code from your model files on save.
@@ -16,10 +17,34 @@ import org.eclipse.xtext.generator.IGeneratorContext
 class ReqTextGenerator extends AbstractGenerator {
 
 	override void doGenerate(Resource resource, IFileSystemAccess2 fsa, IGeneratorContext context) {
-//		fsa.generateFile('greetings.txt', 'People to greet: ' + 
-//			resource.allContents
-//				.filter(typeof(Greeting))
-//				.map[name]
-//				.join(', '))
+		fsa.generateFile("generatedFile.html", generateContents(resource))
 	}
+	
+	def generateContents(Resource resource) {
+		val specObjs = (resource.contents.head as RModel).objs
+		'''
+			<html>
+			<head>
+			</head>
+			<body>
+				«FOR specObj : specObjs»
+					<h2>«specObjs.indexOf(specObj)» «specObj.name»</h2>
+					«specObj.description»</br>
+					state: «specObj.state.name»</br>
+					classification: «specObj.class_.name»</br>
+					«IF specObj.image != null»<img src="«specObj.image»"/>«ENDIF»
+					
+					«FOR child : specObj.children»
+						<h3>«specObjs.indexOf(specObj)».«specObj.children.indexOf(child)» «child.name»</h3>
+						«child.description»
+						state: «child.state.name»</br>
+						classification: «child.class_.name»</br>
+						«IF child.image != null»<img src="«child.image»"/>«ENDIF»
+					«ENDFOR»
+				«ENDFOR»
+			</body>
+			</html>
+		'''
+	}
+	
 }

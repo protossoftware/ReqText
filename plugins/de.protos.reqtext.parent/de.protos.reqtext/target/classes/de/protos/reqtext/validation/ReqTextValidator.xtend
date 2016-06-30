@@ -3,11 +3,6 @@
  */
 package de.protos.reqtext.validation
 
-import de.protos.reqtext.reqText.RMapEntry
-import de.protos.reqtext.reqText.ReqTextPackage
-import de.protos.reqtext.util.CCStringIndentation
-import org.eclipse.xtext.validation.Check
-
 /**
  * This class contains custom validation rules. 
  * 
@@ -25,12 +20,12 @@ class ReqTextValidator extends AbstractReqTextValidator {
 //					INVALID_NAME)
 //		}
 //	}
-	@Check
-	def checkMyMap(RMapEntry element) {
-		val ccStringIndent = new CCStringIndentation(element.value);
-		if (!ccStringIndent.validateIndentation())
-			warning("Inconsistent indentation", element, ReqTextPackage.Literals.RMAP_ENTRY__VALUE);
-
-	}
+//	@Check
+//	def checkMyMap(RMapEntry element) {
+//		val ccStringIndent = new CCStringIndentation(element.value);
+//		if (!ccStringIndent.validateIndentation())
+//			warning("Inconsistent indentation", element, ReqTextPackage.Literals.RMAP_ENTRY__VALUE);
+//
+//	}
 
 }

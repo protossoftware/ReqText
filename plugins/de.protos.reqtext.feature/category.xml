@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/de.protos.reqtext.feature_1.0.0.qualifier.jar" id="de.protos.reqtext.feature" version="1.0.0.qualifier">
+      <category name="de.protos.reqtext.category"/>
+   </feature>
+   <category-def name="de.protos.reqtext.category" label="ReqText"/>
+</site>

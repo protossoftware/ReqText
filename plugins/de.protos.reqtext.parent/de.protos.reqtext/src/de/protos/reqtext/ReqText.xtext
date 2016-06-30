@@ -3,28 +3,36 @@ grammar de.protos.reqtext.ReqText with org.eclipse.xtext.common.Terminals
 generate reqText "http://www.protos.de/reqtext/ReqText"
 
 RModel:
-	imports+=RImport*
-	contents+=Content*
+	imports += RImport*
+	(
+		states 	+= State 		|
+		classes += Class 		|
+		objs 	+= SpecObject
+	)
 ;
 
-Content:
-	RList|RMap|CrossRef
-;
-	
-RList:
-	'List' name=ID ('[' (entries+=ID (',' entries+=ID)*)? ']')?
-;
-
-RMap:
-	'Map' name=ID entries+=RMapEntry*
-;
-
-RMapEntry:
-	name=ID '=>' value=CC_STRING ('[' ref=[RMapEntry]? ']')?
+SpecObject:
+	'SpecObject' name=ID '{'
+		'description' description=CC_STRING
+		(('state' state = [State]) &
+		('classification' class = [Class]) &
+		('version' version = Version) &
+		('image' image = CC_STRING)? &
+		('reference' reference = [SpecObject])?)
+		children += SpecObject*		
+	'}' 
 ;
 
-CrossRef:
-	'ref' ref=[Content|ID]
+State:
+	'State' name=ID
+;
+
+Class:
+	'Classification' name=ID
+;
+
+Version:
+	major=INT '.' minor=INT
 ;
 
 RImport:
