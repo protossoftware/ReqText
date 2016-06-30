@@ -1,0 +1,222 @@
+import "states.reqtext"
+
+SpecObject Content {
+	description '''actual content of a the requirement'''
+	state InWork
+	classification Requirement
+	version 0.1
+	reference Usability 
+	
+	SpecObject TextRequirements {
+		description '''field for textual description for requirement'''
+		state InWork
+		classification Requirement
+		version 0.1
+	}
+	SpecObject Images {
+		description '''integration of images'''
+		state InWork
+		classification Requirement
+		version 0.1
+	}
+	SpecObject ImageSources {
+		description '''Integration of sources for images along with build method to build the image. This way only the source of the image has to be under version control, not the image itself (no useful diff possible).</br>
+					<b>Examples:</b>
+					<ul>
+						<li>graphviz/dot</li>
+						<li>PlantUML</li>
+						<li>Trace2UML</li>
+						<li>...</li>
+					</ul>
+
+
+'''
+		state InWork
+		classification Requirement
+		version 0.1
+	}
+	SpecObject Metadata {
+		description '''fields for metadata for requirements ( e.g. state oder version information )'''
+		state InWork
+		classification Requirement
+		version 0.1
+	}
+}
+
+SpecObject Usability {
+	description '''usability and efficiency of the tooling'''
+	state InWork
+	classification Requirement
+	version 0.1
+	SpecObject UnambiguousIdentification {
+		description '''unambiguous identification of requirements'''
+		state InWork
+		classification Requirement
+		version 0.1
+	}
+	SpecObject Efficiency {
+		description '''efficient editing of requirements'''
+		state InWork
+		classification Requirement
+		version 0.1
+	}
+	SpecObject FormattingForTextReqs {
+		description '''formatting for requirements (e.g. as XHTML)'''
+		state InWork
+		classification Requirement
+		version 0.1
+	}
+	SpecObject SimpleReorganization {
+		description '''simple way to reorganize requirements (e.g move to other place in structure)'''
+		state InWork
+		classification Requirement
+		version 0.1
+	}
+	SpecObject MultiEditing {
+		description '''the same field in multiple requirements can be edited with mult select'''
+		state InWork
+		classification Requirement
+		version 0.1
+		image '''example for multi editing''' '''../doc/images/MultiEditingExample.png''' 
+		
+	}
+	SpecObject GeneratePreview {
+		description '''a preview is needed while editing for fast verification of results'''
+		state InWork
+		classification Requirement
+		version 0.1
+	}
+	SpecObject CodeTemplates {
+		description '''code templates with pre defined values for attributes'''
+		state InWork
+		classification Requirement
+		version 0.1
+	}
+}
+
+SpecObject Traceability {
+	description '''traceability between requirements and to external information is needed'''
+	state InWork
+	classification Requirement
+	version 0.1
+	SpecObject UUIDs {
+		description '''optional UUIDs for identification of requirements from outside the requirement model'''
+		state InWork
+		classification Requirement
+		version 0.1
+	}
+	SpecObject ReferenceToExternalDocuments {
+		description '''reference to external documents and pictures'''
+		state InWork
+		classification Requirement
+		version 0.1
+	}
+	SpecObject ReferenceToOtherRequirements{
+		description '''references to other requirements'''
+		state InWork
+		classification Requirement
+		version 0.1
+	}
+	SpecObject ConsistencyChecks{
+		description '''consistency checks for formal requirements'''
+		state InWork
+		classification Requirement
+		version 0.1
+	}
+	SpecObject ConsistencyChecksForDiagrams{
+		description '''consistency checks for external diagrams (e.g. UML diagrams in other tool)'''
+		state InWork
+		classification Requirement
+		version 0.1
+	}
+}
+SpecObject GeneratedViews{
+	description '''different views can be be generated from the same requirement model'''
+	state InWork
+	classification Requirement
+	version 0.1
+	SpecObject GeneratedHtmlView{
+		description '''generate HTML view as fast preview'''
+		state InWork
+		classification Requirement
+		version 0.1
+	}
+	SpecObject OutlineView{
+		description '''outline view as tree to navigate in requirement model and for multi editing'''
+		state InWork
+		classification Requirement
+		version 0.1
+	}
+}
+
+SpecObject ImportExportInterfaces{
+	description '''different import interfaces'''
+	state InWork
+	classification Requirement
+	version 0.1
+	SpecObject IntegrityImport{
+		description '''import for PTC/Integrity'''
+		state InWork
+		classification Requirement
+		version 0.1
+	}
+	SpecObject RIFImportExport{
+		description '''import for RIF format'''
+		state InWork
+		classification Requirement
+		version 0.1
+	}
+	SpecObject ReqIFImportExport{
+		description '''import for ReqIF format'''
+		state InWork
+		classification Requirement
+		version 0.1
+	}
+	SpecObject OfficeDocumentImport{
+		description '''import for various document formats like WORD, PDF, Excel, Open Office, ...'''
+		state InWork
+		classification Requirement
+		version 0.1
+	}
+}
+
+SpecObject ProcessSupport{
+	description '''requirement regarding the support of development processes'''
+	state InWork
+	classification Requirement
+	version 0.1
+	SpecObject SourceVersionControl{
+		description '''Version control for requirements must be possible with GIT, Subversion and other version control systems. </br>
+						branch/merge/diff has to be able without special tooling. </br>
+						This way requirements can be versioned with the same mechanism as the code, even in the same repository.'''
+		state InWork
+		classification Requirement
+		version 0.1
+	}
+	SpecObject ExplicitVersionControl{
+		description '''explicit definition of a version for a requirement'''
+		state InWork
+		classification Requirement
+		version 0.1
+	}
+	SpecObject RequirementReviews{
+		description '''the review of requirements must be supported'''
+		state InWork
+		classification Requirement
+		version 0.1
+	}
+}
+
+
+SpecObject NonFunctionalRequirements{
+	description '''non functional requirements'''
+	state InWork
+	classification Requirement
+	version 0.1
+	SpecObject Reusability{
+		description '''reusability has to be supported e.g. by enabling requirement libraries which can be imported or inheritance of requirements'''
+		state InWork
+		classification Requirement
+		version 0.1
+	}
+}
