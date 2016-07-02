@@ -2,7 +2,7 @@
 <feature
       id="de.protos.reqtext.feature"
       label="ReqText Feature Plugin"
-      version="1.0.0.qualifier"
+      version="0.0.1.qualifier"
       provider-name="Protos Software Gmbh"
       plugin="de.protos.reqtext.ui">
 

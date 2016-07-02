@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<templates>
+	<template autoinsert="true" context="de.protos.reqtext.ReqText.SpecObject"
+		deleted="false" id="specObject" description="SpecObject Template" enabled="true"
+		name="SpecObject">SpecObject ${Name} {&#13;
+	description '''${Name}'''&#13;
+	state InWork&#13;
+	classification ${Type}&#13;
+	version 0.1&#13;
+}
+	</template>
+</templates>

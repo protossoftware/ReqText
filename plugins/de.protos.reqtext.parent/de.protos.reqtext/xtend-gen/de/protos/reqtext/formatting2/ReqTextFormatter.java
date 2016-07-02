@@ -4,15 +4,22 @@
 package de.protos.reqtext.formatting2;
 
 import com.google.common.base.Objects;
+import com.google.common.collect.Iterables;
 import com.google.inject.Inject;
 import de.protos.reqtext.reqText.RImport;
 import de.protos.reqtext.reqText.RModel;
+import de.protos.reqtext.reqText.ReqTextPackage;
+import de.protos.reqtext.reqText.SpecObject;
 import de.protos.reqtext.services.ReqTextGrammarAccess;
 import java.util.Arrays;
 import java.util.List;
 import java.util.function.Consumer;
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.ecore.EAttribute;
+import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EReference;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.xtext.formatting2.AbstractFormatter2;
 import org.eclipse.xtext.formatting2.IFormattableDocument;
 import org.eclipse.xtext.formatting2.IHiddenRegionFormatter;
@@ -20,6 +27,7 @@ import org.eclipse.xtext.formatting2.regionaccess.ISemanticRegion;
 import org.eclipse.xtext.formatting2.regionaccess.ISemanticRegionsFinder;
 import org.eclipse.xtext.resource.XtextResource;
 import org.eclipse.xtext.xbase.lib.Extension;
+import org.eclipse.xtext.xbase.lib.Functions.Function1;
 import org.eclipse.xtext.xbase.lib.IterableExtensions;
 import org.eclipse.xtext.xbase.lib.Procedures.Procedure1;
 
@@ -50,19 +58,20 @@ public class ReqTextFormatter extends AbstractFormatter2 {
     EList<EObject> _eContents = model.eContents();
     final Consumer<EObject> _function_1 = (EObject it) -> {
       boolean _matched = false;
-      if (!_matched) {
-        EList<RImport> _imports = model.getImports();
-        RImport _last = IterableExtensions.<RImport>last(_imports);
-        if (Objects.equal(it, _last)) {
-          _matched=true;
-          final Procedure1<IHiddenRegionFormatter> _function_2 = (IHiddenRegionFormatter it_1) -> {
-            it_1.setNewLines(2, 2, 3);
-          };
-          document.<EObject>append(it, _function_2);
-        }
+      EList<RImport> _imports = model.getImports();
+      RImport _last = IterableExtensions.<RImport>last(_imports);
+      if (Objects.equal(it, _last)) {
+        _matched=true;
+        final Procedure1<IHiddenRegionFormatter> _function_2 = (IHiddenRegionFormatter it_1) -> {
+          it_1.setNewLines(2, 2, 3);
+        };
+        document.<EObject>append(it, _function_2);
       }
       if (!_matched) {
-        document.<EObject>append(it, this.appendDefault);
+        final Procedure1<IHiddenRegionFormatter> _function_3 = (IHiddenRegionFormatter it_1) -> {
+          it_1.setNewLines(1, 2, 2);
+        };
+        document.<EObject>append(it, _function_3);
       }
     };
     _eContents.forEach(_function_1);
@@ -73,12 +82,78 @@ public class ReqTextFormatter extends AbstractFormatter2 {
     _eContents_1.forEach(_function_2);
   }
   
+  protected void _format(final SpecObject obj, @Extension final IFormattableDocument document) {
+    ISemanticRegionsFinder _regionFor = this.textRegionExtensions.regionFor(obj);
+    ISemanticRegion _keyword = _regionFor.keyword("{");
+    final Procedure1<IHiddenRegionFormatter> _function = (IHiddenRegionFormatter it) -> {
+      it.oneSpace();
+    };
+    ISemanticRegion _prepend = document.prepend(_keyword, _function);
+    document.append(_prepend, this.appendDefault);
+    final Procedure1<IHiddenRegionFormatter> _function_1 = (IHiddenRegionFormatter it) -> {
+      it.indent();
+    };
+    document.<SpecObject>interior(obj, _function_1);
+    EClass _eClass = obj.eClass();
+    EList<EStructuralFeature> _eStructuralFeatures = _eClass.getEStructuralFeatures();
+    Iterable<EAttribute> _filter = Iterables.<EAttribute>filter(_eStructuralFeatures, EAttribute.class);
+    final Function1<EAttribute, Boolean> _function_2 = (EAttribute it) -> {
+      return Boolean.valueOf((!Objects.equal(it, ReqTextPackage.Literals.SPEC_OBJECT__NAME)));
+    };
+    Iterable<EAttribute> _filter_1 = IterableExtensions.<EAttribute>filter(_filter, _function_2);
+    final Consumer<EAttribute> _function_3 = (EAttribute it) -> {
+      ISemanticRegionsFinder _regionFor_1 = this.textRegionExtensions.regionFor(obj);
+      ISemanticRegion _feature = _regionFor_1.feature(it);
+      final Procedure1<IHiddenRegionFormatter> _function_4 = (IHiddenRegionFormatter it_1) -> {
+        it_1.oneSpace();
+      };
+      ISemanticRegion _prepend_1 = document.prepend(_feature, _function_4);
+      document.append(_prepend_1, this.appendDefault);
+    };
+    _filter_1.forEach(_function_3);
+    EClass _eClass_1 = obj.eClass();
+    EList<EStructuralFeature> _eStructuralFeatures_1 = _eClass_1.getEStructuralFeatures();
+    Iterable<EReference> _filter_2 = Iterables.<EReference>filter(_eStructuralFeatures_1, EReference.class);
+    final Function1<EReference, Boolean> _function_4 = (EReference it) -> {
+      boolean _isContainment = it.isContainment();
+      return Boolean.valueOf((!_isContainment));
+    };
+    Iterable<EReference> _filter_3 = IterableExtensions.<EReference>filter(_filter_2, _function_4);
+    final Consumer<EReference> _function_5 = (EReference it) -> {
+      ISemanticRegionsFinder _regionFor_1 = this.textRegionExtensions.regionFor(obj);
+      ISemanticRegion _feature = _regionFor_1.feature(it);
+      final Procedure1<IHiddenRegionFormatter> _function_6 = (IHiddenRegionFormatter it_1) -> {
+        it_1.oneSpace();
+      };
+      ISemanticRegion _prepend_1 = document.prepend(_feature, _function_6);
+      document.append(_prepend_1, this.appendDefault);
+    };
+    _filter_3.forEach(_function_5);
+    EList<EObject> _eContents = obj.eContents();
+    final Consumer<EObject> _function_6 = (EObject it) -> {
+      final Procedure1<IHiddenRegionFormatter> _function_7 = (IHiddenRegionFormatter it_1) -> {
+        it_1.oneSpace();
+      };
+      EObject _prepend_1 = document.<EObject>prepend(it, _function_7);
+      document.<EObject>append(_prepend_1, this.appendDefault);
+    };
+    _eContents.forEach(_function_6);
+    EList<SpecObject> _children = obj.getChildren();
+    final Consumer<SpecObject> _function_7 = (SpecObject it) -> {
+      this.format(it, document);
+    };
+    _children.forEach(_function_7);
+  }
+  
   public void format(final Object model, final IFormattableDocument document) {
     if (model instanceof XtextResource) {
       _format((XtextResource)model, document);
       return;
     } else if (model instanceof RModel) {
       _format((RModel)model, document);
+      return;
+    } else if (model instanceof SpecObject) {
+      _format((SpecObject)model, document);
       return;
     } else if (model instanceof EObject) {
       _format((EObject)model, document);
