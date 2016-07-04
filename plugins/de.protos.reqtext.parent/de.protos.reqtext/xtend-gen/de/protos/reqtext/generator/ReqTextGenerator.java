@@ -81,16 +81,31 @@ public class ReqTextGenerator extends AbstractGenerator {
             boolean _notEquals = (!Objects.equal(_image, null));
             if (_notEquals) {
               _builder.append("\t");
-              _builder.append("<p><img src=\"");
+              _builder.append("<figure>");
+              _builder.newLine();
+              _builder.append("\t");
+              _builder.append("\t");
+              _builder.append("<img src=\"");
               Image _image_1 = specObj.getImage();
               String _url = _image_1.getUrl();
-              _builder.append(_url, "\t");
+              _builder.append(_url, "\t\t");
               _builder.append("\" alt=\"");
               Image _image_2 = specObj.getImage();
               String _name_3 = _image_2.getName();
-              _builder.append(_name_3, "\t");
-              _builder.append("\"/></p>");
+              _builder.append(_name_3, "\t\t");
+              _builder.append("\"/>");
               _builder.newLineIfNotEmpty();
+              _builder.append("\t");
+              _builder.append("\t");
+              _builder.append("<figcaption>");
+              Image _image_3 = specObj.getImage();
+              String _name_4 = _image_3.getName();
+              _builder.append(_name_4, "\t\t");
+              _builder.append("</figcaption>");
+              _builder.newLineIfNotEmpty();
+              _builder.append("\t");
+              _builder.append("</figure>");
+              _builder.newLine();
             }
           }
           _builder.append("\t");
@@ -100,8 +115,8 @@ public class ReqTextGenerator extends AbstractGenerator {
             for(final SpecObject child : _children) {
               _builder.append("\t");
               _builder.append("<h3>");
-              String _name_4 = child.getName();
-              _builder.append(_name_4, "\t");
+              String _name_5 = child.getName();
+              _builder.append(_name_5, "\t");
               _builder.append("</h3>");
               _builder.newLineIfNotEmpty();
               _builder.append("\t");
@@ -113,32 +128,47 @@ public class ReqTextGenerator extends AbstractGenerator {
               _builder.append("\t");
               _builder.append("<p class=\"metadata\"><b>State:</b> ");
               State _state_1 = child.getState();
-              String _name_5 = _state_1.getName();
-              _builder.append(_name_5, "\t");
+              String _name_6 = _state_1.getName();
+              _builder.append(_name_6, "\t");
               _builder.append("</p>");
               _builder.newLineIfNotEmpty();
               _builder.append("\t");
               _builder.append("<p class=\"metadata\"><b>Classification:</b> ");
               de.protos.reqtext.reqText.Class _class__1 = child.getClass_();
-              String _name_6 = _class__1.getName();
-              _builder.append(_name_6, "\t");
+              String _name_7 = _class__1.getName();
+              _builder.append(_name_7, "\t");
               _builder.append("</p>");
               _builder.newLineIfNotEmpty();
               {
-                Image _image_3 = child.getImage();
-                boolean _notEquals_1 = (!Objects.equal(_image_3, null));
+                Image _image_4 = child.getImage();
+                boolean _notEquals_1 = (!Objects.equal(_image_4, null));
                 if (_notEquals_1) {
                   _builder.append("\t");
-                  _builder.append("<p><img src=\"");
-                  Image _image_4 = child.getImage();
-                  String _url_1 = _image_4.getUrl();
-                  _builder.append(_url_1, "\t");
-                  _builder.append("\" alt=\"");
+                  _builder.append("<figure>");
+                  _builder.newLine();
+                  _builder.append("\t");
+                  _builder.append("\t");
+                  _builder.append("<img src=\"");
                   Image _image_5 = child.getImage();
-                  String _name_7 = _image_5.getName();
-                  _builder.append(_name_7, "\t");
-                  _builder.append("\"/></p>");
+                  String _url_1 = _image_5.getUrl();
+                  _builder.append(_url_1, "\t\t");
+                  _builder.append("\" alt=\"");
+                  Image _image_6 = child.getImage();
+                  String _name_8 = _image_6.getName();
+                  _builder.append(_name_8, "\t\t");
+                  _builder.append("\"/>");
                   _builder.newLineIfNotEmpty();
+                  _builder.append("\t");
+                  _builder.append("\t");
+                  _builder.append("<figcaption>");
+                  Image _image_7 = child.getImage();
+                  String _name_9 = _image_7.getName();
+                  _builder.append(_name_9, "\t\t");
+                  _builder.append("</figcaption>");
+                  _builder.newLineIfNotEmpty();
+                  _builder.append("\t");
+                  _builder.append("</figure>");
+                  _builder.newLine();
                 }
               }
             }

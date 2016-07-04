@@ -1,3 +1,7 @@
+/*
+ * example for elements that are very likely to be reused by other projects (import statement in example.reqtext)
+ */
+
 State InWork
 State Released
 State Submitted

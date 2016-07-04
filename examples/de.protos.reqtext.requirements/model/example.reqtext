@@ -1,22 +1,25 @@
 /**
  *  Useful hotkeys:
  * 		- Ctrl+Space	ContentAssit
- * 		- F3 			Open Declaration
- * 		- Ctrl+Shift+G 	Find References
+ * 		- Ctrl+Shift+F	Auto Format
+ * 		- F3 			Open Declaration (Navigation)
+ * 		- Ctrl+Shift+G 	Find References (Navigation)
  * 		- Ctrl+O		Quick Outline (use arrow keys to navigate)
  * 		- Ctrl+1		Quick Fix (available at region which is underlined in orange)
- * 		- Strg+Alt+F	Auto Format
  */
 
+
+// import of another reqtext file to use or reference the elements defined there 
+// this enables reuse of requirements between projects
 import "states.reqtext"
 
-SpecObject Content {
-	description '''actual content of a the requirement'''
-	state InWork
-	classification Requirement
-	version 0.1
-	reference Usability
-
+SpecObject Content { // name of the requirement is also used to reference the requirement
+	description '''actual content of a the requirement''' // description of a requirement
+	state InWork // current state of the requirement
+	classification Requirement // classification of the requirement -> very likely to be changed to a stronger classification to create your own SpecObject types
+	version 0.1 // version with <major>.<minor> convention
+	reference Usability // reference to another 
+	// Containment of requirements to define hierarchies
 	SpecObject TextRequirements {
 		description '''field for textual description for requirement'''
 		state InWork
@@ -30,6 +33,7 @@ SpecObject Content {
 		version 0.1
 	}
 	SpecObject ImageSources {
+		// example for a multi line description with html formats
 		description '''
 					Integration of sources for images along with build method to build the image. This way only the source of the image has to be under version control, not the image itself (no useful diff possible).</br>
 					<b>Examples:</b>
@@ -86,7 +90,7 @@ SpecObject Usability {
 		state InWork
 		classification Requirement
 		version 0.1
-		image '''example for multi editing''' '''../doc/images/MultiEditingExample.png'''
+		image '''example for multi editing''' '''../doc/images/MultiEditingExample.png''' // a reference to an image
 
 	}
 	SpecObject GeneratePreview {

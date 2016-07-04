@@ -34,7 +34,10 @@ class ReqTextGenerator extends AbstractGenerator {
 					<p class="metadata"><b>State:</b> «specObj.state.name»</p>
 					<p class="metadata"><b>Classification:</b> «specObj.class_.name»</p>
 					«IF specObj.image != null»
-						<p><img src="«specObj.image.url»" alt="«specObj.image.name»"/></p>
+						<figure>
+							<img src="«specObj.image.url»" alt="«specObj.image.name»"/>
+							<figcaption>«specObj.image.name»</figcaption>
+						</figure>
 					«ENDIF»
 					
 					«FOR child : specObj.children»
@@ -43,7 +46,10 @@ class ReqTextGenerator extends AbstractGenerator {
 						<p class="metadata"><b>State:</b> «child.state.name»</p>
 						<p class="metadata"><b>Classification:</b> «child.class_.name»</p>
 						«IF child.image != null»
-							<p><img src="«child.image.url»" alt="«child.image.name»"/></p>
+							<figure>
+								<img src="«child.image.url»" alt="«child.image.name»"/>
+								<figcaption>«child.image.name»</figcaption>
+							</figure>
 						«ENDIF»					«ENDFOR»
 				«ENDFOR»
 			</body>
